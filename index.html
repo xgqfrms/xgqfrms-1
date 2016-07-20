@@ -17,6 +17,42 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   <style>
+    .body-bg {
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        background-color: #159957;
+        background-image: linear-gradient(120deg, #155799, #159957);
+    }
+    .main-content{
+      max-width: 100%;
+      padding: 2rem 0 0;
+      /*position: fixed;*/
+    }
+    .footer{
+      color:#fff;
+      /*background-color: rgba(255,255,255,0.7);*/
+      /*opacity: 1;*/
+    }
+    a{
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: none;
+      color:rgba(0,255,0,0.7);
+    }
+    .footer a{
+      text-decoration: none;
+      color:rgba(255,0,255,0.7);
+    }
+    .footer a:hover{
+      text-decoration: none;
+      color:rgba(0,255,255,0.7);
+    }
+    .site-footer{
+      padding: 1rem 0;
+    }
+    /*google style*/
     #maia-signature {
         clear: both;
         margin: 10px auto 0;
@@ -44,18 +80,20 @@
     }
   </style>
 </head>
-<body>
+<body class="body-bg">
   <section class="page-header">
     <h1 class="project-name">xgqfrms</h1>
     <h2 class="project-tagline">xgqfrms&#39;s offical website of GitHub!</h2>
-    <a href="http://xgqfrms.github.io/xgqfrms/" class="btn"><img src="images/icon.png" alt="QR code"/></a>
+    <a href="http://xgqfrms.github.io/xgqfrms/" class="btn"><img src="images/icon.png" alt="QR code" draggable="false"/></a>
   </section>
-  <section class="main-content" >
+  <section class="main-content">
     <div id="maia-signature">
       <!-- google color banner -->
     </div>
-    <a href="https://xgqfrms.github.io/xgqfrms">https://xgqfrms.github.io/xgqfrms</a>
-    <i><mark>More contents coming soon...</mark></i>
+    <div class="footer">
+      <a href="https://xgqfrms.github.io/xgqfrms">https://xgqfrms.github.io/xgqfrms</a>
+      <i><mark>More contents coming soon...</mark></i>
+    </div>
     <div id="xxx" style="background-color:black">
       <footer class="site-footer">
         <span class="site-footer-owner">
@@ -63,7 +101,7 @@
           <a href="https://github.com/xgqfrms">xgqfrms</a>.&nbsp;&nbsp;&nbsp;
           <h3><mark>Powered by HTML5+CSS3+JavaScript...</mark></h3>
         </span>
-        <span class="site-footer-credits">© 2015 xgqfrms 
+        <span class="site-footer-credits">&copy; 2016 xgqfrms
           <a href="mailto:xgqfrms@gmail.com">Contact Me</a>
           <img src="images/blacktocat.png" alt="blacktocat.png">
           <a href="https://github.com/xgqfrm">Follow Me</a>
