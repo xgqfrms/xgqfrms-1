@@ -13,8 +13,6 @@
 
 ## [Plugins for SEO]
 
-### [Google Analytics](https://xgqfrms.github.io/DataStructure/)
-
 ### [Google Translate](https://xgqfrms.github.io/DataStructure/)
 
 ### [mouseflow](https://xgqfrms.github.io/DataStructure/)
@@ -24,6 +22,12 @@
 ### [Disqus](https://disqus.com/)
 
 ### [Font Awesome](http://fontawesome.io/)
+
+## [跟踪器]
+
+### [Google Analytics](https://xgqfrms.github.io/DataStructure/)
+### [Facebook Connect](https://developers.facebook.com/docs/javascript)
+
 
 ### [CDN](https://www.maxcdn.com/)
 https://cdnjs.com/libraries
@@ -44,7 +48,12 @@ http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
 ### [React](https://xgqfrms.github.io/DataStructure/)
 ### [React-Native](https://xgqfrms.github.io/DataStructure/)
 
-### [Google reCAPTCHA](https://www.google.com/recaptcha/intro/index.html)
+
+### [x](https://xgqfrms.github.io/DataStructure/)
+### [x](https://xgqfrms.github.io/DataStructure/)
+### [x](https://xgqfrms.github.io/DataStructure/)
+### [x](https://xgqfrms.github.io/DataStructure/)
+### [x](https://xgqfrms.github.io/DataStructure/)
 ### [x](https://xgqfrms.github.io/DataStructure/)
 ### [x](https://xgqfrms.github.io/DataStructure/)
 
@@ -58,6 +67,7 @@ http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
 ### [用户代理字符串解析器](https://github.com/xgqfrms/ua-parser-js)
 ### [UA: Feature Detection](https://github.com/xgqfrms/Modernizr)
 ### [google 人机身份验证](https://www.google.com/recaptcha/intro/index.html)
+### [Google reCAPTCHA](https://www.google.com/recaptcha/intro/index.html)
 
 
 
