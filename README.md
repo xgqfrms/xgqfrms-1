@@ -36,7 +36,7 @@ http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
 
 ## [mobile first]
 
-### [JQuery](https://xgqfrms.github.io/DataStructure/)
+### [JQuery](https://code.jquery.com/)
 ### [JQuery UI](https://xgqfrms.github.io/DataStructure/)
 ### [Bootstrap](https://xgqfrms.github.io/DataStructure/)
 ### [AngularJS](https://xgqfrms.github.io/DataStructure/)
@@ -44,7 +44,7 @@ http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
 ### [React](https://xgqfrms.github.io/DataStructure/)
 ### [React-Native](https://xgqfrms.github.io/DataStructure/)
 
-### [x](https://xgqfrms.github.io/DataStructure/)
+### [Google reCAPTCHA](https://www.google.com/recaptcha/intro/index.html)
 ### [x](https://xgqfrms.github.io/DataStructure/)
 ### [x](https://xgqfrms.github.io/DataStructure/)
 
