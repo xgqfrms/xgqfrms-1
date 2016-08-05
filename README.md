@@ -26,7 +26,12 @@
 ## [跟踪器]
 
 ### [Google Analytics](https://xgqfrms.github.io/DataStructure/)
+### [Google Tag Manager](https://tagmanager.google.com/?hl=en#/home)
+### [Typekit by Adobe](https://typekit.com/fonts)
+### [Disqus](https://disqus.com/home/forums/xgqfrms-xyz/)
+
 ### [Facebook Connect](https://developers.facebook.com/docs/javascript)
+### [Twitter ?](https://developers.facebook.com/docs/javascript)
 
 ## [CDN]
 
