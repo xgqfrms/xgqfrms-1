@@ -25,7 +25,7 @@
 
 ## [app spector]
 
-### [Google Translate](http://translate.google.com/manager/website/add?security_token=ALkJrhg2TsMjUN1yBJ96kn6iSR1g10TY4w%3A1470412679178&step=2&prevStep=1&hl=zh-CN&tl=_all&dm=2&ad=1&apl=1&ana=1&aid=UA-80900288-1)
+7
 ### [Google Analytics](https://analytics.google.com/analytics/web/?hl=zh-CN&pli=1#home/a68591543w105424940p109710584/)
 ### [reCAPTCHA](https://www.google.com/recaptcha/admin#list)
 ### [Disqus](https://disqus.com/home/forums/xgqfrms-xyz/)
@@ -45,14 +45,16 @@
 
 ## [跟踪器]
 
+5
+### [Google Translate](http://translate.google.com/manager/website/add?security_token=ALkJrhg2TsMjUN1yBJ96kn6iSR1g10TY4w%3A1470412679178&step=2&prevStep=1&hl=zh-CN&tl=_all&dm=2&ad=1&apl=1&ana=1&aid=UA-80900288-1)
 ### [Google Analytics](https://analytics.google.com/analytics/web/?hl=zh-CN&pli=1#home/a68591543w105424940p109710584/)
 ### [Google Tag Manager](https://tagmanager.google.com/?hl=en#/home)
 ### [Typekit by Adobe](https://typekit.com/fonts)
 ### [Disqus](https://disqus.com/home/forums/xgqfrms-xyz/)
 
+
 ### [Facebook Connect](https://developers.facebook.com/docs/javascript)
 ### [Twitter ?](https://developers.facebook.com/docs/javascript)
-### [Google Translate](http://translate.google.com/manager/website/add?security_token=ALkJrhg2TsMjUN1yBJ96kn6iSR1g10TY4w%3A1470412679178&step=2&prevStep=1&hl=zh-CN&tl=_all&dm=2&ad=1&apl=1&ana=1&aid=UA-80900288-1)
 
 ## [CDN]
 
