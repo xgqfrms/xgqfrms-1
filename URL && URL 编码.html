@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>URL && URL 编码:</title>
+</head>
+<body>
+	<div>
+		<h3>
+			<a href="http://www.w3school.com.cn/tiy/t.asp?f=jseg_encodeURI">referrence link</a>
+		</h3>
+		<h3>
+			<a href="https://developers.google.com/url-shortener/?csw=1">Google URL Shortener</a>
+			<span><a href="https://goo.gl/">https://goo.gl/</a></span>
+		</h3>
+		<div id="div1">
+			<!--  -->
+		</div>
+		<div id="div2">
+			<!--  -->
+		</div>
+		<div id="div3">
+			<!-- div5 内容插入失败：原因 js 执行先后顺序的问题，导致div5 先于父容器div3执行，找不到div3,无法生成div5 -->
+			<!--  -->
+			<div id="div5">
+				<!-- 
+					<h1>Uncaught TypeError: Cannot set property 'innerHTML' of null</h1>
+					You have to place the hello div before the script, so that it exists when the script is loaded.
+					<a href="http://stackoverflow.com/questions/18239430/cannot-set-property-innerhtml-of-null">http://stackoverflow.com/questions/18239430/cannot-set-property-innerhtml-of-null</a>
+				 -->
+			</div>
+		</div>
+		<div id="div4">
+			<!--  -->
+		</div>
+	</div>
+	<div>
+		<table>
+			<thead>JavaScript encodeURI() 函数:</thead>
+			<tbody>
+				<tr>
+					<td>/</td>
+					<td>:</td>
+					<td>#</td>
+					<td>?</td>
+					<td>@</td>
+					<td>$</td>
+					<td>&</td>
+					<td>+</td>
+					<td>=</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- js -->
+	<script>
+		// encodeURI : encodeURI(URIstring)
+		// encodeURI() 函数可把字符串作为 URI 进行编码。
+		/*
+			该方法不会对 ASCII 字母和数字进行编码，也不会对这些 ASCII 标点符号进行编码： - _ . ! ~ * ' ( ) 。
+			该方法的目的是对 URI 进行完整的编码，因此对以下在 URI 中具有特殊含义的 ASCII 标点符号，encodeURI() 函数是不会进行转义的：;/?:@&=+$,#
+		*/
+		var x1 = encodeURI("https://www.xgqfrms.xyz")+"<br/>";
+		var x2 = encodeURI("https://www.xgqfrms.xyz/My first/")+"<br/>";
+		var x3 = encodeURI("https://www.xgqfrms.xyz/id=xgqfrms@xyz")+"<br/>";
+		var x4 = encodeURI(",/?:@&=+$#")+"<br/><br/>";
+		var dom1 = document.getElementById('div1').innerHTML=(x1+x2+x3+x4);
+		// encodeURIComponent 
+		/*
+			如果URI组件中含有分隔符,比如space,?和#,则应当使用encodeURIComponent() 对组件进行编码。
+		*/
+		var y1 = encodeURIComponent("https://www.xgqfrms.xyz")+"<br/>";
+		var y2 = encodeURIComponent("https://www.xgqfrms.xyz/My first/")+"<br/>";
+		var y3 = encodeURIComponent("https://www.xgqfrms.xyz/id=xgqfrms@xyz")+"<br/>";
+		var y4 = encodeURI(",/?:@&=+$#")+"<br/><br/>";
+		var dom2 = document.getElementById('div2').innerHTML=(y1+y2+y3+y4);
+		// 
+		var test = new Array();
+		var testType = "";
+
+		if (test.constructor==Array){
+			testType = "This is an Array"+"<br/>";
+		}
+		else if (test.constructor==Boolean){
+			testType = "This is a Boolean"+"<br/>";
+		}
+		else if (test.constructor==Date){
+			testType = "This is a Date"+"<br/>";
+		}
+		else if (test.constructor==String){
+			testType = "This is a String"+"<br/>";
+		}
+		var dom5 = document.getElementById('div5').innerHTML = testType;
+
+		console.log(testType);
+		console.log("<br/>");
+
+		test[0] = encodeURIComponent("https://www.xgqfrms.xyz")+"<br/>";
+		      
+		console.log(test.prototype);
+		console.log("<br/>");
+		console.log(test.length);
+		console.log("<br/>");
+		console.log(test.constructor());
+		console.log("<br/>");
+		var dom3 = document.getElementById('div3').innerHTML=test.toString(test[0])+"<br/>";
+		var dom4 = document.getElementById('div4').innerHTML=test.valueOf(test[0])+"<br/><br/>";
+		// 
+		function employee(name,job,born){
+			this.nameValue=name;
+			this.jobValue=job;
+			this.bornValue=born;
+		}
+		var bill=new employee("Bill Gates","Engineer",1985);
+		employee.prototype.salaryValue=null;
+		// prototype 用来添加属性
+		bill.salary=20000;
+		document.write(bill.salary+"<br/>");
+		document.write(bill.nameValue+"<br/>");
+		document.write(bill.jobValue+"<br/>");
+		document.write(bill.bornValue+"<br/>");
+	</script>
+</body>
+</html>
