@@ -20,18 +20,32 @@
 			<!--  -->
 		</div>
 		<div id="div3">
-			<!-- div5 内容插入失败：原因 js 执行先后顺序的问题，导致div5 先于父容器div3执行，找不到div3,无法生成div5 -->
-			<!--  -->
-			<div id="div5">
-				<!-- 
-					<h1>Uncaught TypeError: Cannot set property 'innerHTML' of null</h1>
-					You have to place the hello div before the script, so that it exists when the script is loaded.
-					<a href="http://stackoverflow.com/questions/18239430/cannot-set-property-innerhtml-of-null">http://stackoverflow.com/questions/18239430/cannot-set-property-innerhtml-of-null</a>
-				 -->
-			</div>
+			<!-- 
+				div5 内容插入失败：原因 js 执行先后顺序的问题(顺序执行,如果前面js代码出错，后面的js代码就不会执行了)，
+				导致div5 先于父容器div3执行，找不到div3,无法生成div5
+			 -->
+			<!-- 解决方案：更改调用 div5 与 div3 的JS代码的执行顺序！ -->
+			<!-- 
+				1. 将 div5 移动到 div3外，div4 的后面！（好使）
+				2. 将 div5 的js代码，移动到 div3的代码后面！（不好使？？？）
+				   不好使原因：div3 的js代码执行.innerHTML 后，将div5 标签覆盖掉了，所以DOM 中div5 标签就不存在了！
+			 -->
+			 <!-- <div id="div5"></div> -->
 		</div>
 		<div id="div4">
 			<!--  -->
+		</div>
+		<div id="div5">
+			<span>just for rewrite test!</span>
+			<!-- span 内容不显示原因：div5 的js代码执行.innerHTML 后，将span标签覆盖掉了，所以DOM 中span 标签就不存在了！ -->
+			<!-- 所以 JS 操作DOM 只适用于，动态添加/删除 DOM节点／内容-->
+		</div>
+		<div id="div5_new">
+			<!-- 
+				<h1>Uncaught TypeError: Cannot set property 'innerHTML' of null</h1>
+				You have to place the hello div before the script, so that it exists when the script is loaded.
+				<a href="http://stackoverflow.com/questions/18239430/cannot-set-property-innerhtml-of-null">http://stackoverflow.com/questions/18239430/cannot-set-property-innerhtml-of-null</a>
+			 -->
 		</div>
 	</div>
 	<div>
@@ -85,26 +99,22 @@
 		var y3 = encodeURIComponent("https://www.xgqfrms.xyz/id=xgqfrms@xyz")+"<br/>";
 		var y4 = encodeURI(",/?:@&=+$#")+"<br/><br/>";
 		var dom2 = document.getElementById('div2').innerHTML=(y1+y2+y3+y4);
-		// 
+		
+		// Array
 		var test = new Array();
 		var testType = "";
-
 		if (test.constructor==Array){
-			testType = "This is an Array"+"<br/>";
+			testType = "This is an Array";
 		}
 		else if (test.constructor==Boolean){
-			testType = "This is a Boolean"+"<br/>";
+			testType = "This is a Boolean";
 		}
 		else if (test.constructor==Date){
-			testType = "This is a Date"+"<br/>";
+			testType = "This is a Date";
 		}
 		else if (test.constructor==String){
-			testType = "This is a String"+"<br/>";
+			testType = "This is a String";
 		}
-		var dom5 = document.getElementById('div5').innerHTML = testType;
-
-		console.log(testType);
-		console.log("<br/>");
 
 		test[0] = encodeURIComponent("https://www.xgqfrms.xyz")+"<br/>";
 		      
@@ -116,6 +126,16 @@
 		console.log("<br/>");
 		var dom3 = document.getElementById('div3').innerHTML=test.toString(test[0])+"<br/>";
 		var dom4 = document.getElementById('div4').innerHTML=test.valueOf(test[0])+"<br/><br/>";
+
+		var dom5 = document.getElementById('div5').innerHTML = "<mark><i>" + testType + "</i></mark>";
+		/*
+			不好使原因：div3 的js代码执行.innerHTML 后，将div5 标签覆盖掉了，所以DOM 中div5 标签就不存在了！
+		*/
+		var dom5_New = document.getElementById('div5_new').innerHTML = "<mark>" + testType + "</mark>";
+		var dom5_Rewrite = document.getElementById('div5_new').innerHTML = "<mark>" + testType + "test for Rewrite" + "</mark>";
+		console.log(testType);
+		console.log("<br/>");
+
 		// 
 		function employee(name,job,born){
 			this.nameValue=name;
