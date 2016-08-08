@@ -3,6 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>URL && URL 编码:</title>
+	<style>
+		.space{
+			margin-left: 12px;
+		}
+		td{
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
 	<div>
@@ -49,33 +57,44 @@
 		</div>
 	</div>
 	<div>
+		<hr>
 		<table>
-			<thead>JavaScript encodeURI() 函数:</thead>
+			<thead>JavaScript encodeURI() 函数: <span style="color:red"><a href="http://www.w3chtml.com/html/ref/url-encode.html">URI编码对照表</a></span> </thead>
+			<hr>
 			<tbody>
 				<tr>
-					<td>/</td>
-					<td>:</td>
-					<td>#</td>
-					<td>?</td>
-					<td>@</td>
-					<td>$</td>
-					<td>&</td>
-					<td>+</td>
-					<td>=</td>
+					<td>:<span class="space"></span></td>
+					<td>/<span class="space"></span></td>
+					<td>.<span class="space"></span></td>
+					<td>&amp;nbsp<span class="space"></span></td>
+					<td>@<span class="space"></span></td>
+					<td>=<span class="space"></span></td>
+
+					<td>?<span class="space"></span></td>
+					<td>&<span class="space"></span></td>
+					<td>$<span class="space"></span></td>
+					<td>,<span class="space"></span></td>
+					<td>+<span class="space"></span></td>
+					<td>#<span class="space"></span></td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>%3A<span class="space"></span></td>
+					<td>%2F<span class="space"></span></td>
+					<td>.<span class="space"></span></td>
+					<td>%20<span class="space"></span></td>
+					<td>%40<span class="space"></span></td>
+					<td>%3D<span class="space"></span></td>
+
+					<td>%3F<span class="space"></span></td>
+					<td>%26<span class="space"></span></td>
+					<td>%24<span class="space"></span></td>
+					<td>%2C<span class="space"></span></td>
+					<td>%2B<span class="space"></span></td>
+					<td>%23<span class="space"></span></td>
 				</tr>
 			</tbody>
 		</table>
+		<hr>
 	</div>
 	<!-- js -->
 	<script>
@@ -87,7 +106,7 @@
 		*/
 		var x1 = encodeURI("https://www.xgqfrms.xyz")+"<br/>";
 		var x2 = encodeURI("https://www.xgqfrms.xyz/My first/")+"<br/>";
-		var x3 = encodeURI("https://www.xgqfrms.xyz/id=xgqfrms@xyz")+"<br/>";
+		var x3 = encodeURI("https://www.xgqfrms.xyz/id=xgqfrms@xyz&name=1$2,+4#5?")+"<br/>";
 		var x4 = encodeURI(",/?:@&=+$#")+"<br/><br/>";
 		var dom1 = document.getElementById('div1').innerHTML=(x1+x2+x3+x4);
 		// encodeURIComponent 
@@ -96,7 +115,7 @@
 		*/
 		var y1 = encodeURIComponent("https://www.xgqfrms.xyz")+"<br/>";
 		var y2 = encodeURIComponent("https://www.xgqfrms.xyz/My first/")+"<br/>";
-		var y3 = encodeURIComponent("https://www.xgqfrms.xyz/id=xgqfrms@xyz")+"<br/>";
+		var y3 = encodeURIComponent("https://www.xgqfrms.xyz/id=xgqfrms@xyz&name=1$2,+4#5?")+"<br/>";
 		var y4 = encodeURI(",/?:@&=+$#")+"<br/><br/>";
 		var dom2 = document.getElementById('div2').innerHTML=(y1+y2+y3+y4);
 		
