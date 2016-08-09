@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js 实现图片预加载 加载完后执行动作</title> 
+	<!-- Google Cultural Institute Puts Us All Onstage -->
+	<style> 
+		/*css*/
+	</style>
+</head>
+<body>
+	<div id="loading"> 
+		<p>
+			<img src="https://raw.githubusercontent.com/xgqfrms/cdn/master/images/Yin_yang.png" alt="https://raw.githubusercontent.com/xgqfrms/cdn/master/images/Yin_yang.svg"/>
+		</p> 
+	</div>
+	<!-- js -->
+	<script> 
+		var i=0; 
+		var c=3; 
+		var imgarr=new Array 
+		imgarr[0]="https://raw.githubusercontent.com/xgqfrms/cdn/master/images/youtube.PNG"; 
+		imgarr[1]="https://raw.githubusercontent.com/xgqfrms/cdn/master/images/Yin_yang.png"; 
+		imgarr[2]="https://raw.githubusercontent.com/xgqfrms/cdn/master/images/svgviewer.gif"; 
+
+		var Browser = new Object(); 
+		Browser.userAgent=window.navigator.userAgent.toLowerCase(); 
+		Browser.ie=/msie/.test(Browser.userAgent); 
+		Browser.Moz=/gecko/.test(Browser.userAgent); 
+		function SImage(url,callback) { 
+			var img = new Image(); 
+			if(Browser.ie){ 
+				img.onreadystatechange =function(){ 
+					if(img.readyState=="complete"||img.readyState=="loaded"){ 
+						ii=i+1; 
+						callback(i); 
+					} 
+				} 
+			}else if(Browser.Moz){ 
+				img.onload=function(){ 
+					if(img.complete==true){ 
+						ii=i+1; 
+						callback(i); 
+					} 
+				} 
+			} 
+			img.src=url; 
+		} 
+		function icall(v){ 
+			if(v<c){ 
+				SImage(""+imgarr[v]+"",icall); 
+			} 
+			else if(v>=c){ 
+				i=0; 
+				//location.replace('banner.html');//这里写自己的动作吧， 
+			} 
+		}
+	</script>
+</body>  
