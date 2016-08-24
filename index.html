@@ -20,9 +20,9 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   <!-- jquery && jquery UI -->
-  <link rel="stylesheet" type="text/css" href="lib/jquery_ui/jquery-ui.min.css" media="screen">
-  <script src='lib/jquery-3.1.0.min.js' async></script>
-  <script src='lib/jquery_ui/jquery-ui.min.js' async></script>
+  <link rel="stylesheet" type="text/css" href="./lib/jquery_ui/jquery-ui.min.css" media="screen">
+  <script src='./lib/jquery/jquery-3.1.0.min.js' async></script>
+  <script src='./lib/jquery_ui/jquery-ui.min.js' async></script>
   
   <style>
     .body-bg {
@@ -86,16 +86,70 @@
         float: right;
         height: 4px;
     }
+    /*type.css*/
+    .typed-cursor{
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: xblink 0.7s infinite;
+    }
+    @keyframes xblink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes xblink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-moz-keyframes xblink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    .type-bg{
+      width: 500px;
+      height: 50px;
+      margin: 0 auto;
+      background: rgba(0,0,0,1);
+      color: rgba(0,255,0,1);
+      box-sizing: border-box;
+      border-radius: 15px;
+      border: 1px solid rgba(0,0,0,0.7);
+      cursor: alias;
+    }
+    .type-bg:hover{
+      border: 1px solid rgba(255,0,255,0.7);
+      cursor: pointer;
+    }
+    .type-bg span{
+      margin: 5px;
+      text-align: center;
+      display: inline-block;
+    }
+    .telement h3{
+      color: rgba(255,0,255,0.7);
+      text-align: center;
+      margin-top: -5px;
+    }
+    /**/
   </style>
 </head>
 <body class="body-bg">
   <section class="page-header">
     <h1 class="project-name">xgqfrms</h1>
-    <h2 class="project-tagline">xgqfrms&#39;s offical website of GitHub!</h2>
-    <a href="https://xgqfrms.github.io/xgqfrms/" class="btn"><img src="images/icon.png" alt="QR code" draggable="false"/></a>
+    <!-- <h2 class="project-tagline">xgqfrms&#39;s offical website of GitHub!</h2> -->
+    <div class="type-bg">
+      <span class="telement"></span>
+      <span class="typed-cursor"></span>
+    </div>
+    <a href="https://xgqfrms.github.io/xgqfrms/" class="btn">
+      <img src="images/icon.png" alt="QR code" draggable="false"/>
+    </a>
     <!-- fork && star -->
     <a href="https://github.com/xgqfrms/xgqfrms">
-    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://raw.githubusercontent.com/xgqfrms/HTML5/gh-pages/images/githubribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" data-canonical-src="https://xgqfrms.github.io/HTML5/images/githubribbons/forkme_right_orange_ff7600.png" />
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://raw.githubusercontent.com/xgqfrms/HTML5/gh-pages/images/githubribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" data-canonical-src="https://xgqfrms.github.io/HTML5/images/githubribbons/forkme_right_orange_ff7600.png" />
     </a>
   </section>
   <section class="main-content">
@@ -353,8 +407,19 @@
       })();
     </script>
   <!--  -->
-  <script src="//cdn.trackduck.com/toolbar/prod/td.js" async data-trackduck-id="57bbcbd7ccb84fa3757b2f7a"></script>
+    <script src="//cdn.trackduck.com/toolbar/prod/td.js" async data-trackduck-id="57bbcbd7ccb84fa3757b2f7a"></script>
   <!--  -->
+  <script src="./lib/typed/typed.min.js"></script>
+  <script>
+    $(function(){
+        $(".telement").typed({
+          // strings: ["First sentence.", "Second sentence."],
+          strings: ["Welcome to this website!", "<h3>this is xgqfrms&#39;s offical website of GitHub!</h3>", "Here you can find something that impress you!,", "Have a great day!"],
+          typeSpeed: 0,
+          loop: true,
+        });
+    });
+  </script>
   </div>
 </body>
 </html>
