@@ -12,7 +12,10 @@
         padding: 0;
       }
       #map {
-        height: 100%;
+        height: 300px;
+        witdh: 400px;
+        box-sizing: border-box;
+        border: 1px solid red;
       }
     </style>
 </head>
@@ -22,8 +25,22 @@
 		var map;
 		function initMap() {
 			map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: -34.397, lng: 150.644},
-				zoom: 8
+				center: {lat: 31.233532, lng: 121.5033335,17},
+				zoom: 3
+        /*
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+          查看坐标信息的位置：URL 31.233532,121.5033335,17
+          https://support.google.com/earth/answer/148068?hl=zh-Hans
+          打开 Google 地球。在顶部菜单栏中，点击工具 > 选项。
+          在“3D 视图”标签下的“显示纬度/经度”中，选择如何显示坐标：
+          小数度数：比如 37.7, -122.2
+          度、分、秒：比如 37 25'19.07"N, 122 05'06.24"W
+          度、十进制分：比如 37° 42' 0", -122° 0' 0"
+          通用横轴墨卡托投影：比如 10 S 055974, 4282182
+          点击确定。您会在屏幕右下角看到坐标。
+
+        */ 
 			});
 		}
 	</script>
