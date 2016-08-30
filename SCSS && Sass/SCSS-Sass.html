@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>SCSS-Sass.html</title>
 	<link rel="stylesheet" href="./css/Sass.sass">
 	<link rel="stylesheet" href="./css/SCSS.scss">
+	<!-- http://www.sassmeister.com/ -->
 </head>
 <body>
 	<div>
@@ -184,7 +186,33 @@
 						//在 Sass 中声明了变量之后，就可以在需要的地方直接调用变量。
 
 					局部变量和全局变量：
-						//
+						//全局变量:就是定义在元素外面的变量;
+						//局部变量:就是定义在元素内部的变量。
+						// 除此之外，Sass 现在还提供一个 !global 参数。!global 和 !default 对于定义变量都是很有帮助的。我们之后将会详细介绍这两个参数的使用以及其功能。
+						// 当在局部范围（选择器内、函数内、混合宏内...）声明一个已经存在于全局范围内的变量时，局部变量就成为了全局变量的影子。基本上，局部变量只会在局部范围内覆盖全局变量。
+						
+						$color: orange !default;
+						//定义全局变量(在选择器、函数、混合宏...的外面定义的变量为全局变量)
+						.block {
+						  color: $color;//调用全局变量
+						}
+						em {
+						  $color: red;//定义局部变量（全局变量 $color 的影子）
+						  a {
+						    color: $color;//调用局部变量
+						  }
+						}
+						span {
+						  color: $color;//调用全局变量
+						}
+
+					嵌套-选择器嵌套:
+						选择器嵌套:
+						<img src="SCSS-选择器嵌套.png" alt="SCSS-选择器嵌套.png">
+						属性嵌套:
+						<img src="" alt="">
+						伪类嵌套:
+						<img src="" alt="">
 			</pre>
 		</div>
 	</div>
