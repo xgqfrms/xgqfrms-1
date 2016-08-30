@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>SCSS-Sass.html</title>
-	<link rel="stylesheet" href="./css/Sass.sass">
-	<link rel="stylesheet" href="./css/SCSS.scss">
+	<link rel="stylesheet" href="./css/Sass.css">
+	<link rel="stylesheet" href="./css/SCSS.css">
+	<link rel="stylesheet" href="./css/utf-8.css">
+	<!-- @charset "UTF-8"; -->
 	<!-- http://www.sassmeister.com/ -->
 </head>
 <body>
@@ -208,10 +210,13 @@
 
 					嵌套-选择器嵌套:
 						选择器嵌套:
+						//选择器嵌套为样式表的作者提供了一个通过局部选择器相互嵌套实现全局选择的方法
 						<img src="SCSS-选择器嵌套.png" alt="SCSS-选择器嵌套.png">
 						属性嵌套:
-						<img src="" alt="">
+						//CSS 有一些属性前缀相同，只是后缀不一样，比如：border-top/border-right，与这个类似的还有 margin、padding、font 等属性。
+						<img src="SCSS-属性嵌套.png" alt="SCSS-属性嵌套.png">
 						伪类嵌套:
+						//其实伪类嵌套和属性嵌套非常类似，只不过他需要借助`&`符号一起配合使用。
 						<img src="" alt="">
 			</pre>
 		</div>
