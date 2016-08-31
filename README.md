@@ -103,6 +103,12 @@ http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
 
 ## free software
 
+
+## placeholder images
+### [http://cdn.xgqfrms.xyz/placeholder/x.png](http://cdn.xgqfrms.xyz/placeholder/x.png)
+* ![http://cdn.xgqfrms.xyz/placeholder/x.png](http://cdn.xgqfrms.xyz/placeholder/x.png)
+* 
+
 ### [Creative Commons : CC (知识共享署名 授权许可)](https://creativecommons.org/)
 
 * More coming soon ...
