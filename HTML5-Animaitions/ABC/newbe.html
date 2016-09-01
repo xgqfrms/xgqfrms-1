@@ -9,6 +9,10 @@
 			margin: 0;
 			padding: 0;
 		}
+		html{
+			width: 100%;
+			height: 100%;
+		}
 		body{
 			background: url(./images/bg.png) center top no-repeat;
 			/*
@@ -18,33 +22,123 @@
 			width: 100%;
 			height: 100%;
 		}
+		.mask{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,0.7);
+			display: none;
+			/*do something later*/
+		}
+		.searchTip{
+			width: 980px;
+			height: 700px;
+			position: absolute;
+			left: 50%;
+			margin-left: -490px;
+			background: rgba(0,255,0,0.7);
+			/*display: none;*/
+		}
+		.steps,.steps a,.steps span{
+			position: absolute;
+		}
+		.steps a,.steps span{
+			cursor: pointer;
+		}
+		.steps a{
+			/*position: absolute;*/
+			width: 95px;
+			height: 32px;
+			background: rgba(255,0,255,0.7);
+			border-radius: 5px;
+			/*text-indent: -9999px;
+			overflow: hidden;*/
+			content: url(./images/next.png);
+			opacity: 0;
+		}
+		.steps a:hover{
+			opacity: 1;
+			transition: all 1s easy 0;
+		}
+		.steps span{
+			/*position: absolute;*/
+			width: 30px;
+			height: 30px;
+			/*background: rgba(0,255,255,0.7);*/
+			content: url(./images/close.png);
+			/*display: none;*/
+			opacity: 0;
+		}
+		.steps span:hover{
+			/*display: inline-block;*/
+			opacity: 1;
+			transition: all 1s easy 0;
+		}
+		.step1{
+			background: url(./images/guide11.png);
+			width: 745px;
+			height: 329px;
+			top: 132px;
+			left: -9px;
+			/*display: none;*/
+		}
+		.step1 a{
+			top: 231px;
+			left: 491px;
+			/*
+				? 取消a 默认的操作行为 && JS传播事件、取消事件默认行为、阻止事件传播
+				1. <a href="http://xgqfrms.xyz" onclick="return func()">点击我</a>
+				2. <a href="javascript:;" onclick="check()">点击我</a>
+				3. <a href="javascript:0;" onclick="check()">点击我</a>
+				4. 非IE的用"e.preventDefault();",IE的用"window.event.returnValue = false;"
+			*/
+		}
+		.step1 span{
+			top: 143px;
+			left: 682px;
+		}
 	</style>
 </head>
 <body>
 	<div>
 		<div class="mask" id="mask"></div>
 		<div class="searchTip" id="searchTip">
-			<div class="step1">
-				<a href="">Next Step</a>
-				<span title="Close">Close</span>
+			<div class="steps step1" id="step1">
+				<a href="javascript:0;" onclick="close();">Next Step</a>
+				<span id="span1" title="Close" onclick="close()"></span>
 			</div>
-			<div class="step2">
+			<div class="steps step2">
 				<a href="">Next Step</a>
-				<span title="Close">Close</span>
+				<span id="span2" title="Close"></span>
 			</div>
-			<div class="step3">
+			<div class="steps step3">
 				<a href="">Next Step</a>
-				<span title="Close">Close</span>
+				<span id="span3" title="Close"></span>
 			</div>
-			<div class="step4">
+			<div class="steps step4">
 				<a href="">Next Step</a>
-				<span title="Close">Close</span>
+				<span id="span4" title="Close"></span>
 			</div>
-			<div class="step5">
+			<div class="steps step5">
 				<a href="">Next Step</a>
-				<span title="Close">Close</span>
+				<span id="span5" title="Close"></span>
 			</div>
 		</div>
 	</div>
+	<script>
+		var step = document.getElementById('step1');
+		function close() {
+			step.style.display = "none";
+		}
+		/*
+			JavaScript HTML DOM - Changing CSS
+			http://www.w3schools.com/js/js_htmldom_css.asp
+			document.getElementById(id).style.property=new style
+			DEMO:
+			document.getElementById("p2").style.color = "blue";
+		*/
+	</script>
 </body>
 </html>
