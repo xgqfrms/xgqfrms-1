@@ -211,6 +211,50 @@
     <!-- ************************************************************************************************************** -->
   </section>
   <div class="plugins-scripts">
+  <!-- cookie -->
+  <script>
+    function cookies(){
+        // read cookie
+        var rc = document.cookie.substring(5);
+        if (rc != "www.xgqfrms.xyz") {
+            alert("cookie is empty!"+rc);
+            var D = new Date();
+            D.setDate(D.getDate()+30);
+            //write cookie
+            document.cookie="name=www.xgqfrms.xyz;domain=xgqfrms.xyz;HttpOnly;expire="+D;
+        }else{
+          alert("cookie is:"+rc);
+        }
+    };
+    cookies();
+  </script>
+  <!-- cookie end -->
+  <!-- webStorage -->
+  <script>
+    function lStorage(){
+        //localStorage
+        var ls = localStorage.getItem("ls");
+        if (ls === "localStorage") {
+          console.log("localStorage.getItem success!");
+        } else {
+          ls = localStorage.setItem("ls","localStorage");
+          console.log("localStorage.setItem success!");
+        }
+    };
+    lStorage();
+    function sStorage(){
+        //sessionStorage
+        var ss = sessionStorage.getItem("ss");
+        if (ss === "sessionStorage" ) {
+          console.log("sessionStorage.getItem success!");
+        } else {
+          ss = sessionStorage.setItem("ss","sessionStorage");
+          console.log("sessionStorage.setItem success!");
+        }
+    };
+    sStorage();
+  </script>
+  <!-- webStorage end -->
   <!-- Disqus -->
     <script>
       (function() { // DON'T EDIT BELOW THIS LINE
