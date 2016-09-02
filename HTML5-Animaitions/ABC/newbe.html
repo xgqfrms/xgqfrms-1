@@ -217,5 +217,39 @@
 			var aClose=oSearch.getElementsByTagName('span');
 		}
 	</script>
+	<script>		
+		var name = "www.xgqfrms.xyz"
+		var D = new Date();
+		D.setDate(D.getDate()+30);
+		console.log(D);
+		document.cookie="name=www.xgqfrms.xyz;expire="+D;
+		var cg = document.cookie.substring(5);
+		console.log(cg);
+		//cookie 必须要在服务器端，才能执行写操作！
+		//Firefox 支持本地，cookie的写操作！
+	</script>
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+			// read cookie
+			var rc = document.cookie.substring(5);
+			alert("rc="+rc);
+			//no cookie
+			if (rc!="www.xgqfrms.xyz") {
+				alert("cookie is empty!"+rc);
+				$().show();
+				$().click(function(){
+					var current = $(this).parent();
+					current.hide();
+					current.next().show();
+				})
+				$().click(function(){
+					$().hode();
+				})
+			} else {
+				// 
+			}
+		})
+	</script>
 </body>
 </html>
