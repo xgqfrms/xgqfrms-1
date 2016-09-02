@@ -214,17 +214,22 @@
   <!-- cookie -->
   <script>
     function cookies(){
-        // read cookie
-        var rc = document.cookie.substring(5);
-        if (rc != "www.xgqfrms.xyz") {
-            alert("cookie is empty!"+rc);
-            var D = new Date();
-            D.setDate(D.getDate()+30);
-            //write cookie
-            document.cookie="name=www.xgqfrms.xyz;domain=xgqfrms.xyz;HttpOnly;expire="+D;
-        }else{
-          alert("cookie is:"+rc);
-        }
+      var D = new Date();
+      D.setDate(D.getDate()+30);
+      document.cookie = "author=xgqfrms; website=www.xgqfrms.xyz; domain=xgqfrms.xyz; secure ;expire="+D;
+      /*
+      // read cookie
+      var rc = document.cookie.substring(5);
+      if (rc != "www.xgqfrms.xyz") {
+          alert("cookie is empty!"+rc);
+          var D = new Date();
+          D.setDate(D.getDate()+30);
+          //write cookie
+          document.cookie="name=www.xgqfrms.xyz;domain=xgqfrms.xyz;HttpOnly;expire="+D;
+      }else{
+        alert("cookie is:"+rc);
+      }
+      */
     };
     cookies();
   </script>
