@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object</title>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			justify-content: center;
+			align-content: center;
+			overflow: hidden;
+			/*scroll-behavior: transparent;*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div>
+			<h1>Object</h1>
+		</div>
+	</div>
+	<script>
+		var newObj =  new Object;//instance of Object
+		var newProp = "I'm xgqfrms!" //define property
+		var newFunc = function(name){//define function 
+			var hello ="hello, "+ name +"!";
+			return hello;
+		}
+		newObj.info = newProp;// add property
+		newObj.func = newFunc;// add function
+
+		console.log(newObj.info);// call function
+		// I'm xgqfrms!
+		console.log(newObj.func("ET"));// call function
+		// hello, ET!
+
+		console.log(newObj instanceof Object);
+		//true
+		console.log(typeof(newObj));
+		//"object"
+	</script>
+</body>
+</html>
