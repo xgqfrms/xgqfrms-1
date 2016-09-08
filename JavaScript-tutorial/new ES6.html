@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ES 6</title>
+</head>
+<body>
+	<div>
+		<div>
+			<h1>new ES6</h1>
+		</div>
+	</div>
+	<script>
+		var x = 3;
+		var foo = {
+			x : 2,
+			baz : {
+				x : 1,
+				bar : function(){
+					return this.x;
+				}
+			}
+		}
+		var go = foo.baz.bar;
+		console.log(go());
+		//3
+		console.log(foo.baz.bar());
+		//1
+
+		console.log(go);
+		//function(){ return this.x; }
+		console.log(foo.baz.bar);
+		//function(){ return this.x; }
+		/*
+		首先, bar 是一个 function();
+		调用 function, 使用 FunctionName(); 
+		*/
+		/*
+			考点：
+			1. 闭包
+			2. 对象/数组 {}
+			3. 函数的调用方式，函数的参数
+			FuncName();
+			FuncName(agrs);//parameter
+			4. this (父对象)
+			5. 逗号(,)运算符
+			6. 冒号(:)运算符
+			7. 变量作用域 
+			var x=1;// global/local
+			x=1;  global
+		*/
+	</script>
+</body>
+</html>

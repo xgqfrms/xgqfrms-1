@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>userAgent</title>
+	<!-- http://getbootstrap.com/getting-started/ -->
+	<!-- http://www.w3schools.com/jsref/obj_navigator.asp -->
+	<style>
+		/*Internet Explorer 10 in Windows 8 and Windows Phone 8*/
+		@-ms-viewport { width: device-width; }
+		@-o-viewport { width: device-width; }
+		@viewport { width: device-width; }
+	</style>
+</head>
+<body>
+	<div>
+		<div>
+			<h1>navigator.userAgent.match</h1>
+			<button onclick="getUA_info()" title="Get your UA information!">userAgent</button>
+			<p id="checked"></p>
+		</div>
+		<div>
+			<!-- http://www.whoishostingthis.com/blog/2014/09/04/learn-to-code/ -->
+			<img src="http://www.whoishostingthis.com/blog/wp-content/uploads/2014/08/What-Code-Should-You-Learn.jpg" alt="What Code Should You Learn? - Via Who Is Hosting This: The Blog" width="100%" /><p>Source: <a href="http://www.WhoIsHostingThis.com/blog/" target="_blank">WhoIsHostingThis.com</a></p>
+		</div>
+	</div>
+	<script>
+		// Copyright 2014-2015 Twitter, Inc.
+		// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		  var msViewportStyle = document.createElement('style')
+		  msViewportStyle.appendChild(
+		    document.createTextNode(
+		      '@-ms-viewport{width:auto!important}'
+		    )
+		  )
+		  document.querySelector('head').appendChild(msViewportStyle)
+		};
+
+		function userAgent(){
+			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {// regular expression
+			    var ms = document.createElement('p');// 创建新元素 document.createElement('E');
+			    ms.appendChild(// 追加 子节点  document.appendChild(E);
+			    	document.createTextNode('navigator.userAgent.match')
+			    	// 创建新文本节点 document.createTextNode('text');
+			  	)
+			    document.querySelector('h2').appendChild(ms);
+			    // document.querySelector('E').appendChild(E);
+			}else{
+				ms = document.createElement('p');
+				ms.innerHTML = "yyyyy";
+				// var newms = ms.appendChild('span');
+				//必须是Node 才可以添加子节点 Node.appendChild('span');
+				var newms = document.createElement('span');
+				newms.innerHTML = "zzzzz";
+				ms.appendChild(newms);
+				document.querySelector('h2').appendChild(ms);
+			}
+		};
+		userAgent();
+		function UAcheck(){
+			var ua = navigator.userAgent;
+			/*
+				//Chrome
+				//"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.89 Safari/537.36"
+
+				//Chrome Canary
+				//"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2850.0 Safari/537.36"
+
+				//Edge
+				//"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393"
+
+				//IE
+				//"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; rv:11.0) like Gecko"
+
+				//Firefox
+				//"Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0"
+			*/
+			console.log(ua);
+			var IE = navigator.userAgent.match(/Trident\/7/);//rv:11.0 && Trident/7.0
+			var Edge = navigator.userAgent.match(/Edge\/14/);//Edge/14.14393
+			var Firefox = navigator.userAgent.match(/Firefox\/48/);//rv:48.0 && Firefox/48.0
+			var Chrome = navigator.userAgent.match(/Chrome/);//Chrome/53.0.2785.89
+			var Canary = navigator.userAgent.match(/Chrome\/55/);//Chrome/55.0.2850.0
+			var num = 0;		
+			if (IE == ture) {
+				// substring(x,y);
+				console.log(ua.substring(x,y));
+			} else {
+				// substring(x,y);
+			}
+			if(){
+				// 
+			}
+			switch(num){
+				case 1: Chrome;
+				break;
+				case 2: Chrome;
+				break;
+				case 3: Chrome;
+				break;
+				case 4: Chrome;
+				break;
+				case 5: Chrome;
+				break;
+			}
+		}
+	</script>
+</body>
+</html>
