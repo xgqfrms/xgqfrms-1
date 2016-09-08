@@ -354,9 +354,9 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 			console.log(i); 
 		}); 
 	} 
-```  ​ 
+``` 
 
-```javascript 
+```javascript  
 	for (var i = 0; i < doms.length; i++) { 
 		(function (i) { 
 			doms.eq(i).on('click', function (ev) { 
