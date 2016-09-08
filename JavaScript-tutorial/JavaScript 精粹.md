@@ -327,11 +327,13 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 
 ```javascript 
 	[1, 2, 3, 4].forEach(function(item){ console.log(item); }); 
-``` 
+```  
+
 #### 闭包 
+
 闭包由两部分组成 
 1. 函数 
-2. 环境：函数创建时作用域内的局部变量 
+2. 环境：函数创建时作用域内的局部变量  
 
 ```javascript 
 	function makeCounter(init) { 
@@ -343,7 +345,7 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 	var counter = makeCounter(10); 
 	console.log(counter()); 
 	console.log(counter()); 
-``` 
+```  
 #### 典型错误 
 
 ```javascript 
@@ -352,7 +354,7 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 			console.log(i); 
 		}); 
 	} 
-``` ​ 
+```  ​ 
 
 ```javascript 
 	for (var i = 0; i < doms.length; i++) { 
@@ -362,7 +364,8 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 			}); 
 		})(i); 
 	} 
-``` 
+```  
+
 #### 惰性函数 
 
 ```javascript 
@@ -379,8 +382,10 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 		} 
 	} 
 	var addEvent = eventBinderGenerator(); 
-	``` 
+``` 
+
 #### 柯里化 
+
 一种允许使用部分参数生成函数的方式 ​	
 
 ```javascript 
@@ -396,7 +401,7 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 	console.log(isArray(1)); 
 	console.log(isArray([1, 2, 3])); 
 
-``` 
+```  
 
 ```javascript 
 	function f(n) { 
@@ -414,6 +419,7 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 	var fn = pipe(f, g); 
 	console.log(fn(5)); 
 ``` 
+
 #### 尾递归 
 1. 尾调用是指某个函数的最后一步是调用另一个函数 
 2. 函数调用自身，称为递归 
@@ -426,7 +432,7 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 	} 
 	factorial(5) 
 	// 120 
-``` 
+```  
 #### 但对于尾递归来说，由于只存在一个调用记录，所以永远不会发生"栈溢出"错误 
 
 ```javascript 
@@ -435,7 +441,7 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 			return factorial(n - 1, n * total); 
 		} 
 	factorial(5, 1) // 120 
-``` 
+```  
 #### 柯里化减少参数 
 
 ```javascript 
@@ -451,13 +457,13 @@ JavaScript 中对象是可变 `键控集合` (**keyed collections**)
 	const factorial = currying(tailFactorial, 1); 
 	factorial(5);
 	// 120 
-``` 
+```  
 #### 反柯里化 
 ```javascript 
 	Function.prototype.uncurry = function () { 
 		return this.call.bind(this);
 	}; 
-``` 
+```  
 #### push 通用化 
 
 ```javascript 
