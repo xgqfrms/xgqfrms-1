@@ -71,5 +71,22 @@
 			https://msdn.microsoft.com/zh-cn/library/9b37css7(v=vs.94).aspx
 		*/
 	</script>
+	<script>
+		/*
+			JavaScript面试时候的坑洼沟洄——逗号、冒号与括号
+			http://www.cnblogs.com/dolphinX/p/3529249.html
+		*/
+		var a=(1,2,3);
+		console.log("a="+a);
+		//3
+		x:y:z:1,2,3;
+		//3
+		console.log("x="+x);
+		//3
+		//console.log("y="+y);
+		//Uncaught ReferenceError: y is not defined(…)(anonymous function)
+		//console.log("z="+z);
+		//Uncaught ReferenceError: y is not defined(…)(anonymous function)
+	</script>
 </body>
 </html>
