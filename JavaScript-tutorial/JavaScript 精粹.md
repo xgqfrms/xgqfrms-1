@@ -1,10 +1,25 @@
 # JavaScript 精粹
-
-## 数据类型 
+## 数据类型
 JavaScript 是 **弱类型** 语言，但并不是没有类型，JavaScript可以识别下面 7 种不同类型的值：
 
-#### 基本数据类型 
-1. Boolean 2. Number 3. String 4. null 5. undefined 6. Symbol 
+## 基本数据类型 
+### ECMAScript Data Types and Values
+#### ECMAScript Language Types
+1. Undefined 
+2. Null 
+3. Boolean  
+4. String 
+5. Number  
+6. Symbol 
+7. Object 
+
+#### ECMAScript Specification Types
+1. The List and Record Specification Type
+2. The Completion Record Specification Type
+3. The Reference Specification Type 
+4. The Property Descriptor Specification Type
+5. The Lexical Environment and Environment Record Specification Types
+6. Data Blocks
 
 #### Object 
 1. Array 2. RegExp 3. Date 4. Math 5. ... 
