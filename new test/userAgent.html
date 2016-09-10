@@ -21,9 +21,18 @@
 		</div>
 		<div>
 			<!-- http://www.whoishostingthis.com/blog/2014/09/04/learn-to-code/ -->
-			<img src="http://www.whoishostingthis.com/blog/wp-content/uploads/2014/08/What-Code-Should-You-Learn.jpg" alt="What Code Should You Learn? - Via Who Is Hosting This: The Blog" width="100%" /><p>Source: <a href="http://www.WhoIsHostingThis.com/blog/" target="_blank">WhoIsHostingThis.com</a></p>
+			<img src="http://www.whoishostingthis.com/blog/wp-content/uploads/2014/08/What-Code-Should-You-Learn.jpg" alt="What Code Should You Learn? - Via Who Is Hosting This: The Blog" width="100" height="300"/>
+			<p>
+				Source: <a href="http://www.WhoIsHostingThis.com/blog/" target="_blank">WhoIsHostingThis.com</a>
+			</p>
+		</div>
+		<div>
+			<pre>
+				<!--  -->
+			</pre>
 		</div>
 	</div>
+	<!--
 	<script>
 		// Copyright 2014-2015 Twitter, Inc.
 		// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -58,8 +67,10 @@
 			}
 		};
 		userAgent();
+	</script>
+	-->
+	<script>
 		function UAcheck(){
-			var ua = navigator.userAgent;
 			/*
 				//Chrome
 				//"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.89 Safari/537.36"
@@ -76,35 +87,77 @@
 				//Firefox
 				//"Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0"
 			*/
-			console.log(ua);
+			var ua = navigator.userAgent;
+			console.log("\n"+ua);
+
 			var IE = navigator.userAgent.match(/Trident\/7/);//rv:11.0 && Trident/7.0
 			var Edge = navigator.userAgent.match(/Edge\/14/);//Edge/14.14393
 			var Firefox = navigator.userAgent.match(/Firefox\/48/);//rv:48.0 && Firefox/48.0
 			var Chrome = navigator.userAgent.match(/Chrome/);//Chrome/53.0.2785.89
-			var Canary = navigator.userAgent.match(/Chrome\/55/);//Chrome/55.0.2850.0
-			var num = 0;		
-			if (IE == ture) {
-				// substring(x,y);
-				console.log(ua.substring(x,y));
-			} else {
-				// substring(x,y);
-			}
-			if(){
-				// 
+			var Canary = navigator.userAgent.match(/Chrome\/55/);//Chrome/55.0.2850.0		
+			/*
+				if (IE == ture) {
+					// substring(x,y);
+					console.log(ua.substring(x,y));
+				} else {
+					// substring(x,y);
+				}
+			*/
+			var num = 0;
+			if(Chrome){
+				num = 1;
+			}else if(Canary){
+				num = 2;
+			}else if(Firefox){
+				num = 3;
+			}else if(Edge){
+				num = 4;
+			}else if(IE){
+				num = 5;
+			}else{
+				num = 6;
 			}
 			switch(num){
-				case 1: Chrome;
+				case 1: console.log("\n your browser is Chrome!");
 				break;
-				case 2: Chrome;
+				case 2: console.log("your browser is Canary!");
 				break;
-				case 3: Chrome;
+				case 3: console.log("your browser is Firefox!");
 				break;
-				case 4: Chrome;
+				case 4: console.log("your browser is Edge!");
 				break;
-				case 5: Chrome;
+				case 5: console.log("your browser is IE!");
 				break;
+				case 6: console.log("your browser is SMG!");
 			}
 		}
 	</script>
+	<!-- 
+	<script>
+	    // userAgent check
+		var ua = document.getElementById('ua');
+		if (navigator.userAgent.indexOf('MSIE') > -1) {
+			ua.attachEvent('onclick',onClick); 
+		} else {
+			ua.addEventListener('click',onClick,false); 
+		}
+		// http://video.ch9.ms/ch9/913b/b2f5edde-8e59-4ca8-9805-090165d6913b/ModernJs_mid.mp4
+		// https://developer.microsoft.com/en-us/microsoft-edge/tools/staticscan/?url=http%3A%2F%2Fxgqfrms.xyz
+		// features check (Modernizr)
+		if (navigator.userAgent.indexOf('MSIE') > -1) {
+			ua.attachEvent('onclick',onClick); 
+		} else {
+			ua.addEventListener('click',onClick,false); 
+		}
+	</script>
+	<script>
+		var mq = window.matchMedia("(max-width:360px)");
+		if (mq.matches) {
+			// 绑定 Touch Event
+		} else {
+			// 使用 Hover 等方法
+		}
+	</script>
+	 -->
 </body>
 </html>

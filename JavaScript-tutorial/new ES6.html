@@ -88,5 +88,23 @@
 		//console.log("z="+z);
 		//Uncaught ReferenceError: y is not defined(…)(anonymous function)
 	</script>
+	<script>
+		/*var square = function(n){
+			return n*n;
+		}*/
+		// square(2);
+		// console.log("square(2)=" + square(2));
+		var square = (n) => n*n;
+		/*
+			function(n) === (n)
+			{return n*n;} === n*n;
+		*/
+		var nrs = [1,2,3,4,5,6,7,8,9];
+		var squares = nrs.map(square);
+		console.log("squares=" + squares);
+		// =>
+
+
+	</script>
 </body>
 </html>
