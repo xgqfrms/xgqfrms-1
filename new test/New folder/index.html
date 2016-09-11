@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="http://cdn.xgqfrms.xyz/images/JS-logo.png" type="image/png">
+	<!-- SEO meta -->
+	<meta charset="UTF-8">
+	<!-- <meta name="author" content="xgqfrms"> -->
+	<link rel="author" type="text/plain" href="http://javascript.xgqfrms.xyz/humans.txt" />
+	<!-- <meta name="robots" content="noindex" /> -->
+	<meta name=generator content="Sublime Text 3">
+	<meta name="keywords" content="JavaScrip,最新,官方,标准参考,教程,ECMA-262,ES 6,ES 7,xgqfrms,github,xgqfrms.xyz">
+	<meta name="description" content="javascript.xgqfrms.xyz: JavaScrip 最新官方标准参考教程: ECMA-262, ES6 ,ES7 !">
+	<meta name="application-name" content="javascript.xgqfrms.xyz">
+
+	<meta property="og:site_name" content="JavaScript 最新标准参考教程">
+	<meta property="og:url" content="http://javascript.xgqfrms.xyz">
+	<meta property="og:description" content="学习最新的官方标准的JavaScript, 获取来自JavaScript官方社区最新的JavaScript消息！">
+	<meta property="og:image" content="http://cdn.xgqfrms.xyz/images/JS-logo.png">
+
+	<!-- media query -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://cdn.xgqfrms.xyz/stylesheets/normalize.css" media="screen">
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' >
+	<link rel="stylesheet" type="text/css" href="http://cdn.xgqfrms.xyz/stylesheets/stylesheet.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="http://cdn.xgqfrms.xyz/stylesheets/github-light.css" media="screen">
+	<!-- jquery && jquery UI -->
+	<link rel="stylesheet" type="text/css" href="http://cdn.xgqfrms.xyz/jquery-ui/1.12.0/jquery-ui.min.css" media="screen">
+	<script src='http://cdn.xgqfrms.xyz/jquery/jquery-3.1.0.min.js' async></script>
+	<script src='http://cdn.xgqfrms.xyz/jquery-ui//1.12.0/jquery-ui.min.js' async></script>
+	<title>JavaScrip™ 最新官方标准参考教程:ECMA-262</title>
+	<style>
+		body{
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			justify-content: center;
+			align-content: center;
+			margin: auto 10%;
+			padding: auto  5%;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div>
+			<h1>JavaScrip 最新官方标准参考教程:ECMA-262 ES6,ES7</h1>
+			<img src="http://cdn.xgqfrms.xyz/images/ecma.gif" alt="ecma.gif">
+			<a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank">
+				<h2>Standard ECMA-262</h2>
+				<h3>ECMAScript® 2016 Language Specification </h3>
+				<h5>7th edition (June 2016)</h5>
+			</a>
+		</div>
+		<hr>
+		<div>
+			<h2> ECMA-262 PDF</h2>
+			<a href="http://cdn.xgqfrms.xyz/offical-docs/ECMA/ECMA-262%206th%20edition%20June%202015.pdf" target="_blank"><h3>ECMA-262 6th PDF</h3></a><br>
+			<a href="http://cdn.xgqfrms.xyz/offical-docs/ECMA/ECMA-262%207th%20edition%20June%202016.pdf" target="_blank"><h3>ECMA-262 7th PDF</h3></a>
+		</div>
+		<hr>
+		<div>
+			<h1><mark>More content coming soon ...</mark></h1>
+			<a href="http://javascript.xgqfrms.xyz" target="_blank">
+				<img src="http://cdn.xgqfrms.xyz/logo/icon.png" alt="/icon.png" width="100" height="100"><br>
+				http://javascript.xgqfrms.xyz
+			</a><br>
+		</div>
+	</div>
+</body>
+</html>
+
+<pre>
+	<a href="./www/index.html">cordova demo</a>
+	<!--  -->
+	<div>
+		<!-- cookie -->
+		<script>
+		    function xcookies(){
+		        var D = new Date();
+		        D.setDate(D.getDate()+30);
+		        //write cookie
+		        document.cookie="name=www.xgqfrms.xyz;domain=xgqfrms.xyz;expire="+D;
+		        console.log("document.cookie is ok?");
+		    };
+		    xcookies();
+		    // https://www.w3.org/TR/csp-cookies/
+		    /*
+		    	document.cookie = "key=value";
+		    	document.cookie = "key=value; secure";
+		    	document.cookie = "key=value; domain=example.com";
+		    	document.cookie = "key=value; domain=example.com; secure";
+		    */
+		    /*
+		    	// read cookie
+		    	var rc = document.cookie.substring(5);
+		    	if (rc != "www.xgqfrms.xyz") {
+		    	    alert("cookie is empty!"+rc);
+		    	    var D = new Date();
+		    	    D.setDate(D.getDate()+30);
+		    	    //write cookie
+		    	    document.cookie="name=www.xgqfrms.xyz;domain=xgqfrms.xyz;HttpOnly;expire="+D;
+		    	}else{
+		    	  alert("cookie is:"+rc);
+		    	}
+		    */
+		</script>
+		<!-- webStorage -->
+		<script>
+		  function lStorage(){
+		      //localStorage
+		      var ls = localStorage.getItem("ls");
+		      if (ls === "localStorage") {
+		        console.log("localStorage.getItem success!");
+		      } else {
+		        ls = localStorage.setItem("ls","localStorage");
+		        console.log("localStorage.setItem success!");
+		      }
+		  };
+		  lStorage();
+		  function sStorage(){
+	          //sessionStorage
+	          var ss = sessionStorage.getItem("ss");
+	          if (ss === "sessionStorage" ) {
+	            console.log("sessionStorage.getItem success!");
+	          } else {
+	            ss = sessionStorage.setItem("ss","sessionStorage");
+	            console.log("sessionStorage.setItem success!");
+	          }
+	      };
+		  sStorage();
+		</script>
+		<!-- webStorage end -->
+		<!-- 
+			https://www.base64-image.de/ 
+			CONVERT YOUR IMAGES	TO BASE64 
+		-->
+		<script>
+			/* string
+			var str = 'Quoth the raven:'+'\n\t\"Nevermore!\"';
+			console.log(str);
+			var s = "Quoth the raven:"+"\n\t\"Nevermore!\"";
+			console.log(s);
+			var s = "Quoth the raven:\n\t\"Nevermore!\"";
+			console.log(s);
+			*/
+			/*
+			var num = 10;
+			for(num; num>0;num--){
+			  console.log(num);
+			}
+			while(num>0){
+			  console.log(num);
+			  num--;
+			}
+			*/
+			var numSheep = 4;
+			var monthNumber = 1;
+			var monthsToPrint = 12;
+			/*
+			while(monthsToPrint>0){
+			  numSheep = numSheep * 4;
+			  console.log("There will be "+numSheep+" sheep after "+monthNumber+" month(s)!");
+			  monthNumber++;
+			  monthsToPrint--;
+			}
+			*/
+			/* 改进codes
+			while(monthNumber <= monthsToPrint){
+			  numSheep = numSheep * 4;
+			  console.log("There will be "+numSheep+" sheep after "+monthNumber+" month(s)!");
+			  monthNumber++;
+			}
+			*/
+			/*
+			for(monthNumber; monthNumber <= monthsToPrint; monthNumber++){
+			  numSheep = numSheep * 4;
+			  console.log("There will be "+numSheep+" sheep after "+monthNumber+" month(s)!");
+			}
+			*/
+			var currentGen = 1;
+			var totalGen = 19;
+			var totalMW = 0;
+			while(currentGen<=4){
+				totalMW = currentGen*62;
+				console.log("Generator #"+currentGen+" is on, adding 62 MW, for a total of "+totalMW+" MW!");
+				currentGen++;
+			}
+			for (var i = 5; i <= totalGen; i++) {
+				totalMW = totalMW + 124;
+				console.log("Generator #"+i+" is on, adding 124 MW, for a total of "+totalMW+" MW!");
+			}
+			// 情态
+		</script>
+	</div>
+</pre>
+ 
