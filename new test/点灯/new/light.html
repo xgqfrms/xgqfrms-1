@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>点灯游戏</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+    	.game-box{
+    		position: absolute;
+    		left: 30%;
+    		margin: 300px auto;
+    		box-sizing: border-box;
+    		background: rgba(0,0,0,0.7);
+    		border: 1px solid red;
+    		border-radius: 50px;
+    		width: 500px;
+    		height: 300px;
+    	}
+    	.game-playground{
+    		width: 600px;
+    		heigh: 400px;
+    		border: 1px solid red;
+    		overflow: hidden;
+    		margin-left: 400px;
+    		padding-left: -200px;
+    	}
+    </style>
+</head>
+<body>
+    <div>
+    	<div class="game-box">
+    		<div class="m-menu">
+    		    <div class="game-choice">
+    		    	<select name="level" id="J_level">
+    		    	    <option value="3" selected="selected">新手</option>
+    		    	    <option value="4">入门</option>
+    		    	    <option value="5">初级</option>
+    		    	    <option value="6">中级</option>
+    		    	    <option value="7">高级</option>
+    		    	    <option value="8">专家</option>
+    		    	    <option value="9">大师</option>
+    		    	    <option value="10">大神</option>
+    		    	    <option value="16">超神</option>
+    		    	</select>
+    		    </div>
+    		    <div class="game-button">
+    		    	<button>
+    		    		<a href="javascript:void(0)" class="u-btn z-enable" data-st="0" id="J_play">开始游戏</a>
+    		    	</button>
+    		    	<button>
+    		    		<a href="javascript:void(0)" class="u-btn z-disabled" id="J_pause">暂停游戏</a>
+    		    	</button>
+    		    	<button>
+    		    		 <a href="javascript:void(0)" class="u-btn z-disabled" id="J_stop">结束游戏</a>
+    		    	</button>
+    		    </div>
+    		    <div class="game-info">
+    		    	<label for="">时间：</label>
+    		    	<span class="u-record" id="J_time">0</span>
+    		    	<label for="">已点亮：</label>
+    		    	<span class="u-record" id="J_light">0</span>
+    		    	<label for="">未点亮：</label>
+    		    	<span class="u-record" id="J_black">0</span>
+    		    </div>
+    		</div>
+    	</div>
+    </div>
+    <div>
+    	<div class="game-playground">
+    		<div class="g-gamebox">
+    		    <ul class="m-game" id="J_game"></ul>
+    		</div>
+    	</div>
+    </div>
+    <script src="./js/game.js"></script>
+</body>
+</html>
