@@ -3,35 +3,70 @@
 <head>
 	<meta charset="UTF-8">
 	<title>CSS3-Multi-column</title>
+	<style>
+		img{
+			width: 100px;
+			height: 100px;
+		}
+		.table{
+			margin: 5px;
+			border: 5px solid green;
+		}
+		.table tr{
+			margin: 5px;
+			border: 3px sloid blue;
+		}
+		.table td{
+			margin: 5px;
+			border: 1px dashed red;
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+		}
+	</style>
 </head>
 <body>
-	<div>
-		<img src="../../images/icon.png" alt="icon.png" title="icon.png">
+	<div class="div-multi-columns">
+		<!-- <img src="../../images/icon.png" alt="icon.png" title="icon.png"> -->
 	</div>
-	<table cellspacing="3" cellpadding="2" contenteditable="" contextmenu="" class="">
+	<table cellspacing="3" cellpadding="2" contenteditable="" contextmenu="" class="table">
 		<thead>
 			<tr>
+				<td>thead-td</td>
+				<td>thead-td</td>
 				<td>thead-td</td>
 			</tr>
 		</thead>
 		<tbody>
 			<caption>caption</caption>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>
+					<img src="../../images/icon.png" alt="icon.png" title="icon.png">
+				</td>
+				<td>
+					ppppppppppppppppppppppppppppppppp<br>
+					ppppppppppppppppppppppppppppppppp<br>
+					ppppppppppppppppppppppppppppppppp<br>
+				</td>
+				<td>
+					ppppppppppppppppppppppppppppppppp<br>
+					ppppppppppppppppppppppppppppppppp<br>
+					ppppppppppppppppppppppppppppppppp<br>
+				</td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>
+					?? Are you ready? Special announcement: Write code for a real autonomous vehicle & learn from top industry partners!<br> 
+				</td>
+				<td>
+					?? Are you ready? Special announcement: Write code for a real autonomous vehicle & learn from top industry partners!<br> 
+				</td>
+				<td>
+					?? Are you ready? Special announcement: Write code for a real autonomous vehicle & learn from top industry partners!<br>
+				</td>
 			</tr>
 		</tbody>
 	</table>
+	<!--  -->
 </body>
 </html>
