@@ -5,6 +5,10 @@
 	font-stretch: normal;
 	font-weight: normal;
 	font-style: normal;
+	font-variant: normal;
+	font-kerning: normal;
+	font-feature-settings: normal;
+	font-synthesis: none;
 	unicode-range: U+0-10FFFF;
 }
 /*
@@ -13,3 +17,4 @@
 	font-kerning: ;
 	unicode-bidi: ;
 */
+body { font-family: "FontAwesome","Bitstream Vera Serif Bold", serif }
