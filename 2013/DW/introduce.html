@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="icons/x.ico" type="image/x-icon">
+<meta name="keywords" content="xgqfrms,hnnd" />
+<meta name="description" content="xelite" />
+<title>***简介***</title>
+<script type="text/javascript">
+  var i=10
+  /*本窗口将在10秒后关闭*/
+  function clock(){
+    alert("本窗口将在"+i+"秒后关闭");
+    i=i-1;
+    document.title="***简介******简介******简介***";
+    if(i>0){
+      setTimeout("clock();",1000);
+    }
+    else{
+      self.close();
+    }
+  }
+  clock();
+</script>
+<script type="text/javascript">
+var repeat=1 //输入数字 0 表示只动态显示一次，输入1表示循环滚动标题
+var title=document.title
+var leng=title.length
+var start=1
+function titlemove() {
+  titl=title.substring(start, leng) + title.substring(0, start)
+  document.title=titl
+  start++
+  if (start==leng+1) {
+    start=0
+    if (repeat==0)
+    return
+  }
+  setTimeout("titlemove()",100)
+}
+if (document.title)
+titlemove()
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+
+function MM_changeProp(objId,x,theProp,theValue) { //v9.0
+  var obj = null; with (document){ if (getElementById)
+  obj = getElementById(objId); }
+  if (obj){
+    if (theValue == true || theValue == false)
+      eval("obj.style."+theProp+"="+theValue);
+    else eval("obj.style."+theProp+"='"+theValue+"'");
+  }
+}
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+<style >
+#apdiv1{
+	background-repeat: no-repeat;
+	background-image: url(bg/bg1.JPG);
+	position: absolute;
+	width: 660px;
+	height: 888px;
+	left: 300px;
+	top: 0px;
+}
+#apdiv2{
+	position: absolute;
+	left: 30px;
+	top: 167px;
+	border-color: #da70da;
+	border-width: 1px;
+	width: 280px;
+	height: 140px;
+}
+#apdiv3{
+	position: absolute;
+	left: 29px;
+	top: 430px;
+	border-color: #FFFF00;
+	border-width: 1px;
+	height: 316px;
+	width: 635px;
+}
+#apdiv4{
+	position: absolute;
+	left: 396px;
+	top: 166px;
+	border-color: #da70da;
+	border-width: 1px;
+	width: 212px;
+	height: 202px;
+}
+.td{
+	border:#00FF00;
+	border-width:1px;
+	alignment-adjust:middle;
+	alignment-adjust:central;}
+.font{
+	font-family:"宋体";
+	font-size:18px;
+	color:#CC33CC;
+      }
+</style>
+
+</head>
+
+<body bgcolor="#00ff7f">
+<div id="apdiv1"  class="font">
+  <table id="apdiv2" >
+    <tr class="td">
+      <td width="15" rowspan="7" class="td"></td><td width="76" height="23" class="td">姓名：</td>
+      <td width="156" class="td"> 夏光乾</td>
+    </tr>
+    <tr class="td">
+      <td height="26" class="td">性别:</td>
+      <td class="td">男</td>
+    </tr>
+    <tr>
+      <td height="28" class="td">民族:</td>
+      <td class="td">汉族</td>
+    </tr>
+    <tr>
+      <td height="25" class="td">出生日期:</td>
+      <td class="td">1993.7.7</td>
+    </tr>
+    <tr>
+      <td height="25" class="td">籍贯:</td>
+      <td class="td">河南省永城市</td>
+    </tr>
+    <tr>
+      <td height="25" class="td">个人电话:</td>
+      <td class="td">18103856792</td>
+    </tr><tr>
+      <td height="28" class="td">邮箱:</td>
+      <td class="td">xgqfrms@gmail.com</td>
+    </tr>
+  </table>
+  <table id="apdiv4">
+     <tr>
+      <td height="23" class="td">照片:</td><td rowspan="2" class="td"><img src="imgs/zp.jpg"/></td>
+    </tr>
+    <tr>
+      <td height="110" class="td">&nbsp;</td>
+    </tr>
+  </table>
+  
+  
+  <table id="apdiv3">
+    
+    <tr>
+      <td width="20" rowspan="12" class="td"></td>
+      <td width="91" height="26" class="td">毕业学校:</td>
+      <td width="508" class="td">河南省农业大学</td>
+    </tr>
+    <tr>
+      <td height="26" class="td">院系专业:</td>
+      <td class="td">信息与管理科学学院&nbsp; &nbsp; 计算机科学与技术(软件工程)</td>
+    </tr>
+     <tr>
+      <td height="27" class="td">个人爱好:</td>
+      <td class="td">球类：篮球，网球，羽毛球</td>
+    </tr>
+    <tr>
+      <td height="26" class="td"></td>
+      <td class="td">极限运动：滑板，跳伞，攀岩</td>
+    </tr>
+    <tr><td height="22" class="td"></td>
+      <td class="td">大型3D游戏：使命召唤，战地，幽灵狙击</td>
+    </tr>
+     <tr>
+      <td height="24" class="td">个人特长:</td>
+      <td class="td">外语：英语，韩语</td>
+    </tr>
+    <tr>
+      <td height="24" class="td"></td>
+      <td class="td">网页方面：HTML5，CSS3，JavaScript</td>
+    </tr>
+    <tr><td height="24" class="td"></td>
+      <td class="td">软件编程：C++,java,3dsMax</td>
+    </tr>
+     <tr>
+      <td height="28" class="td">荣誉榜:</td><td class="td">优秀党员，省级三好学生，优秀班干部</td>
+    </tr>
+    <tr><td height="28" class="td"></td><td class="td">Adobe 认证高级设计师，Autodesk 认证高级工程师</td>  
+    </tr>
+    <tr><td height="28" class="td"></td><td class="td"></td>
+    </tr>
+  </table>
+
+</div>
+</body>
+</html>
