@@ -3,6 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<title>3D flip-trigger</title>
+	<link rel="stylesheet" href="trigger.css">
+	<style>
+		.animated_div {
+		    width: 100px;
+		    height: 60px;
+		    color: #ffffff;
+		    position: relative;
+		    font-weight: bold;
+		    padding: 20px 10px 0px 10px;
+		    float: left;
+		    margin: 20px;
+		    margin-right: 50px;
+		    border: 1px solid #888888;
+		    border-radius: 5px;
+		    font: 12px Verdana, Arial, Helvetica, sans-serif;
+		    text-align: center;
+		    vertical-align: middle;
+		    background-color: rad;
+		}
+		.rd{
+		    border: 1px solid #000000;
+		    background: red;
+		    margin: 10px;
+		    opacity: 0.7;
+		}
+		.rd h3{
+		    margin: 12px 0 0 0;
+		    line-height: 150%;
+		}
+		.rd:hover{
+			cursor: pointer;
+		}
+	</style>
 </head>
 <body>
 	<div class="filp">
@@ -15,5 +48,57 @@
 			<h3>back</h3>
 		</div>
 	</div>
+	<!--  -->
+	<div>
+		<div class="animated_div rd rd1" id="rotate1" onclick="rotateDIV()">
+			<h3>2D 旋转</h3>
+		</div>
+		<div class="animated_div rd rd2" id="rotatey1" onclick="rotateYDIV()">
+			<h3>3D 旋转</h3>
+		</div>
+	</div>
+	<script>
+	// http://www.w3school.com.cn/css3/css3_3dtransform.asp
+		<!--
+		var x,y,n=0,ny=0,rotINT,rotYINT;
+		function rotateDIV(){
+			x=document.getElementById("rotate1");
+			clearInterval(rotINT);
+			rotINT=setInterval("startRotate()",10);
+		}
+		function startRotate(){
+				n=n+1;
+				x.style.transform="rotate(" + n + "deg)"
+				// x.style.webkitTransform="rotate(" + n + "deg)"
+				// x.style.OTransform="rotate(" + n + "deg)"
+				// x.style.MozTransform="rotate(" + n + "deg)"
+				if (n==180 || n==360){
+					clearInterval(rotINT)
+					if (n==360){
+						n=0;
+					}
+				}
+			}
+		// 
+		function rotateYDIV(){
+			y=document.getElementById("rotatey1");
+			clearInterval(rotYINT);
+			rotYINT=setInterval("startYRotate()",10);
+		}
+		function startYRotate(){
+			ny=ny+1;
+			y.style.transform="rotateY(" + ny + "deg)";
+			// y.style.webkitTransform="rotateY(" + ny + "deg)"
+			// y.style.OTransform="rotateY(" + ny + "deg)"
+			// y.style.MozTransform="rotateY(" + ny + "deg)"
+			if (ny==180 || ny>=360){
+				clearInterval(rotYINT)
+				if (ny>=360){
+					ny=0;
+				}
+			}
+		}
+		//-->
+	</script>
 </body>
 </html>

@@ -1,1 +1,15 @@
 @import url(flip.css);
+@font-face{
+	font-family: "FontAwesome";
+	src: url();
+	font-stretch: normal;
+	font-weight: normal;
+	font-style: normal;
+	unicode-range: U+0-10FFFF;
+}
+/*
+	font-size: ;
+	font-variant: ;
+	font-kerning: ;
+	unicode-bidi: ;
+*/
