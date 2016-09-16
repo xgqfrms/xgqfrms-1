@@ -23,7 +23,7 @@
 	position: absolute;
 	width: 200px;
 	height: 100px;
-	background: rgba(0,255,0,0.7);
+	background: rgba(0,255,0,1);
 	cursor: pointer;
 	/*transform: perspective(600px)
 			   rotate3d(0,1,0,0deg);*/
@@ -39,7 +39,7 @@
 	position: absolute;
 	width: 200px;
 	height: 100px;
-	background: rgba(255,0,255,0.7);
+	background: rgba(255,0,255,1);
 	cursor: pointer;
 	/*transform: perspective(600px)
 			   rotate3d(0,1,0,-180deg);*/
@@ -123,4 +123,36 @@
 hr{
 	clear: both;
 	float: none;
+}
+span.error{
+	color:red;
+	background: rgba(0,255,255,0.7);
+}
+
+
+.frontx{
+	transform: perspective(600px)
+			   rotate3d(1,0,0,0deg);
+}
+.filps:hover > .frontx{
+	transform: perspective(600px)
+			   rotate3d(1,0,0,120deg);
+}
+
+.backx{
+	transform: perspective(600px)
+			   rotate3d(1,0,0,-120deg);
+}
+.filps:hover > .backx{
+	transform: perspective(600px)
+			   rotate3d(1,0,0,0deg);
+}
+
+.backxx{
+	transform: perspective(600px)
+			   rotate3d(1,0,0,-240deg);
+}
+.filps:hover > .backxx{
+	transform: perspective(600px)
+			   rotate3d(1,0,0,0deg);
 }
