@@ -13,6 +13,9 @@
 <body>
 	<div>
 		<h1>JSON</h1>
+		<div id="out">
+		         <h1>out content:</h1>
+		    </div>
 		<div>
 			<div id="page_logo">
                 <!-- <img src="https://d1n0x3qji82z53.cloudfront.net/ace-logo.png" /> -->
@@ -25,8 +28,8 @@
             </div>
 		</div>
 	</div>
+	<!--json + DOM-->
 	<script>
-		// 
 		// window.onload
 		// src="demo.json"
         var jo = {
@@ -45,6 +48,12 @@
         console.log("\nJSON.parse:age=" + p.age + "\n\n");
         console.log("\nJSON.parse:gender=" + p.gender + "\n\n");
         console.log("\nJSON.parse:length=" + p.length + "\n\n");
+        
+        var div = document.getElementById("out");
+        var out = document.createElement("p");
+        // p.creatTextodeNode(s);
+        out.innerHTML = "S=" +s;
+        div.appendChild(out);
 	</script>
 </body>
 </html>
