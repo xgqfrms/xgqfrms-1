@@ -3,8 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>animation</title>
-	<link rel="stylesheet" href="http://cdn.xgqfrms.xyz/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="http://cdn.xgqfrms.xyz/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
 	<!-- <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui-1.12.0.css"> -->
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../lib/css/animate.css">
 	<style>
 		.HHH{
@@ -74,6 +76,19 @@
     	    $(".btn").addClass("shake")
     	    $("#target1").addClass("btn-primary")
 	    */
+	    /*
+	    	This is slightly different from a normal CSS declaration, 
+	    	because the CSS property and its value are in quotes, 
+	    	and separated with a comma instead of a colon.
+	    	这与一个正常的CSS声明略有不同，因为CSS属性，其值是在引号中，并用逗号，而不是一个冒号分隔。
+
+	    	css === {key:vale ;}
+	    	.css() ==== "key", "value"
+
+	    	// JSON { key:value, key:value, key:value ... }
+	    */
+	    $("#target1").css("color", "red");
+    	//.css()  JSON data?
 	  });
 	</script>
 </body>
