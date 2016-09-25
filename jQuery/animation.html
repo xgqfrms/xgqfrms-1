@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<link rel="stylesheet" href="http://cdn.xgqfrms.xyz/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui-1.12.0.css"> -->
+	<link rel="stylesheet" href="../lib/css/animate.css">
+	<style>
+		.HHH{
+			color: red;
+			/*transform: rotateZ(45deg);*/
+			border: 3px dotted blue;
+			border-radius: 10px;
+			width: 15%;
+			transform: translateX(145px);
+			background: rgba(0,255,0,0.7);
+			transition: all 1s;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<!-- 
+		Only change code above this line.
+	-->
+		<div class="container-fluid">
+		  <h3 class="text-primary text-center">jQuery Playground</h3>
+		  <div class="row">
+		    <div class="col-xs-6">
+		      <h4>#left-well</h4>
+		      <div class="well" id="left-well">
+		        <button class="btn btn-default target" id="target1">#target1</button>
+		        <button class="btn btn-default target" id="target2">#target2</button>
+		        <button class="btn btn-default target" id="target3">#target3</button>
+		      </div>
+		    </div>
+		    <div class="col-xs-6">
+		      <h4>#right-well</h4>
+		      <div class="well" id="right-well">
+		        <button class="btn btn-default target" id="target4">#target4</button>
+		        <button class="btn btn-default target" id="target5">#target5</button>
+		        <button class="btn btn-default target" id="target6">#target6</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- test for jquery -->
+		<div>
+			<h1 class="hhh">HAHAHA!</h1>
+			<h1 class="h1">HAHAHA!</h1>
+		</div>
+	</div>
+	<!-- js -->
+	<!-- <script src="http://cdn.xgqfrms.xyz/jquery/jquery-3.1.0.min.js"></script> -->
+	<!-- https: ajax support -->
+	<!-- <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+	<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+	<!-- <script src="../lib/jquery-ui/jquery-ui-1.12.0.js"></script> -->
+	<!-- animated css -->
+	<script>
+	  $(document).ready(function() {
+	    $("button").addClass("animated bounce");
+	    $(".well").addClass("animated shake");
+	    $("#target3").addClass("animated fadeOut");
+	    $("#target6").addClass("animated fadeOut");
+	    // error animate disable .hhh
+	    // $("h1.hhh").addClass("animated bounce").addClass("HHH");
+	    // onClick & onmouseover/in
+	    $("h1.hhh").addClass("HHH");
+	    // $("h1.hhh").onClick().addClass("animated bounce");
+	  });
+	</script>
+</body>
+</html>
