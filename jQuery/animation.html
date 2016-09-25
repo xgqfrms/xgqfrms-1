@@ -62,13 +62,18 @@
 	  $(document).ready(function() {
 	    $("button").addClass("animated bounce");
 	    $(".well").addClass("animated shake");
-	    $("#target3").addClass("animated fadeOut");
-	    $("#target6").addClass("animated fadeOut");
+	    $("#target3").addClass("animated fadeOut").addClass("btn-primary");
+	    $("#target6").addClass("animated fadeOut").addClass("btn-primary");
 	    // error animate disable .hhh
 	    // $("h1.hhh").addClass("animated bounce").addClass("HHH");
 	    // onClick & onmouseover/in
-	    $("h1.hhh").addClass("HHH");
+	    $("h1.hhh").addClass("HHH").addClass("btn-primary");
 	    // $("h1.hhh").onClick().addClass("animated bounce");
+	    /*
+	    	$("button").addClass("animated")
+    	    $(".btn").addClass("shake")
+    	    $("#target1").addClass("btn-primary")
+	    */
 	  });
 	</script>
 </body>
