@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> factorial </title>
+	<!-- https://www.freecodecamp.com/challenges/factorialize-a-number -->
+	<style>
+		#demo{
+			color: green;
+			background: black;
+			font-weight: 700;
+			font-size: 3em;
+			width: 50px;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>challenges : factorial	阶乘</h1>
+		<pre>
+			5! = 1 * 2 * 3 * 4 * 5 = 120
+		</pre>
+		<div>
+			<h3><mark>factorial 阶乘</mark></h3>
+			<p id="demo"></p>
+		</div>
+	</div>
+	<!-- js -->
+	<script>
+		function factorialize(num) {
+		  var sum = 0;
+		  for (var i = 1; i <= num; i++) {
+		      sum += (i*i); 
+		      // console.log("\ni="+i);
+		      // console.log("\nsum="+sum);
+		  }
+		  return sum;
+		}
+		factorialize(5);
+		document.getElementById("demo").innerHTML = factorialize(5);
+		// console.log("\nfactorialize(5)="+factorialize(5));
+	</script>
+</body>
+</html>

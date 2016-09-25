@@ -19,6 +19,14 @@
 			background: rgba(0,255,0,0.7);
 			transition: all 1s;
 		}
+		mark{
+			/*color: yellow;*/
+			/*background: rgba(0,255,255,0.7);*/
+			background: rgba(255,255,0,0.7);
+			/*
+			override css of bootstrap
+			*/
+		}
 	</style>
 </head>
 <body>
@@ -89,6 +97,43 @@
 	    */
 	    $("#target1").css("color", "red");
     	//.css()  JSON data?
+    	$("button#target1").prop("disabled", true);
+    	/*
+    	.html() that lets you add HTML tags and text within an element. Any content previously within the element will be completely replaced with the content you provide using this function.
+    	//修改内容+css样式
+    	.text() that only alters text without adding tags. In other words, this function will not evaluate any HTML tags passed to it, but will instead treat it as the text you want to replace the existing content with.
+    	//只替换内容
+    	*/
+    	$("#target4").html("<em><mark>#target4</mark></em>");// #target4
+    	$("#target5").text("<em>#target4</em>");// <em>#target4</em>
+    	$("#target4").remove();
+    	/*
+    	appendTo() that allows you to select HTML elements and append them to another element.
+    	*/
+    	$("#target2").appendTo("#right-well");
+    	/*
+    	clone() that makes a copy of an element.
+    	*/
+    	$("#target5").clone().appendTo("#left-well");
+    	/*
+    	parent() that allows you to access the parent of whichever element you've selected
+    	*/
+    	$("#target1").parent().css("background-color", "red");
+    	/*
+    	children() that allows you to access the children of whichever element you've selected.
+    	*/
+    	$("#right-well").children().css("color", "orange");
+    	/*
+    	target:nth-child(n) css selector allows you to select all the nth elements with the target class or element type.
+    	*/
+    	$(".target:nth-child(2").addClass("animated bounce");
+    	/*
+    	:odd 奇数 0,2,4,6,8... (index 0)
+    	selects the second element, fourth element, and so on.
+    	:even 偶数 1,3,5,7... (index 0)
+    	*/
+		$(".target:even").addClass("animated shake");
+		$("body").addClass("animated  hinge");
 	  });
 	</script>
 </body>
