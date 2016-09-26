@@ -42,6 +42,37 @@ function factorialize(num) {
 		return sum;
 	}
 }
-factorialize(5);
-document.getElementById("num").innerHTML = "factorialize(5) === ";
-document.getElementById("demo").innerHTML = factorialize(5);
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+// http://www.w3school.com.cn/tiy/t.asp?f=jseg_regexp_nondigit
+// http://www.w3school.com.cn/jsref/jsref_match.asp
+function outClick(){
+	let iv = document.getElementById('input1').value;
+	console.log(iv);
+	// regex (/^[0,9]*$/)
+	// only num [0,170]
+	var reg = /\D+/gi;// 查找非数字字符。//No char == null
+	// No need ^开头 $结尾
+	// var pattern = new RegExp(reg);
+	var flag = iv.match(reg);//null || x,y,z,....
+	/*
+	match() 方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。
+	该方法类似 indexOf() 和 lastIndexOf()，但是它返回指定的值，而不是字符串的位置。
+	*/
+	// var flag = pattern.exec(iv);
+	console.log(flag);
+	//exec() 方法:返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。
+	// let reg = iv.regex();
+	if (!flag) {
+		document.getElementById("num").innerHTML = "factorialize("+iv+") === ";
+		document.getElementById("demo").innerHTML = factorialize(iv);
+		document.getElementById("out1").innerHTML = "input1 = "+ iv;
+		// alert(iv);
+	} else {
+		alert("Error!\n\""+ iv +"\"\ninput value invalid");
+		document.getElementById("num").innerHTML = "factorialize("+iv+") === ";
+		// document.getElementById("demo").innerHTML = factorialize(iv);
+		document.getElementById("out1").innerHTML = "input1 = "+ iv;
+	}
+}
