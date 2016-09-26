@@ -53,6 +53,17 @@ function outClick(){
 	// regex (/^[0,9]*$/)
 	// only num [0,170]
 	var reg = /\D+/gi;// 查找非数字字符。//No char == null
+
+	/*
+	more adding 
+	if(0-170){
+		cal
+	}else{
+		no cal
+		//alert infinity
+	}
+	*/
+
 	// No need ^开头 $结尾
 	// var pattern = new RegExp(reg);
 	var flag = iv.match(reg);//null || x,y,z,....
@@ -67,12 +78,12 @@ function outClick(){
 	if (!flag) {
 		document.getElementById("num").innerHTML = "factorialize("+iv+") === ";
 		document.getElementById("demo").innerHTML = factorialize(iv);
-		document.getElementById("out1").innerHTML = "input1 = "+ iv;
+		// document.getElementById("out1").innerHTML = "input1 = "+ iv;
 		// alert(iv);
 	} else {
-		alert("Error!\n\""+ iv +"\"\ninput value invalid");
+		// alert("Error!\n\""+ iv +"\"\ninput value invalid");
 		document.getElementById("num").innerHTML = "factorialize("+iv+") === ";
-		// document.getElementById("demo").innerHTML = factorialize(iv);
-		document.getElementById("out1").innerHTML = "input1 = "+ iv;
+		document.getElementById("demo").innerHTML = "<mark>Error!</mark><br>input value invalid";
+		// document.getElementById("out1").innerHTML = "input1 = "+ iv;
 	}
 }
