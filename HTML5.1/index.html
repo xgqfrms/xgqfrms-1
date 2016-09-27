@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5.1 offical template</title>
+	<!-- ARIA landmark roles: accessibility -->
+	<style>
+		main{
+			display: block;
+		}
+	</style>
+</head>
+<body id="body">
+	<header role="banner">
+		<h1>HTML5.1 offical template</h1>
+		<h3>xgqfrms™ && xgqfrms<sup>™</sup> xgqfrms<sup>TM</sup> xgqfrms<sub>TM</sub></h3>
+		<nav role="navigation">
+			<ul>
+				<li>Home</li>
+				<li>HTML5</li>
+				<li>CSS3</li>
+				<li>JavaScript(ES 6)</li>
+				<li>Blogs</li>
+				<li>Projects</li>
+				<li>About</li>
+				<select name="" id="">
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+				</select>
+			</ul>
+		</nav>
+	</header>
+	<main role="main">
+		<h1>main content</h1>
+		<section>
+			<article>
+				<h1>HTML5 Semantic Elements: Semantic Elements in HTML5</h1>
+				<a href="http://www.w3schools.com/html/html5_semantic_elements.asp">http://www.w3schools.com/html/html5_semantic_elements.asp</a>
+				<h3>article  nest  section ??? asection nest article</h3>
+				<h1>关于article与section嵌套问题，视情况而定！不存在绝对的优先级！</h1>
+				<pre>
+					Nesting &lt;article&gt; in &lt;article&gt; or Vice Versa?
+					The <&lt;article&gt; element specifies independent, self-contained content.
+
+					The &lt;section&gt; element defines section in a document.
+
+					Can we use the definitions to decide how to nest those elements? No, we cannot!
+
+					So, on the Internet, you will find HTML pages with &lt;section&gt; elements containing &lt;article&gt; elements, and &lt;article&gt; elements containing &lt;sections> elements.
+
+					You will also find pages with &lt;section&gt; elements containing &lt;section&gt; elements, and &lt;article&gt; elements containing &lt;article&gt; elements.
+
+					Example for a newspaper: The sport articles in the sport section, may have a technical section in each article.
+				</pre>
+			</article>
+		</section>
+		<section>
+			<form action="" method="post">
+			<!-- http://www.w3schools.com/tags/tag_form.asp -->
+				<fieldset>
+					<legend>Personalia:</legend>
+					<label for="">Name:</label>
+					<input type="text" placeholder="name" required=""><br>
+					<label for="">Email:</label>
+					<input type="email" placeholder="email" required=""><br>
+					<input type="submit" value="submit">
+				</fieldset>
+			</form>
+			<form action="">
+				<label for="">datalist</label>
+				<input list="browsers">
+				<datalist id="browsers">
+					<option value="Internet Explorer"/>
+					<option value="Firefox"/>
+					<option value="Chrome"/>
+					<option value="Opera"/>
+					<option value="Safari"/>
+					<!-- error
+					<option value="">GitHub</option>
+					 -->
+				</datalist>
+				<label for="">datalist</label>
+				<input type="text" list="socail-media">
+				<datalist  id="socail-media">
+					<option value="GitHub"></option>
+					<option value="Linkedin"></option>
+					<option value="Facebook"></option>
+					<option value="Twitter"></option>
+					<option value="Pinterest"></option>
+					<option value="Youtube"></option>
+					<option value="Google"></option>
+					<option value="Microsoft"></option>
+					<option value="Linux"></option>
+					<option value="Apache"></option>
+				</datalist>
+			</form>
+		</section>
+		<article>
+			<h1>post</h1>
+			<p>text</p>
+			<p>
+				<figure>
+					<img src="https://www.w3.org/html/logo/img/html5-topper.png" alt="html5-topper.png">
+					<figcaption>https://www.w3.org/html/logo/img/html5-topper.png</figcaption>
+				</figure>
+			</p>
+			<h3>wbr</h3>
+			<p>this is a very long long long long long ,very long long long long long, very long long long long long , paragraph .To learn AJAX, you must be familiar with the XML<wbr/>Http<wbr/>Request Object.</p>
+			<p>this is a very long long long long long ,very long long long long long, very long long long long long , paragraph .To learn AJAX, you must be familiar with the XMLHttpRequest Object.</p>
+			<aside>
+				<ul>
+					<li><a href="#">links</a></li>
+				</ul>
+			</aside>
+		</article>
+		<article>
+			<h1>Comment</h1>
+			<p>text</p>
+			<!-- bdi -->
+			<ul>
+				<li>
+					User<bid>hrefs</bid>: 60 points
+				</li>
+				<li>
+					User<bid>jdoe</bid>: 80 points
+				</li>
+				<li>
+					User<bid>إيان</bid>: 90 points
+				</li>
+			</ul>
+		</article>
+		<article>
+			<h1>video & audio</h1>
+			<p>video & audio</p>
+			<div>
+				<video src="URL/movie.mp4" type="video/mp4"></video>
+				<!-- poster -->
+				<h1>video & source & track</h1>
+				<video width="320" height="240" controls loop="" autoplay="" autobuffer="" accesskey="v" poster="http://www.webmfiles.org/wp-content/uploads/2010/05/webm-file.jpg" preload="auto" played="" muted="" media="screen and (min-width:320px)">
+					<source src="http://video.webmfiles.org/elephants-dream.webm" type="video/webm" default>
+					<source src="URL/movie.ogg" type="video/ogg">
+					<source src="URL/movie.mp4" type="video/mp4">
+					<track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" default></track>
+					<track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian"></track>
+					<mark>Your browser does not support the video tag.</mark>
+				</video>
+				<pre>
+					kind: 
+
+					captions
+					chapters
+					descriptions
+					metadata
+					subtitles
+
+					For video:
+						video/ogg
+						video/mp4
+						video/webm
+					For audio:
+						audio/ogg
+						audio/mpeg
+				? Wav	audio/wav
+					Look at	<a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA Media Types</a> for a complete list of standard media types
+				</pre>
+				<h3>audio</h3>
+				<audio src="http://www.w3schools.com/tags/horse.ogg" type="audio/ogg" controls=""></audio><br/>
+				<audio controls="" autoplay="" accesskey="a" loop="" lang="" played="" preload="auto" muted="">
+					<source src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Demo_chorus.ogg" type="audio/ogg">
+					<source src="horse.mp3" type="audio/mpeg">
+					<mark>Your browser does not support the audio element.</mark>
+				</audio>
+				<h1>HTML &lt;source&gt; media Attribute : media="screen and (min-width:320px)"</h1>
+				<!-- http://www.w3schools.com/tags/att_source_media.asp -->
+			</div>
+		</article>
+		<article>
+			<h1>pre code</h1>
+			<pre>
+				<code class="language-javscript">
+					let x = 0;
+					const PI = 3.1415926;
+				</code>
+			</pre>
+			<pre>
+				<samp>
+					<span class="prompt">jdoe@mowmow:~$</span>
+					<kbd>ssh demo.example.com</kbd>
+					Last login: Tue Apr 12 09:10:17 2005 from mowmow.example.com on pts/1
+					Linux demo 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189 #1 SMP Tue Feb 1 11:22:36 PST 2005 i686 unknown
+					<span class="prompt">jdoe@mowmow:~$</span>
+					<span class="cursor">_</span>
+				</samp>
+			</pre>
+		</article>
+		<article>
+			<h1>canvas && svg</h1>
+			<canvas id="myCanvas"></canvas>
+			<svg>
+				<!-- svg -->
+			</svg>
+		</article>
+		<article>
+			<h1>bdo && dialog && details</h1>
+			<p>
+				<bdo dir="ltr">hello, world!</bdo><br/>
+				<bdo dir="rtl">hello, world!</bdo>
+				<pre>
+					Default CSS Settings:
+					bdo { 
+					    unicode-bidi: bidi-override;
+					}
+				</pre>
+			</p>
+			<p>
+				<!-- <dialog>just can be used on Chrome!</dialog> -->
+			</p>
+			<div>
+				<a href="#">read less</a>
+				<!-- open: An open/visible <details> element: -->
+				<details open="">
+					<summary>details of this article</summary>
+					<p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+				</details>
+				<a href="#">read more</a>
+				<details>
+					<summary>details of this article</summary>
+					<p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+				</details>
+			</div>
+		</article>
+		<section>
+			<h1>ruby</h1>
+			<p>
+				<ruby>
+				 漢 <rt> ㄏㄢˋ </rt>
+				</ruby>
+			</p>
+			<h1>input type</h1>
+			<pre>
+				type	
+
+				button
+				checkbox
+				color
+				date 
+				datetime 
+				datetime-local 
+				email 
+				file
+				hidden
+				image
+				month 
+				number 
+				password
+				radio
+				range 
+				reset
+				search
+				submit
+				tel
+				text
+				time 
+				url
+				week
+			</pre>
+			<h1>http://www.w3schools.com/tags/tag_time.asp</h1>
+			<pre>
+				<p>We open at <time>10:00</time> every morning.</p>
+
+				<p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+			</pre>
+		</section>
+		<section>
+			<h1>HTML menuitem Tag</h1>
+			<!-- http://www.w3schools.com/tags/tag_menuitem.asp -->
+			<!-- http://www.w3schools.com/tags/tag_menu.asp -->
+			<menu type="context" id="mymenu">
+			  <menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png">
+			  </menuitem>
+			  <menu label="Share on...">
+			    <menuitem label="Twitter" icon="ico_twitter.png"
+			    onclick="window.open('//twitter.com/intent/tweet?text='+window.location.href);">
+			    </menuitem>
+			    <menuitem label="Facebook" icon="ico_facebook.png"
+			    onclick="window.open('//facebook.com/sharer/sharer.php?u='+window.location.href);">
+			    </menuitem>
+			  </menu>
+			  <menuitem label="Email This Page"
+			  onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+			</menu>
+		</section>
+		<section>
+			<article>
+			  <header>
+			    <h1>Most important heading here</h1>
+			    <h3>Less important heading here</h3>
+			    <p>Some additional information here</p>
+			  </header>
+			  <p>Lorem Ipsum dolor set amet....</p>
+			</article>
+		</section>
+	</main>
+	<!--  sidebar -->
+	<aside role="complementary">
+		<select name="" id="">
+			<option value="">link ?</option>
+			<option value="">link ?</option>
+			<option value="">link ?</option>
+			<option value="">link ?</option>
+			<option value="">link ?</option>
+			<option value="">link ?</option>
+			<option value="">link ?</option>
+		</select>
+		<ul>
+			<li><a href="">friends links</a></li>
+			<li><a href="">tools</a></li>
+			<li><a href="">wiki</a></li>
+		</ul>
+	</aside>
+	<footer>
+		<p>Created by: xgqfrms && webgeeker <mark>Powered by HTML5+CSS3+JavaScript...</mark></p>
+		<p>Contact information: <a href="mailto:xgqfrms@xgqfrms.xyz">xgqfrms@xgqfrms.xyz</a></p>
+		<p><small>Copyright &copy; 2016 xgqfrms</small></p>
+		<a href="#">sitemap</a>
+		<a href="#body">back to top</a>
+		<!-- about me -->
+		<div>
+			<address>
+			Written by <a href="mailto:xgqfrms@xgqfrms.xyz">xgqfrms</a>.<br> 
+			Visit us at:<br>
+			xgqfrms.xyz<br>
+			Box 888, Pudong New District<br>
+			China
+			</address>
+		</div>
+	</footer>
+	<script>
+		/*HTML5shiv: https://github.com/afarkas/html5shiv */
+		document.createElement('main');
+	</script>
+	<script>
+		/*canvas*/
+		var canvas = document.getElementById("myCanvas");
+		var ctx = canvas.getContext("2d");
+		ctx.fillStyle = "#FF0000";
+		ctx.fillRect(0, 0, 80, 80);
+	</script>
+</body>
+</html>

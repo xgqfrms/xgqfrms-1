@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Online or offline?</title>
+	<!-- https://html.spec.whatwg.org/multipage/semantics.html#sections -->
+</head>
+<body  ononline="update(true)"
+       onoffline="update(false)"
+       onload="update(navigator.onLine)">
+	<div>
+		<p>You are: <span id="status">(Unknown)</span></p>
+	</div>
+	<script>
+		function update(online) {
+			// document.getElementById('status').textContent = online ? 'Online' : 'Offline';
+			let x = document.getElementById('status').textContent = online ? 'Online' : 'Offline';
+			alert("You are: " + x);
+		}
+	</script>
+</body>
+</html>
