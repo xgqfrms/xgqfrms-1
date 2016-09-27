@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Morphing Play-Pause Button</title>
+	<!-- http://thenewcode.com/1112/Make-a-Morphing-Play-Pause-Button-for-HTML5-Video-with-SVG -->
+	<style>
+		.svg1, .svg2, .svg3{
+			width: 300px;
+			height: 300px;
+			border: 1px solid red;
+			float: left;
+			margin-left: 10px;
+		}
+		/*964px ?*/
+		* { box-sizing: border-box; }
+		#atlanticlight { 
+		    position: relative;
+		    font-size: 0; width: 100%; 
+		}
+		#atlanticlight, #atlanticlight video, #atlanticlight button { 
+		    width: 100%; height: auto;
+		}
+		#atlanticlight button svg { 
+		    width: 50%; margin: 0 auto;
+		    fill: #fff; padding: 3rem;
+		    transition: .6s opacity;
+		}
+		#atlanticlight video, #atlanticlight button { 
+		    position: absolute; top: 0; 
+		}
+		#atlanticlight button { 
+		    background: transparent; 
+		    outline: none; border: none;
+		    cursor: pointer;
+		}
+		#playpause { display: none; }
+		.playing { opacity: 0; }
+	</style>
+</head>
+<body>
+	<div>
+		<div>
+			<h1>svg animate: Morphing Play-Pause Button原理：</h1>
+			<div>
+				<h3>三角形(5 points )：三角形 => 矩形</h3>
+				1             1  1
+                  1
+				    1    =>      1
+                  1
+				1             1  1
+				<h3>梯形(4 points )：梯形 => 矩形</h3>
+				1             1  1
+				   1               
+				         =>
+				   1               
+				1             1  1
+			</div>
+			<pre>
+				steps:
+				1.
+					made a triangle in Adobe Illustrator 
+					Note that the right triangle has five points, rather than four, to retain the arrow shape;
+					the right most three points are in separate positions, but they could be overlapped with each other. 
+				2.
+					 using &lt;animate&gt; elements to animate each &lt;polygon&gt; to its new state. By dragging around the existing points to form two vertical “bars”.
+				3.
+					begin="indefinite" stops the animation from executing immediately 
+				4.
+					 xlink:href : referencing the elements they influence via xlink:href values.
+					 fill="freeze" is equivalent to animation-direction: 
+					 it means that the animation plays through once, and stops at its final state. 
+				5.
+					we want to animate it back to play mode. 
+					Unfortunately, SVG doesn’t have a simple reverse mode; 
+					instead, we’ll create a second target state that returns the morphed elements back to their original form:
+				6.
+					The SVG is set inside a &lt;button&gt; element for easy access:
+				7.
+					Setting up includes setting the SVG to invisible by default; it will be made visible by the JavaScript to follow:
+					The transition on the SVG, applied via a class, will enable it to be faded in and out as we add and remove the class with classList.
+				...
+			</pre>
+		</div>
+	</div>
+	<div class="svg1">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="playpause1" xmlns:xlink="http://www.w3.org/1999/xlink">
+		    <title>Play</title>
+		    <polygon points="12,0 25,11.5 25,39 12,50" id="leftbar1"/>
+		    <polygon points="25,11.5 39.7,24.5 41.5,26 39.7,27.4 25,39" id="rightbar1"/>
+		</svg>
+	</div>
+	<div class="svg2">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="playpause2" xmlns:xlink="http://www.w3.org/1999/xlink">
+		    <title>Play</title>
+		    <polygon points="12,0 25,11.5 25,39 12,50" id="leftba2r"/>
+		    <polygon points="25,11.5 39.7,24.5 41.5,26 39.7,27.4 25,39" id="rightbar2"/>
+		    <!-- animate -->
+		    <animate to="7,3 19,3 19,47 7,47" id="lefttopause2" xlink:href="#leftbar2" 
+		attributeName="points" dur=".3s" fill="freeze" />
+		    <animate to="31,3 43,3 43,26 43,47 31,47" id="righttopause2" xlink:href="#rightbar2" 
+		attributeName="points" dur=".3s" fill="freeze" />
+		    <!-- <animate to="7,3 19,3 19,47 7,47" id="lefttopause2" xlink:href="#leftbar2" 
+		attributeName="points" dur=".3s" begin="indefinite" fill="freeze" />
+		    <animate to="31,3 43,3 43,26 43,47 31,47" id="righttopause2" xlink:href="#rightbar2" 
+		attributeName="points" dur=".3s" begin="indefinite" fill="freeze" /> -->
+		</svg>
+	</div>
+	<div class="svg3">
+		<div id="atlanticlight">
+			<video controls>
+				<source src="http://thenewcode.com/assets/videos/atlantic-light.webm">
+				<source src="http://thenewcode.com/assets/videos/atlantic-light.mp4">
+			</video>
+			<button>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="playpause" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<title>Play</title>
+					<polygon points="12,0 25,11.5 25,39 12,50" id="leftbar" />
+					<polygon points="25,11.5 39.7,24.5 41.5,26 39.7,27.4 25,39" id="rightbar" />
+
+					<animate to="7,3 19,3 19,47 7,47" id="lefttopause" xlink:href="#leftbar" attributeName="points" dur=".3s" begin="indefinite" fill="freeze" />
+					<animate to="12,0 25,11.5 25,39 12,50" id="lefttoplay" xlink:href="#leftbar" attributeName="points" dur=".3s" begin="indefinite" fill="freeze" />
+
+					<animate to="31,3 43,3 43,26 43,47 31,47" id="righttopause" xlink:href="#rightbar" attributeName="points" dur=".3s" begin="indefinite" fill="freeze" />
+					<animate to="25,11.5 39.7,24.5 41.5,26 39.7,27.4 25,39" id="righttoplay" xlink:href="#rightbar" attributeName="points" dur=".3s" begin="indefinite" fill="freeze" />
+				</svg>
+			</button>
+		</div>
+	</div>
+	<script>
+		var atlanticlight = document.querySelector("#atlanticlight video"),
+		playpause = document.getElementById("playpause"),
+		lefttoplay = document.getElementById("lefttoplay"),
+		righttoplay = document.getElementById("righttoplay"),
+		lefttopause = document.getElementById("lefttopause"),
+		righttopause = document.getElementById("righttopause");
+
+		atlanticlight.removeAttribute("controls");
+		playpause.style.display = "block";
+		playpause.addEventListener('click',function(){
+		    if (atlanticlight.paused) {
+		        atlanticlight.play();
+		        playpause.classList.add("playing");
+		        lefttopause.beginElement();
+		        righttopause.beginElement();
+		    } else { 
+		        atlanticlight.pause();
+		        lefttoplay.beginElement();
+		        righttoplay.beginElement();
+		        playpause.classList.remove("playing");
+		    }
+		},false);
+	</script>
+</body>
+</html>
