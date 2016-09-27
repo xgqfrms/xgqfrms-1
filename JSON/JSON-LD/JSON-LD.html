@@ -3,12 +3,59 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JSON-LD</title>
-	<!--  -->
+	<!-- http://www.lesliesikos.com/json-ld/ -->
+	<!-- http://www.lesliesikos.com/resource-description-framework/ -->
+	<!-- https://www.w3.org/TR/json-ld-api/ -->
+	<!-- http://www.lesliesikos.com/mastering-structured-data-on-the-semantic-web/ -->
 </head>
 <body>
 	<div>
 		<div>
 			<h1>JSON-LD</h1>
+			<h3>
+				<mark>JavaScript Object Notation for Linked Data (JSON-LD)</mark>
+				is described as JavaScript code rather than markup elements and attributes.
+			</h3>
+			<pre>
+				demo1:
+
+				&lt;script type="application/ld+json"&gt;
+				{
+				  "@context": "http://schema.org",
+				  "@type": "Person",
+				  "image": "johnsmith.jpg",
+				  "name": "John Smith",
+				  "url": "http://www.johnsmith.com"
+				}
+				&lt;/script&gt;
+			</pre>
+			<pre>
+				demo2:
+
+
+				[
+				  {
+				    "@type": [
+				      "http://schema.org/Person"
+				   ],
+				    "http://schema.org/image": [
+				      {
+				        "@id": "http://www.johnsmith.com/images/johnsmith.jpg"
+				      }
+				   ],
+				    "http://schema.org/name": [
+				      {
+				        "@value": "John Smith"
+				      }
+				   ],
+				    "http://schema.org/url": [
+				      {
+				        "@id": "http://www.johnsmith.com"
+				      }
+				   ]
+				  }
+				]
+			</pre>
 		</div>
 	</div>
 </body>
