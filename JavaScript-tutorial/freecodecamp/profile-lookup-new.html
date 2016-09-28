@@ -56,13 +56,18 @@
 		// Only change code below this line
 		  var a=false,b=false,x;
 		  for(var i=0;i < contacts.length;i++){
-		    if(firstName === contacts[i].firstName){
+		    if(firstName === contacts[i].firstName && contacts[i].hasOwnProperty(prop) === true){
 		      a = true;
-		    }
-		//     else error
-		    if(contacts[i].hasOwnProperty(prop) === true){
 		      b = true;
 		      x = contacts[i][prop];
+		      //only when both true,  we need to get values
+		    }
+		//     else error
+		    if(firstName === contacts[i].firstName === true){
+		      a = true;
+		    }
+		    if(contacts[i].hasOwnProperty(prop) === true){
+		      b = true;
 		    }
 		  }
 		  if( a === true  && b === true){
