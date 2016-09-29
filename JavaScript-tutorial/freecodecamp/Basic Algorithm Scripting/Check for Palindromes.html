@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Check for Palindromes</title>
+	<!-- https://www.freecodecamp.com/challenges/check-for-palindromes -->
+</head>
+<body>
+	<div>
+		<h1>Check for Palindromes</h1>
+	</div>
+	<script>
+		function palindrome(str) {
+		  // Good luck!
+		  var b =false;
+		  var reg = /\w*/;
+		  var s  = str.toLowerCase();
+		  //var n =  s.filter(reg);//TypeError: s.filter is not a function
+		  var n =  s.replace(reg);/
+		  //You'll need to remove all non-alphanumeric characters
+
+		  if(n === reverseString(n)){
+		    b = true;
+		  }else{
+		    b = false;
+		  }
+		  return b;
+		}
+		function reverseString(str) {
+
+		  var a = [];//array
+		  for (var i = 0; i < str.length; i++) {
+			a[i] = str[i];
+			// console.log("a[i]="+a[i]);
+		  }
+		  a.reverse();
+		  // join()
+		  str = a.join('');
+		  return str;
+		}
+
+		palindrome("eye");
+	</script>
+</body>
+</html>

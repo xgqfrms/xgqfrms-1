@@ -20,6 +20,20 @@
 	<script>
 		// reverse
 		// arr.reverse()
+		function reverseString(str) {
+
+		  var a = [];//array
+		  for (var i = 0; i < str.length; i++) {
+			a[i] = str[i];
+			// console.log("a[i]="+a[i]);
+		  }
+		  a.reverse();
+		  // join()
+		  str = a.join('');
+		  return str;
+		}
+
+		reverseString("hello");
 	</script>
 </body>
 </html>
