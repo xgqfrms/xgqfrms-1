@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title Case a Sentence</title>
+	<!-- https://www.freecodecamp.com/challenges/title-case-a-sentence -->
+	<!-- http://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript -->
+</head>
+<body>
+	<div>
+		<h1>Title Case a Sentence</h1>
+	</div>
+	<script>		
+		function titleCase(str) {
+		   var re = /\s+/;
+		   var nameList = str.split(re);
+		   console.log("nameList.length =" + nameList.length);
+		   var max=[];
+		   for(var i=0;i < nameList.length ;i++){
+		            // var s = nameList[i][0].toUpperCase();
+		            //console.log(" nameList[i][0] ="+ nameList[i][0]);
+		            var s = nameList[i][0];//String 是 Array
+		            //******************************************************************************************************
+		            // 字符串的不可变性 ： 可以覆盖，不可以修改
+		            //？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+		            nameList[i][0] = s.toUpperCase();//字符串，才好使!
+		            console.log("s.toUpperCase() =" + s.toUpperCase());
+		            console.log(" nameList[i][0] ="+ nameList[i][0]);
+		            
+
+				    max[i] = nameList[i];   
+				    console.log("max[i] =" + max[i]); 
+			}
+		    console.log("max =" + max);
+		    max.join("");
+			console.log("max =" + max);
+			return max;
+			//return 发生中断,后面的js语句是不会被执行的！
+		}
+		titleCase("I'm a little tea pot");
+	</script>
+</body>
+</html>
