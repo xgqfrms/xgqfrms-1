@@ -132,9 +132,10 @@
 		</section>
 		<section>
 			<div>
-				<form action="form.html" method="GET">
+				<form action="form.php" method="GET">
 					<label for="">datalist</label>
-					<input type="text" list="socail-media" size="50">
+					<!-- $_GET : name="sm-name" -->
+					<input type="text" list="socail-media" size="50" name="sm-name" title="sm-title">
 					<!-- datalist:  <option value="Value">GitHub</option>-->
 					<!-- select :  <option value="GitHub">Value</option> -->
 					<datalist  id="socail-media">
