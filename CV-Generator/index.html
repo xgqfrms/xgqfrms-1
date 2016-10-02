@@ -99,20 +99,37 @@
 			color: red;
 			transform: scale(3);
 			transition: all 1s linear 0s;
+			width: 32px;
+			height: 32px;
+		}
+		.main .section3 div.rating{
+			unicode-bidi: bidi-override;
+			direction: rtl;
+			/*direction: ltr;*/
+			background-color: rgba(255,255,255,0.7);
+			width: 100px;
+			padding: 0 15px;
+			align-content: center;
+			box-sizing: border-box;
 		}
 		.main .section3 div.rating span{
 			cursor: pointer;
-			background-color: rgba(255,255,255,0.7);
+			/*background-color: rgba(255,255,255,0.7);*/
+			color: rgba(0,255,0,0.7);
 		}
 		/*
 		content:'\2606'; === &#9734; === ☆;
 		content:'\2606'; === &#9733; === ★; 
+		https://css-tricks.com/star-ratings
 		*/
-		.main .section3 div.rating span:hover:before{
-			cursor: pointer;
-			/*background-color: rgba(255,255,0,0.7);*/
+		.main .section3 div.rating > span:hover{
+			cursor: pointer;			
+		}
+		.main .section3 div.rating > span:hover:before, div.rating > span:hover ~ span:before{
 			content: "\2605";
 			position: absolute;
+			color: rgba(255,255,0,0.7);
+			transition: all 0.5s;
 		}
 	</style>
 </head>
