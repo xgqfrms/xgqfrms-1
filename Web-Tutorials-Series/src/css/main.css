@@ -1,0 +1,55 @@
+/* main.css */
+.main{
+	/*background: rgba(255,0,255,0.7);*/
+	background: rgba(0,0,0,0.5);
+	width: 60%;
+	margin: auto 5%;
+	float: left;
+}
+.main .section0 > img{
+	width: 100%;
+}
+.main .section1 div.qr li i{
+	/*background: black;*/
+	color: green;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+.main .section1 div.qr li i:hover{
+	/*background: url(./images/qrcode.png) no-repeat;*/
+	color: red;
+	transform: scale(3);
+	transition: all 1s linear 0s;
+	width: 32px;
+	height: 32px;
+}
+.main .section-star div.rating{
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	/*direction: ltr;*/
+	background-color: rgba(255,255,255,0.7);
+	width: 100px;
+	padding: 0 15px;
+	align-content: center;
+	box-sizing: border-box;
+}
+.main .section-star div.rating span{
+	cursor: pointer;
+	/*background-color: rgba(255,255,255,0.7);*/
+	color: rgba(0,255,0,0.7);
+}
+/*
+	content:'\2606'; === &#9734; === ☆;
+	content:'\2606'; === &#9733; === ★; 
+	https://css-tricks.com/star-ratings
+*/
+.main .section-star div.rating > span:hover{
+	cursor: pointer;			
+}
+.main .section-star div.rating > span:hover:before, div.rating > span:hover ~ span:before{
+	content: "\2605";
+	position: absolute;
+	color: rgba(255,255,0,0.7);
+	transition: all 0.5s;
+}

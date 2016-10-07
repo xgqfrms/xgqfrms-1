@@ -1,0 +1,20 @@
+/* aside.css */
+.aside{
+	/*border: 1px solid red;*/
+	background: rgba(0,0,0,0.7);
+	width: 30%;
+	/*float: left;*/
+	float: right;
+	box-sizing: border-box;
+	align-content: center;
+	vertical-align: center;
+}
+.aside ul{
+	/**/
+}
+.aside ul.fa-ul>li{
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	margin: 10px;
+}

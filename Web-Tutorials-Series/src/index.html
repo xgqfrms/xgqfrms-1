@@ -10,7 +10,20 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	<!-- css -->
-	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<style>
+		main div.hr-line{
+			width: 100%;
+			height: 7px;
+			/*color: rgba(0,255,0,0.7);*/
+			background-color: rgba(255,0,255,0.7);
+			margin: 3px auto;
+			/*z-index: 9999;*/
+			box-sizing: border-box;
+			clear: both;
+			overflow-x: hidden;
+		}
+	</style>
 </head>
 <body>
 	<!-- SEMANTIC WEB: https://www.w3.org/standards/semanticweb/ -->
@@ -31,10 +44,10 @@
 					<i class="fa-li fa-lg fa fa-video-camera" aria-hidden="true"></i>
 					<a class="btn btn-primary" href="" aria-label="Videos">Videos</a>
 				</li>
-				<li>
+				<!-- <li>
 					<i class="fa-li fa-lg fa fa-wrench" aria-hidden="true"></i>
 					<a class="btn btn-primary" href="" aria-label="Tools">Tools</a>
-				</li>
+				</li> -->
 				<li>
 					<i class="fa-li fa-lg fa fa-newspaper-o" aria-hidden="true"></i>
 					<a class="btn btn-primary" href="" aria-label="Blogs">Blogs</a>
@@ -52,28 +65,135 @@
 	</header>
 	<main class="main" role="main">
 		<section class="section1">
-			<h2><i class="fa fa-list"></i> HTML5/CSS3</h2>
-			<div>
-				<h3>[学习 HTML5]</h3>
+			<div class="container">
+				<div class="raw">
+					<div class="col-md-12">
+						<h2><i class="fa fa-list"></i> HTML5/CSS3</h2>
+					</div>
+					<div class="hr-line"></div>
+					<div class="col-md-6">
+						<div>
+							<h3><i class="fa fa-html5"></i> [学习 HTML5]</h3>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div>
+							<h3><i class="fa fa-css3"></i> [学习 CSS3]</h3>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
+		<hr/>
 		<section class="section2">
-			<div>
-				<!--  -->
+			<div class="container">
+				<div class="raw">
+					<div class="col-md-12">
+						<h2><i class="fa fa-list"></i> JavaScript/TypeScript</h2>
+					</div>
+					<div class="hr-line"></div>
+					<div class="col-md-6">
+						<div>
+							<h3><i class="fa fa-diamond"></i> [学习 ES 2015(ES 6)]</h3>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div>
+							<h3><i class="fa fa-rocket"></i> [学习 TypeScript]</h3>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
+		<hr/>
 		<section class="section3">
+			<h2><i class="fa fa-list"></i> Node.js</h2>
 			<div>
-				<!--  -->
+				<h3><i class="fa fa-wrench"></i> [学习 Node.js]</h3>
 			</div>
 		</section>
+		<hr/>
 		<section class="section4">
+			<h2><i class="fa fa-list"></i> AngularJS</h2>
 			<div>
-				<!--  -->
+				<h3><i class="fa fa-paper-plane"></i> [学习 AngularJS]</h3>
 			</div>
 		</section>
+		<hr/>
+		<section class="section5">
+			<h2><i class="fa fa-list"></i> AngularJS</h2>
+			<div>
+				<h3><i class="fa fa-paper-plane"></i> [学习 AngularJS]</h3>
+			</div>
+		</section>
+		<hr/>
+		<section class="section6">
+			<h2><i class="fa fa-list"></i> NoSQL/DataBase</h2>
+			<div>
+				<h3><i class="fa fa-database"></i> [学习 MongoDB]</h3>
+			</div>
+			<div>
+				<h3><i class="fa fa-reddit"></i> [学习 Redis]</h3>
+			</div>
+		</section>
+		<hr/>
+		<section>
+			<div class="container">
+				<div class="raw">
+					<div class="col-md-6">
+						<h1>bt-col-md-6</h1>
+						<div>
+							<h3><i class="fa fa-diamond"></i> [学习 ES 2015(ES 6)]</h3>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h1>bt-col-md-6</h1>
+						<div>
+							<h3><i class="fa fa-diamond"></i> [学习 ES 2015(ES 6)]</h3>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h1>bt-col-md-6</h1>
+						<div>
+							<h3><i class="fa fa-diamond"></i> [学习 ES 2015(ES 6)]</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="raw">
+					<div class="col-md-6">
+						<h1>bt-col-md-6</h1>
+					</div>
+					<div class="col-md-6">
+						<h1>bt-col-md-6</h1>
+					</div>
+					<div class="col-md-6">
+						<h1>bt-col-md-6</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="raw">
+					<div class="col-md-6">
+						<h1>bt-col-md-6</h1>
+					</div>
+					<div class="col-md-6">
+						<h1>bt-col-md-6</h1>
+					</div>
+					<div class="col-md-6">
+						<h1>bt-col-md-6</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<hr/>
 		<article>
-			<h1><h2></h2> article</h1>
+			<h2>article title</h2> 
 			<p></p>
 		</article>
 		<hr>

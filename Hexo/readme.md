@@ -22,6 +22,11 @@ Hexo has a powerful plugin system. You can install more plugins for Jade, Coffee
 
 ```sh
 $ npm install hexo-cli -g
+
+$ npm install hexo-cli --save-dev
+
+$ npm install hexo-cli --save
+
 $ hexo init blog
 $ cd blog
 $ npm install
