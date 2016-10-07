@@ -27,7 +27,7 @@ RSS <channel> ²Î¿¼ÊÖ²á
 
 GUID = Globally Unique Identifier
 
-<guid>http://www.w3school.com.cn/rss/item5803</guid>
+<guid>http://xgqfrms.xyz/index.html/rss/item001</guid>
 
 
 RSS <channel> ÔªËØ
