@@ -12,5 +12,8 @@
     "blog"
   ],
   "author": "xgqfrms",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "hexo-cli": "^1.0.2"
+  }
 }
