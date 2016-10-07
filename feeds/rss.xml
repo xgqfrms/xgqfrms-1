@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
+		<title>xgqfrm.xyz RSS</title>
+		<link>http://xgqfrms.xyz/feeds/atom.xml</link>
+		<description>xgqfrms's offical website of GitHub! RSS</description>
+		<atom:link href="https://xgqfrms.xyz/feeds/posts.rss" rel="self" type="application/rss+xml"/>
+		<atom:link href="https://xgqfrms.xyz/feeds/atom.xml" rel="self" type="application/atom+xml"/>
+		<copyright>2016 xgqfrms.xyz. All rights reserved.</copyright>
 		<item>
 			<title>xgqfrm.xyz</title>
 			<link>http://xgqfrms.xyz/index.html</link>
 			<description>xgqfrms's offical website of GitHub!</description>
 			<atom:link href="https://xgqfrms.xyz/feeds/posts.rss" rel="self" type="application/rss+xml"/>
 			<atom:link href="https://xgqfrms.xyz/feeds/atom.xml" rel="self" type="application/atom+xml"/>
+			<guid>http://xgqfrms.xyz/index.html/rss/item001</guid>
 		</item>
 		<item>
 			<title>xgqfrm.xyz</title>
@@ -14,6 +21,7 @@
 			<description>xgqfrms's offical website of GitHub!</description>
 			<atom:link href="https://xgqfrms.xyz/feeds/posts.rss" rel="self" type="application/rss+xml"/>
 			<atom:link href="https://xgqfrms.xyz/feeds/atom.xml" rel="self" type="application/atom+xml"/>
+			<guid>http://xgqfrms.xyz/index.html/rss/item002</guid>
 		</item>
 		<item>
 			<title>xgqfrm.xyz</title>
@@ -21,6 +29,7 @@
 			<description>xgqfrms's offical website of GitHub!</description>
 			<atom:link href="https://xgqfrms.xyz/feeds/posts.rss" rel="self" type="application/rss+xml"/>
 			<atom:link href="https://xgqfrms.xyz/feeds/atom.xml" rel="self" type="application/atom+xml"/>
+			<guid>http://xgqfrms.xyz/index.html/rss/item003</guid>
 		</item>
 		<item>
 			<title>RSS HTTPS -> HTTP</title>
@@ -28,6 +37,7 @@
 			<description>xgqfrms's offical website of GitHub!</description>
 			<atom:link href="https://xgqfrms.xyz/feeds/posts.rss" rel="self" type="application/rss+xml"/>
 			<atom:link href="https://xgqfrms.xyz/feeds/atom.xml" rel="self" type="application/atom+xml"/>
+			<guid>http://xgqfrms.xyz/index.html/rss/item004</guid>
 		</item>
 		<!-- 
 			<link href="http://xgqfrms.xyz/feeds/posts.rss" type="application/rss+xml" rel="alternate" title="Blog RSS"/>
