@@ -14,6 +14,15 @@
 			<li></li>
 			<li></li>
 		</ul>
+		<div>
+			<!-- action=""  闪退 问题？ -->
+			<!-- <form action=""> -->
+				<label for="">Name</label>
+				<input type="text" id="myText" value="xgqfrms2016">
+				<h1 id="h"></h1>
+				<input type="submit" value="submit" onclick="myFunction();">
+			<!-- </form> -->
+		</div>
 	</div>
 	<pre>
 		六种 原始数据类型:
@@ -83,8 +92,9 @@
 			}
 		}
 		var go = foo.baz.bar;
-		alert(go());
-		alert(foo.baz.bar());
+		//alert(go());
+		//alert(foo.baz.bar());
+
 		//3,1
 		/*
 			[其他运算符: void运算符/逗号运算符运算符](http://javascript.ruanyifeng.com/grammar/operator.html)
@@ -124,7 +134,70 @@
 		*/
 	</script>
 	<script>
-		
+		console.log("\n\n");
+		console.log(typeof null);
+		console.log(typeof {});
+		console.log(typeof []);
+		console.log(typeof undefined);
+
+		console.log("\n\n");
+		console.log(typeof(null));
+		console.log(typeof({}));
+		console.log(typeof([]));
+		console.log(typeof(undefined));
+		/*result
+			object
+			object
+			object
+			undefined
+			
+			object
+			object
+			object
+			undefined
+		*/
+	</script>
+	<script>
+		/*
+			how to get input text.value using js by ID
+
+			http://stackoverflow.com/questions/11563638/javascript-how-to-get-value-of-text-input-field
+			http://www.w3schools.com/jsref/prop_text_value.asp
+		*/
+		//var text = document.getElementById("myText").value;;
+		function myFunction() {
+			var x = document.getElementById("myText").value;
+			//alert(x);
+			//document.getElementById("h").innerHTML = x;
+			return document.getElementById("h").innerHTML = x;
+		}
+		//Uncaught TypeError: Cannot set property 'value' of null
+		/*
+
+		Name: <input type="text" id="myText" value="Mickey">
+		<p>Click the button to change the value of the text field.</p>
+		<button onclick="myFunction()">Try it</button>
+
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myText").value;
+				alert(x);
+				//document.getElementById("h").innerHTML = x;
+				return document.getElementById("h").innerHTML = x;
+			}
+		<\/script>
+		*/
+	</script>
+	<script>
+		(function(){
+			var a = b = 10;
+		})();
+		console.log(b);
+		/*
+			anonymous function, 立即执行func, encloure
+
+			= = 
+		*/
 	</script>
 </body>
 </html>
