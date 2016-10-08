@@ -9,11 +9,6 @@
 		<h1>携程 web前端 笔试题</h1>
 	</div>
 	<div>
-		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
 		<div>
 			<!-- action=""  闪退 问题？ -->
 			<!-- <form action=""> -->
@@ -249,7 +244,10 @@
 	</script>
 	<script>
 		// create a function mylog(), to repacle the console.log();
-
+		function myLog(str){
+			console.log(str);
+		}
+		myLog("hello, log!");
 		/*
 			?
 		*/
@@ -271,8 +269,57 @@
 			// var i = x.getElementsByTagName(li);
 			var y = x.getElementsByTagName('li');
 			//Uncaught TypeError: Cannot read property 'getElementsByTagName' of null
-			alert(i);
+			for (var i = 0; i < y.length; i++) {
+				alert(i);
+			}
+			// alert(i);
+			/*
+			???????????????????????????????????
+			http://stackoverflow.com/questions/2927592/find-the-clicked-li-number
+
+			$('ul li a').live('click', function() {
+			    console.log($(this).parent('li').index());
+			});
+
+			var g = document.getElementById('my_div');
+			for (var i = 0, len = g.children.length; i < len; i++)
+			{
+
+			    (function(index){
+			        g.children[i].onclick = function(){
+			              alert(index)  ;
+			        }    
+			    })(i);
+
+			}
+			*/
 		}
 	</script>
+	<div>
+		<h1>同源策略：</h1>
+		<pre>
+			跨域方法：
+			CORS 跨域资源共享, SRI 诚信子资源, CSP 内容安全策略, JSONP, Ajax
+			https://www.w3.org/TR/SRI/
+			https://www.w3.org/TR/CSP2/
+			https://www.w3.org/TR/CORS/
+
+			https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage
+			https://html.spec.whatwg.org/multipage/comms.html#web-messaging
+			https://html.spec.whatwg.org/multipage/comms.html#channel-messaging
+
+			http://harttle.com/2015/10/10/cross-origin.html
+			设置 document.domain
+			有src的标签
+			navigation 对象
+			访问控制安全的讨论
+
+			http://www.ruanyifeng.com/blog/2016/04/cors.html
+			CORS 跨域资源共享
+			JSONP
+
+			? 在只知道key的情况下，如何获取JSON数据key的索引值 ？
+		</pre>
+	</div>
 </body>
 </html>
