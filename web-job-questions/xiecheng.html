@@ -23,6 +23,13 @@
 				<input type="submit" value="submit" onclick="myFunction();">
 			<!-- </form> -->
 		</div>
+		<div>
+			<ul class="ulid">
+				<li onclick="alertLi();">one</li>
+				<li onclick="alertLi();">two</li>
+				<li onclick="alertLi();">three</li>
+			</ul>
+		</div>
 	</div>
 	<pre>
 		六种 原始数据类型:
@@ -198,6 +205,74 @@
 
 			= = 
 		*/
+	</script>
+	<script>
+		function fn(a) {
+			console.log(a);//global ? not executed
+			var a = 2;// override
+			function a(){
+				// 
+			}
+			console.log(a);//local ?
+		}
+		fn(1);
+		// 2
+		/*
+			local var
+		*/
+	</script>
+	<script>
+		// want to output 1,2,3 ? true : false 
+		for (var i = 1; i <= 3; i++) {
+			setTimeout(function(){
+				console.log(i);
+			},0);
+		}
+		//result 4,4,4
+		/*
+			setTimeout 延迟执行，for 早已经遍历完了，
+			此时：i++ === 3++ === 4
+			？
+		*/
+
+		//modify the code, make it works!
+		for (var i = 1; i <= 3; i++) {
+			console.log(i);
+		}
+	</script>
+	<script>
+		//how to remove the duplicate item of an Array?
+
+		/*
+			? freecodecamp ?
+		*/
+	</script>
+	<script>
+		// create a function mylog(), to repacle the console.log();
+
+		/*
+			?
+		*/
+	</script>
+	<script>
+		//how to realize ,when click any of li, alert its index ?
+		
+		/*
+			<ul class="ulid">
+				<li>one</li>
+				<li>two</li>
+				<li>three</li>
+			</ul>
+		*/
+		function alertLi(){
+			var x = document.getElementById("ulid");
+			//object
+			//alert(typeof(x));
+			// var i = x.getElementsByTagName(li);
+			var y = x.getElementsByTagName('li');
+			//Uncaught TypeError: Cannot read property 'getElementsByTagName' of null
+			alert(i);
+		}
 	</script>
 </body>
 </html>
