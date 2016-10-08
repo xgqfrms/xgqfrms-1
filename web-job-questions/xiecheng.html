@@ -24,10 +24,92 @@
 			Number   表示数字，例如： 42 或者 3.14159。
 			String   表示字符串，例如："Howdy"
 			Symbol   ( 在 ECMAScript 6 中新添加的类型).。一种数据类型，它的实例是唯一且不可改变的。
-			Object   对象
+		
+		Object   对象
+
+		<h1><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures</a></h1>
+		
+		The latest ECMAScript standard defines seven data types:
+			//Six data types that are primitives:(不可变性)
+			[Primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+			Boolean
+			Null
+			Undefined
+			Number
+			String
+			Symbol (new in ECMAScript 6)
+
+			and Object(引用类型)
+
+		运算符 Operators
+		JavaScript 拥有如下类型的运算符。本节描述了运算符和运算符的优先级。
+
+		[Expressions and operators](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+
+		赋值运算符(Assignment operators)
+		比较运算符(Comparison operators)
+		算数运算符(Arithmetic operators)
+		按位运算符(Bitwise operators)
+		逻辑运算符(Logical operators)
+		字符串运算符(String operators)
+		条件 (三元) 运算符(Conditional operator)
+		逗号运算符(Comma operator)
+		一元运算符(Unary operators)
+		关系运算符(Relational operator)
+
+		https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/void
+
+		当用户点击一个以 javascript: URI 时，浏览器会对冒号后面的代码进行求值，然后把求值的结果显示在页面上，这时页面基本上是一大片空白，这通常不是我们想要的。只有当这段代码的求值结果是 undefined 的时候，浏览器才不会去做这件傻事，所以我们经常会用 void 运算符来实现这个需求。像下面这样：
+
+		<\a href="javascript:void(0);">
+		  这个链接点击之后不会做任何事情，如果去掉 void()，
+		  点击之后整个页面会被替换成一个字符 0。
+		</\a>
+
+		<\a href="javascript:void(document.body.style.backgroundColor='green');">
+		  点击这个链接会让页面背景变成绿色。
+		</\a>
+		注意，虽然这么做是可行的，但利用 javascript: 伪协议来执行 JavaScript 代码是不推荐的，推荐的做法是为链接元素绑定 click 事件。
 	</pre>
 	<script>
-		primitive type
+		var x = 3;
+		var foo = {
+			x: 2,
+			baz: {
+				x: 1,
+				bar: function(){
+					return this.x;
+				}
+			}
+		}
+		var go = foo.baz.bar;
+		alert(go());
+		alert(foo.baz.bar());
+		//3,1
+		/*
+			[其他运算符: void运算符/逗号运算符运算符](http://javascript.ruanyifeng.com/grammar/operator.html)
+
+			, 逗号操作符(https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_Operator)
+
+			The JavaScript Comma Operator
+			[The JavaScript Comma Operator](https://javascriptweblog.wordpress.com/2011/04/04/the-javascript-comma-operator/)
+
+			冒号(： colon)
+			: 冒号 操作符
+			[stackoverflow](http://stackoverflow.com/questions/418799/what-does-colon-do-in-javascript/39934616#39934616)
+
+			colon operator javascript
+
+			? JavaScript Object Notation(JSON)
+
+			[Conditional Operator ( ? : )](http://www.ecma-international.org/ecma-262/6.0/#sec-conditional-operator)
+
+			[The Syntactic Grammar](http://www.ecma-international.org/ecma-262/6.0/#sec-syntactic-grammar)
+
+			[Grammar Notation](http://www.ecma-international.org/ecma-262/6.0/#sec-grammar-notation)
+		*/
+		//使用 JSONP 实现跨域通信，第 1 部分: 结合 JSONP 和 jQuery 快速构建强大的 mashup
+		//[使用 JSONP 实现跨域通信](http://www.ibm.com/developerworks/cn/web/wa-aj-jsonp1/)
 	</script>
 </body>
 </html>
