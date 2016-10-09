@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>照片墙基本制作步骤</title>
+	<style>
+		/* angle function */
+		/* $a30 = 30deg;
+		???
+		box-shadow
+		position: absolute
+		
+		z-index: 9999
+		transform: scale, rotate, skew
+		transition */
+	</style>
+	<style>
+		body{
+			background: #eee;
+		}
+		.container{
+			margin: 60px auto;
+			width: 960px;
+			height: 450px;
+			position: relative;
+		}
+		img{
+			padding: 10px 10px 15px;
+			background-color: #f0f;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			position: absolute;
+			transform: rotateZ(90deg);
+			width: 300px;
+			height: 200px;
+			transition: all 1s;
+		}
+		img:hover{
+			background-color: #0f0;
+			transform: rotateZ(-90deg);
+			transform:scale(2);
+			transition: all 1s;
+			z-index: 9999;
+		}
+		.img1{
+			top: 50px;
+			left: 200px;
+		}
+		.img2{
+			top: 100px;
+			left: 300px;
+		}
+		.img3{
+			top: 200px;
+			left:700px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>照片墙基本制作步骤</h1>
+	</div>
+	<div class="container">
+		<img src="bug.png" alt="" class="img1">
+		<img src="bug.png" alt="" class="img2">
+		<img src="bug.png" alt="" class="img3">
+	</div>
+</body>
+</html>
+<!-- http://www.imooc.com/video/4660 -->
