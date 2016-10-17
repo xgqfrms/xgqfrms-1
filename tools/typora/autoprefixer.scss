@@ -1,0 +1,28 @@
+.box{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+/* 
+.box{
+    display: flex;
+}
+ */
+/*
+Ctrl + Shift + p (autoprefix) Enter
+https://www.udemy.com/sublime-text-3/learn/v4/t/lecture/4943938
+*/
+
+/*
+Setting User
+https://packagecontrol.io/packages/Autoprefixer
+
+```code
+{
+    "browsers": ["ie >= 9", "> 1%"],
+    "cascade": true,
+    "remove": true,
+    "prefixOnSave": true
+}
+```
+*/
