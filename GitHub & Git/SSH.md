@@ -58,7 +58,8 @@
 
 ```sh
 >$ git status
->$ git add.
+# 空格: git add . !== git add.
+>$ git add .
 >$ git commit -m "commit info"
 >$ git push
 # master(origin) / gh-pages
