@@ -44,6 +44,7 @@
 
 # 添加您的SSH密钥到ssh-agent
 >$ ssh-add ~/.ssh/id_rsa
+>$ ssh-add ~/.ssh/webgeeker/id_rsa
 # 添加SSH密钥到您的GitHub帐户。
 ```
 
