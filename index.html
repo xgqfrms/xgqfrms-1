@@ -176,8 +176,9 @@
       <h1 class="project-name">xgqfrms</h1>
       <nav>
         <ul>
-          <!-- <li>Home</li>
-          <li>About</li>
+          <li><gcse:search></gcse:search></li>
+		  <!-- Custom Search Engine : https://github.com/xgqfrms-GitHub/schemaorg/tree/sdo-callisto/Tutorilas-->
+          <!-- <li>About</li>
           <li>Contact</li> -->
         </ul>
       </nav>
@@ -368,7 +369,21 @@
   };
   firebase.initializeApp(config);
 </script>
-<!-- End Google Firebase -->  
+<!-- End Google Firebase --> 
+
+ <!-- Google Custom Search Engine -->
+<script>
+  (function() {
+    var cx = '014705857445356661731:ikkekm11qfc';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+  <!-- Google Custom Search Engine -->
   <!-- Google Tag Manager -->
     <noscript>
       <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KD5KNC" height="0" width="0" style="display:none;visibility:hidden"></iframe>
