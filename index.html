@@ -190,11 +190,40 @@
       margin-top: -5px;
     }
 
-	@media screen and (max-width: 320px){
+	@media screen and (max-width: 350px){
 		.type-bg {
 			width: 230px !important;
 			height: 70px !important;
+			border: 1px solid rgba(255,0,255,0.7);
+			background: rgba(0,0,0,0.7);
+			border-radius: 10px;
+			color: rgba(0,255,0,0.8);
+		}	
+    .type-bg:hover{
+      border: 1px solid rgba(255,0,255,0.7);
+      cursor: pointer;
+    }
+    .type-bg span{
+      margin: 3px;
+      text-align: center;
+      display: inline-block;
+    }
+	}
+	@media screen and (max-width: 480px){
+		.type-bg {
+			width: 250px !important;
+			height: 50px !important;
+			border: 2px solid rgba(0,255,255,0.7);
 		}
+		.type-bg:hover{
+      border: 1px solid rgba(255,0,255,0.7);
+      cursor: pointer;
+    }
+    .type-bg span{
+      margin: 3px;
+      text-align: center;
+      display: inline-block;
+    }
 	}
     /**/
   </style>
