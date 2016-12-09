@@ -1,0 +1,12 @@
+{
+	"name": "xgqfrms",
+	"icons": [
+		{
+			"src": "\/android-chrome-96x96.png",
+			"sizes": "96x96",
+			"type": "image\/png"
+		}
+	],
+	"theme_color": "#00ffd1",
+	"display": "standalone"
+}

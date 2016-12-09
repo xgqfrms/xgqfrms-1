@@ -1,0 +1,16 @@
+<!--event.wxml-->
+<view class="container">
+<form bindsubmit="formSubmit">
+  <view class="section">
+    <view class="section__title">事件名称：</view>
+    <input name="name" placeholder="请输入事件名称" value="{{options.name}}"/>
+  </view>
+  <view class="section">
+    <view class="section__title">提醒时间：</view>
+    <input name="time" placeholder="请输入提醒时间" value="{{options.time}}"/>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">保存</button>
+  </view>
+</form>
+</view>

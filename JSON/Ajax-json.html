@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Ajax-JSON</title>
+	<!-- https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript -->
+	<!-- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse -->
+</head>
+<body>
+	<div>
+		<h1>Ajax-JSON</h1>
+		<div>
+			<div id="out">
+		        <h1>out content:</h1>
+		    </div>
+		</div>
+	</div>
+	<script src="http://cdn.xgqfrms.xyz/jquery/jquery-3.1.0.min.js"></script>
+	<script>
+		function loadJSON(callback) {   
+		    var xobj = new XMLHttpRequest();
+		    xobj.overrideMimeType("application/json");
+		    xobj.open('GET', 'demo.json', true); 
+		    // Replace 'demo.json' with the path to your file
+		    xobj.onreadystatechange = function () {
+				if (xobj.readyState == 4 && xobj.status == "200") {
+				// Required use of an anonymous callback 
+				// as .open will NOT return a value but simply returns undefined in asynchronous mode
+					callback(xobj.responseText);
+				}
+		    };
+		    xobj.send(null);  
+		 }
+
+		function init() {
+		  	loadJSON(function(response) {
+			    // Parse JSON string into object
+			    // var actual_JSON = JSON.parse(response);
+			    var demo = JSON.parse(response);
+			    /*
+			    	here do something!
+			    */
+		    		var s = JSON.stringify(demo);
+		    		//alert(x);
+		    		// console.log("\n");
+		    		console.log("\nJSON.stringify=" + s + "\n\n");
+		            var p = JSON.parse(s);
+		            //p is Object
+		            console.log("\ntypeof(p)=" + typeof(p) + "\n\n");
+		            console.log("\nJSON.parse:name=" + p.name + "\n\n");
+		            console.log("\nJSON.parse:age=" + p.age + "\n\n");
+		            console.log("\nJSON.parse:gender=" + p.gender + "\n\n");
+		            console.log("\nJSON.parse:length=" + p.length + "\n\n");
+		            
+		            var div = document.getElementById("out");
+		            var out = document.createElement("p");
+		            // p.creatTextodeNode(s);
+		            out.innerHTML = "S=" +s;
+		            div.appendChild(out);
+		  	});
+		 }
+	</script>
+	<!-- old -->
+	<!-- <script type="text/javascript" src="demo.json"></script>
+	<script>
+		var s = JSON.stringify(demo);
+		console.log("\nJSON.stringify=" + s + "\n\n");
+	        var p = JSON.parse(s);
+	        //p is Object
+	        console.log("\ntypeof(p)=" + typeof(p) + "\n\n");
+	        console.log("\nJSON.parse:name=" + p.name + "\n\n");
+	        console.log("\nJSON.parse:age=" + p.age + "\n\n");
+	        console.log("\nJSON.parse:gender=" + p.gender + "\n\n");
+	        console.log("\nJSON.parse:length=" + p.length + "\n\n");
+	        
+	        var div = document.getElementById("out");
+	        var out = document.createElement("p");
+	        // p.creatTextodeNode(s);
+	        out.innerHTML = "S=" +s;
+	        div.appendChild(out);
+	</script> -->
+</body>
+</html>

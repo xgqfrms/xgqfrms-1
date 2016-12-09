@@ -1,0 +1,31 @@
+//welcome to imooc learn SCSS(old-version: Sass)
+$width: 200px;
+$height: 300px;
+body {
+   width: $width;
+  height: $height;
+}
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+//Sass写法：
+body
+  color: #fff
+  background: #f36
+
+//而在 CSS 我们是这样书写：(可以直接把.css 修改为 .scss)
+body{
+  color:#fff;
+  background:#f36;
+}
+//而在 SCSS 也可以这样书写（有病呀！）：
+
+body{
+  color:#fff;
+  background:#f36;
+}

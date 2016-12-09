@@ -1,0 +1,32 @@
+@import url(flip.css);
+/*
+FontAwesome
+http://cdn.xgqfrms.xyz/webfonts/css/font-awesome-4.6.3.min.css
+*/
+@font-face{
+	font-family:'FontAwesome';
+	src:url('http://cdn.xgqfrms.xyz/webfonts/fonts/fontawesome-webfont.eot?v=4.6.3');
+	src:url('http://cdn.xgqfrms.xyz/webfonts/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'),
+	url('http://cdn.xgqfrms.xyz/webfonts/fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'),
+	url('http://cdn.xgqfrms.xyz/webfonts/fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'),
+	url('http://cdn.xgqfrms.xyz/webfonts/fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'),
+	url('http://cdn.xgqfrms.xyz/webfonts/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+	font-stretch: normal;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-kerning: normal;
+	font-feature-settings: normal;
+	font-synthesis: none;
+}
+/*
+	https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
+	https://developer.mozilla.org/en-US/docs/Web/CSS/font
+
+	font-size: ;
+	font-variant: ;
+	font-kerning: ;
+	unicode-bidi: ;
+	unicode-range: U+0-10FFFF;
+*/
+body { font-family: 'FontAwesome',"Bitstream Vera Serif Bold", serif }

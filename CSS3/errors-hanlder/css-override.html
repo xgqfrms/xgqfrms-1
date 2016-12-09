@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Override Styles in Subsequent CSS</title>
+	<!-- https://www.freecodecamp.com/challenges/override-styles-in-subsequent-css -->
+	<!-- https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity -->
+	<!-- http://www.w3cplus.com/css/the-important-css-declaration-how-and-when-to-use-it.html -->
+	<!-- https://www.freecodecamp.com/challenges/override-class-declarations-by-styling-id-attributes -->
+	<style>
+	  body {
+	    background-color: rgba(0,0,0,0.7);
+	    font-family: Monospace;
+	    color: rgba(255,255,255,0.7);
+	  }
+	  .classSuper{
+	  	color: rgba(255,0,255,0.7) !important; 
+	  }
+	  /*
+	  color: red !important; //最高优先级
+	  */
+	  #classID{
+	  	color: rgba(255,255,0,0.7);
+	  }
+	  #classID2{
+	  	color: rgba(0,255,255,0.7);
+	  }
+	  .classID{
+	  	color: rgba(255,255,0,0.7);
+	  }
+	  .classID2{
+	  	color: rgba(0,255,255,0.7);
+	  }
+	  .class1{
+	  	color: red;
+	  }
+	  .class2{
+	  	color: green;
+	  }
+	  .class3{
+	  	color: blue;
+	  }
+	</style>
+</head>
+<body>
+	<div>
+		<h1 class="pink-text blue-text">Hello World!</h1>
+	</div>
+	<div>
+		<p>
+			<pre class="class2">			
+				同时使用多个，相同的优先级的css样式，CSS 样式的声明顺序，越靠后，就会覆盖前面的所有相同优先级的样式！
+				PS: 这与使用 .class1 .class2 .class3 的先后顺序无关，仅与CSS的样式表中，声明的先后顺序有关！
+				<hr>
+				<span class="classSuper">如何禁用CSS的顺序覆盖</span>
+				1.Override All Other Styles by using <span class="classSuper">!important</span>
+				2.Override-class-declarations-by-styling-<span class="classSuper">id</span>-attributes
+				3.Override Class Declarations with <span class="classSuper">Inline Styles</span>
+			</pre>
+		</p>
+		<hr>
+		<p>
+			<pre>
+				.classSuper{
+					<span class="classSuper">color: rgba(255,0,255,0.7) !important; </span>
+				}
+				#classID{
+					<span class="classID">color: rgba(255,255,0,0.7);</span>
+				}
+				#classID2{
+					<span class="classID2">color: rgba(0,255,255,0.7);</span>
+				}
+				/*
+				color: red !important; 
+				*/
+				.class1{
+					<span class="class1">color: red;</span>
+				}
+				.class2{
+					<span class="class2">color: green;</span>
+				}
+				.class3{
+					<span class="class3">color: blue;</span>
+				}				
+			</pre>
+		</p>
+		<hr>
+		<label for="">
+			class1 class2 <mark>class3</mark>
+		</label>
+		<h3 class="class1 class2 class3">
+			color:red; color:green; color:blue;
+		</h3>
+		<label for="">
+			<mark>class3 </mark>class2 class1
+		</label>
+		<h3 class="class3 class2 class1">
+			color:red; color:green; color:blue;
+		</h3>
+		<label for="">
+			<mark>classSuper</mark> class1 class2 class3
+		</label>
+		<h3 class="classSuper class1 class2 class3">
+			color:rgba(255,0,255,0.7) !important; color:red; color:green; color:blue;
+		</h3>
+		<hr>
+		<label for="">
+			<mark>classID</mark> class3 class2 class1
+		</label>
+		<h3 id="classID" class="class3 class2 class1">
+			color:rgba(255,255,0,0.7); color:red; color:green; color:blue;
+		</h3>
+		<label for="">
+			classID2 <mark>classSuper</mark>class1 class2 class3
+		</label>
+		<h3 id="classID2" class="classSuper class1 class2 class3">
+			color:rgba(255,255,0,0.7); color:rgba(255,0,255,0.7) !important; color:red; color:green; color:blue;
+		</h3>
+	</div>
+	<hr>
+	<div>
+		<pre class="class2">
+			Our "pink-text" class overrode our body element's CSS declaration!
+
+			We just proved that our classes will override the body element's CSS. So the next logical question is, what can we do to override our pink-text class?
+
+			Create an additional CSS class called blue-text that gives an element the color blue. Make sure it's below your pink-text class declaration.
+
+			Apply the blue-text class to your h1 element in addition to your pink-text class, and let's see which one wins.
+
+			Applying multiple class attributes to a HTML element is done with a space between them like this:
+
+			class="class1 class2"
+
+			Note: It doesn't matter which order the classes are listed in the HTML element.
+
+			However, the order of the class declarations in the &lt;style&gt; section are what is important. The second declaration will always take precedence over the first. Because .blue-text is declared second, it overrides the attributes of .pink-text
+		</pre>
+		<hr>
+		<pre class="class2">
+			Yay! We just proved that in-line styles will override all the CSS declarations in your style element.
+
+			But wait. There's one last way to override CSS. This is the most powerful method of all. But before we do it, let's talk about why you would ever want to override CSS.
+
+			In many situations, you will use CSS libraries. These may accidentally override your own CSS. So when you absolutely need to be sure that an element has specific CSS, you can use !important
+
+			Let's go all the way back to our pink-text class declaration. Remember that our pink-text class was overridden by subsequent class declarations, id declarations, and in-line styles.
+
+			Let's add the keyword !important to your pink-text element's color declaration to make 100% sure that your h1 element will be pink.
+
+			An example of how to do this is:
+
+			color: red !important;
+		</pre>
+	</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.div1{
+			background-color: rgba(0,255,0,0.5);
+			width: 300px;
+			height: 100px;
+			border: 1px solid red;
+			color: red;
+		}
+		img{
+			width: 100px;
+			height: 100px;
+			/*background: rgba(0,0,0,1);*/
+			background: rgba(0,255,0,1);
+			/*border-radius: 50%;*/
+		}
+	</style>
+</head>
+<body>
+	<div id="div1" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<!--  -->
+	</div><br>
+	<p id="drag1" draggable="true" ondragstart="drag(event)">
+		这是一段可移动的段落。请把该段落拖入上面的矩形。
+	</p>
+	<hr>
+	<!--  -->
+	<h1><mark>pic.svg</mark></h1>
+	<div id="svg" onmouseover="changeColor()">
+		<!-- <?xml version="1.0" encoding="utf-8"?> -->
+		<svg xmlns="http://www.w3.org/2000/svg" height="72" width="72" viewBox="0 0 72 72">
+		  <g>
+		    <ellipse cy="36" cx="36" ry="36" rx="36" fill="#00ff00" />
+		    <path id="path1" transform="rotate(0,36,36) translate(16.2499997615814,16) scale(1.25,1.25)  " fill="#FFFFFF" d="M16.100018,4.5L5.3000431,13.899994 5.3000431,28.799988 12.800034,28.799988 12.800034,17.399994 19.699989,17.399994 19.699989,28.799988 26.199982,28.799988 26.199982,13.5z M15.999982,0L31.6,13.699997 31.6,18.199997 28.800016,15.699997 28.800016,32 2.8000455,32 2.8000455,16.099991 0,18.599991 0,14.099991z" />
+		  </g>
+		</svg>
+	</div>
+	<hr>
+	<div>
+		<h1><mark>white-pic.png</mark></h1>
+		<img src="House.png" alt="House.png"><br>
+		<h1><mark>black-pic.svg</mark></h1>
+		<img src="House-09.png" alt="House-09.png"><br>
+	</div>
+	<!-- js -->
+	<script >
+		function allowDrop(ev)
+		{
+			ev.preventDefault();
+		}
+
+		function drag(ev)
+		{
+			ev.dataTransfer.setData("Text",ev.target.id);
+		}
+
+		function drop(ev)
+		{
+			var data=ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+			ev.preventDefault();
+		}
+	</script>
+	<script>
+		var div = document.getElementById('svg');
+		var svg = div.getElementsByTagName('svg');
+		function changeColor(){
+			svg.childNode.ellipse.style = {fill="#00ff00"};
+			// DOM
+		}
+	</script>
+</body>
+</html>

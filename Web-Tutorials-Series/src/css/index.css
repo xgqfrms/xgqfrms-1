@@ -1,0 +1,15 @@
+@import url(./reset.css);
+@import url(./footer.css);
+@import url(./header.css);
+@import url(./aside.css);
+@import url(./main.css);
+@import url(./common.css);
+/* index.css */
+
+/*Sass/.scss*/
+
+/**
+* Uglify js
+* gzip css
+* mixin css
+*/

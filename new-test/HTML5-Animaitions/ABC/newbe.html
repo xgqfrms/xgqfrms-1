@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>newbe</title>
+	<style>
+		/*SCSS*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			background: url(./images/bg.png) center top no-repeat;
+			/*
+			=== background: url(./images/bg.png) top no-repeat;
+			link: https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+			*/
+			width: 100%;
+			height: 100%;
+		}
+		.mask{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,0.7);
+			display: none;
+			/*do something later*/
+		}
+		.searchTip{
+			width: 980px;
+			height: 700px;
+			position: absolute;
+			left: 50%;
+			margin-left: -490px;
+			background: rgba(0,255,0,0.7);
+			/*display: none;*/
+		}
+		.steps,.steps a,.steps span{
+			position: absolute;
+		}
+		.steps a,.steps span{
+			cursor: pointer;
+		}
+		.steps a{
+			/*position: absolute;*/
+			width: 95px;
+			height: 32px;
+			/*background: rgba(255,0,255,0.7);*/
+			border-radius: 5px;
+			/*text-indent: -9999px;
+			overflow: hidden;*/
+			content: url(./images/next.png);
+			z-index: 9999;
+			opacity: 0;
+		}
+		.steps a:hover{
+			opacity: 1;
+			transition: all 1s easy 0;
+		}
+		.steps span{
+			/*position: absolute;*/
+			width: 30px;
+			height: 30px;
+			/*background: rgba(0,255,255,0.7);*/
+			content: url(./images/close.png);
+			z-index: 9999;
+			/*display: none;*/
+			opacity: 0;
+		}
+		.steps span:hover{
+			opacity: 1;
+			transition: all 1s easy 0;
+		}
+		/*
+			test === display: none;
+			https://drafts.csswg.org/selectors-3/#selectors
+			属性选择器：Selectors 3
+			E[foo^="bar"]	
+			=== an E element whose "foo" attribute value begins exactly with the string "bar"	Attribute selectors	3
+		*/
+		.searchTip div[class^="step"]{
+			/*display: none;*/
+		}
+		.step1{
+			background: url(./images/guide11.png) no-repeat;
+			width: 745px;
+			height: 329px;
+			top: 132px;
+			left: -9px;
+		}
+		.step1 a{
+			top: 231px;
+			left: 491px;
+		}
+		.step1 span{
+			top: 143px;
+			
+			left: 682px;
+		}
+		.step2{
+			background: url(./images/guide21.png) no-repeat;
+			width: 647px;
+			height: 405px;
+			top: 3px;
+			left: 324px;
+		}
+		.step2 a{
+			top: 307px;
+			left: 147px;
+		}
+		.step2 span{
+			top: 196px;
+			left: 332px;
+		}
+		.step3{
+			background: url(./images/guide31.png) no-repeat;
+			width: 654px;
+			height: 257px;
+			top: 294px;
+			left: 319px;
+		}
+		.step3 a{
+			top: 156px;
+			left: 401px;
+		}
+		.step3 span{
+			top: 44px;
+			left: 588px;
+		}
+		.step4{
+			background: url(./images/guide41.png) no-repeat;
+			width: 558px;
+			height: 348px;
+			top: 81px;
+			left: 162px;
+		}
+		.step4 a{
+			top: 246px;
+			left: 307px;
+		}
+		.step4 span{
+			top: 135px;
+			left: 492px;
+		}
+		.step5{
+			background: url(./images/guide51.png) no-repeat;
+			width: 397px;
+			height: 342px;
+			top: 80px;
+			left: 256px;
+		}
+		.step5 a{
+			top: 246px;
+			left: 155px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="mask" id="mask"></div>
+		<div class="searchTip" id="searchTip">
+			<div class="steps step1" id="step1">
+				<a href="javascript:0;" onclick="close();">Next Step</a>
+				<span id="span1" title="Close" onclick="close()"></span>
+			</div>
+			<div class="steps step2">
+				<a href="">Next Step</a>
+				<span id="span2" title="Close"></span>
+			</div>
+			<div class="steps step3">
+				<a href="">Next Step</a>
+				<span id="span3" title="Close"></span>
+			</div>
+			<div class="steps step4">
+				<a href="">Next Step</a>
+				<span id="span4" title="Close"></span>
+			</div>
+			<div class="steps step5">
+				<a href="">Next Step</a>
+			</div>
+		</div>
+	</div>
+	<script>
+		var step = document.getElementById('step1');
+		function close() {
+			step.style.display = "none";
+			// return step;
+		}
+		/*
+			JavaScript HTML DOM - Changing CSS
+			http://www.w3schools.com/js/js_htmldom_css.asp
+			document.getElementById(id).style.property=new style
+			DEMO:
+			document.getElementById("p2").style.color = "blue";
+		*/
+		/*
+			? 取消a 默认的操作行为 && JS传播事件、取消事件默认行为、阻止事件传播
+			1. <a href="http://xgqfrms.xyz" onclick="return func()">点击我</a>
+			2. <a href="javascript:;" onclick="check()">点击我</a>
+			3. <a href="javascript:0;" onclick="check()">点击我</a>
+			4. 非IE的用"e.preventDefault();",IE的用"window.event.returnValue = false;"
+		*/
+		window.onload=function(){
+		    var oMask=document.getElementById('mask');
+			var oSearch=document.getElementById('searchTip');	
+			var aStep=oSearch.getElementsByTagName('div');
+		    // 返回 NodeList 对象
+		    // getElementsByTagName() 方法可返回带有指定标签名的对象的集合。
+		    //
+			var aA= oSearch.getElementsByTagName('a');
+			var aClose=oSearch.getElementsByTagName('span');
+		}
+	</script>
+	<script>		
+		var name = "www.xgqfrms.xyz"
+		var D = new Date();
+		D.setDate(D.getDate()+30);
+		console.log(D);
+		document.cookie="name=www.xgqfrms.xyz;expire="+D;
+		var cg = document.cookie.substring(5);
+		console.log(cg);
+		//cookie 必须要在服务器端，才能执行写操作！
+		//Firefox 支持本地，cookie的写操作！
+	</script>
+	<script src="jquery.min.js"></script>
+	<script>
+		$(function(){
+			// read cookie
+			var rc = document.cookie.substring(5);
+			alert("rc="+rc);
+			//no cookie
+			if (rc!="www.xgqfrms.xyz") {
+				alert("cookie is empty!"+rc);
+				$().show();
+				$().click(function(){
+					var current = $(this).parent();
+					current.hide();
+					current.next().show();
+				})
+				$().click(function(){
+					$().hode();
+				})
+			} else {
+				// 
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content="变色方块">
+	<meta name="author" content="xgqfrms">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="/assets/js/html5.js"></script>
+    <![endif]-->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>变色方块</title>
+</head>
+<body>
+	<div class="container">
+		<iframe src="http://rcm-cn.amazon-adsystem.com/e/cm?t=yanhaijing-23&o=28&p=48&l=ez&f=ifr&f=ifr" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border:none;max-width:100%;">				
+		</iframe>
+		<header id="header"></header>
+		<script id="t:header" type="text/html">
+        	<h1>
+        		<%=data.h1%><a id="share" class="share"><%=data.share%></a>
+        	</h1>
+        </script>
+		<aside id="score" class="score"></aside>
+		<script id="t:score" type="text/html">
+            <ul>
+                <li><%=data.currentLevel%><span id="cur-level">1</span></li>
+                <li><%=data.bestLevel%><span id="sup-level">1</span> <%=data.bestLevel1%><span id="sup-level-click">0</span> <%=data.bestLevel2%></li>
+                <li><%=data.currentClick%><span id="cur-click">0</span></li>
+                <li><%=data.totalClick%><span id="total-click">0</span></li>
+            </ul>
+		</script>
+		<div id="menu" class="menu"></div>
+		<script id="t:menu" type="text/html">
+		    <a id="pop-restart-level" class="btn btn-primary"><%=data.restartLevel%></a>
+            <a id="pop-restart-game" class="btn btn-primary"><%=data.restartGame%></a>
+            <a id="pop-intro" class="btn btn-primary"><%=data.intro%></a>
+		</script>
+		<section id="screen" class="screen"></section>
+		<div id="restart-game-pop" class="pop js-pop"></div>
+		<script id="t:restart-game-pop" type="text/html">
+            <div class="pop-content">
+                <header>
+                    <h2><%=data.h2%></h2>
+                </header>
+                <div class="pop-body">
+                    <%:=data.body%>
+                </div>
+                <footer>
+                    <a id="restart-game" class="btn btn-success"><%=data.ok%></a>
+                </footer>
+            </div>
+		</script>
+		<div id="restart-level-pop" class="pop js-pop"></div>
+		<script id="t:restart-level-pop" type="text/html">
+            <div class="pop-content">
+                <header>
+                    <h2><%=data.h2%></h2>
+                </header>
+                <div class="pop-body">
+                    <%=data.body%>
+                </div>
+                <footer>
+                    <a id="restart-level" class="btn btn-success"><%=data.ok%></a>
+                </footer>
+            </div>
+		</script>
+		<div id="intro-pop" class="pop js-pop"></div>
+		<script id="t:intro-pop" type="text/html">
+		    <div class="pop-content">
+                <header>
+                    <h2><%=data.h2%></h2>
+                </header>
+                <div class="pop-body">
+                    <ol>
+                        <li><%=data.li1%></li>
+                        <li><%=data.li2%></li>
+                    </ol>
+                </div>
+                <footer>
+                    <a id="intro" class="btn btn-success"><%=data.ok%></a>
+                </footer>
+            </div>
+		</script>
+		<div id="success-pop" class="pop js-pop"></div>
+		<script id="t:success-pop" type="text/html">
+		    <div class="pop-content">
+                <header>
+                    <h2><%=data.h2%></h2>
+                </header>
+                <div class="pop-body js-pop-body">
+                    <%:=data.body%>
+                </div>
+                <footer>
+                    <a class="btn btn-success"><%=data.ok%></a>
+                </footer>
+            </div>
+		</script>
+		<div id="hightLevel-pop" class="pop js-pop"></div>
+		<script id="t:hightLevel-pop" type="text/html">
+		    <div class="pop-content">
+                <header>
+                    <h2><%=data.h2%></h2>
+                </header>
+                <div class="pop-body js-pop-body">
+                    <%=data.body%>
+                </div>
+                <footer>
+                    <a class="btn btn-success"><%=data.ok%></a>
+                    <a id="hight-share" class="btn btn-primary"><%=data.share%></a>
+                </footer>
+            </div>
+		</script>	
+		<script src="./js/require-min.js" data-main="js/main"></script>
+	</div>
+</body>
+</html>

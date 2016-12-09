@@ -1,0 +1,6 @@
+<!--eventList.wxml-->
+<view class="container event-list">
+  <block wx:for="{{events}}" wx:for-item="event">
+	  <text id="{{event.id}}" bindtap="bindEventItemTap" class="event-item">{{event.time}} - {{event.name}}</text>
+  </block>
+</view>

@@ -1,0 +1,23 @@
+
+.homeicon-:before { content: '\e800'; } /* '' */
+.linkicon-:before { content: '\e801'; } /* '' */
+.tagsicon-:before { content: '\e802'; } /* '' */
+.up-bigicon-:before { content: '\e803'; } /* '' */
+.lampicon-:before { content: '\e804'; } /* '' */
+.okicon-:before { content: '\e805'; } /* '' */
+.cancelicon-:before { content: '\e806'; } /* '' */
+.attachicon-:before { content: '\e807'; } /* '' */
+.bookmark-emptyicon-:before { content: '\f097'; } /* '' */
+.quote-lefticon-:before { content: '\f10d'; } /* '' */
+.quote-righticon-:before { content: '\f10e'; } /* '' */
+.githubicon-:before { content: '\f113'; } /* '' */
+.html5icon-:before { content: '\f13b'; } /* '' */
+.stackoverflowicon-:before { content: '\f16c'; } /* '' */
+.windowsicon-:before { content: '\f17a'; } /* '' */
+.vimeo-squaredicon-:before { content: '\f194'; } /* '' */
+.wordpressicon-:before { content: '\f19a'; } /* '' */
+.file-codeicon-:before { content: '\f1c9'; } /* '' */
+.trashicon-:before { content: '\f1f8'; } /* '' */
+.creative-commonsicon-:before { content: '\f25e'; } /* '' */
+.commenting-oicon-:before { content: '\f27b'; } /* '' */
+.universal-accessicon-:before { content: '\f29a'; } /* '' */

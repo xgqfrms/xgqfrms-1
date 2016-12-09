@@ -1,0 +1,40 @@
+
+/*css 最高优先级!important*/
+@keyframes animate{
+	0% {background: red};
+	15% {background: orange}
+	30% {background: yellow}
+	45% {background: green}
+	60% {background: blue}
+	75% {background: indigo}
+	90% {background: violet}
+	95% {background: white}
+	100% {background: black}
+}
+.animate{
+	/*animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+	animation: animate 7s ease 0s infinite alternate-reverse both running;
+	width: 200px;
+	height: 200px;
+	background: radial-gradient(center, red, orange, yellow, green, blue, indigo, violet);
+}
+.animate span{
+	justify-content: center;
+	vertical-align: center;
+	box-sizing: border-box;
+	margin: 50px auto;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+	word-break: keep-all;
+}
+
+.icon-aside{
+    color:rgba(0,255,0,0.7);
+}
+.icon-html5 {
+    color: #f16529;
+}
+.icon-nav{
+	color: #f16529;
+}

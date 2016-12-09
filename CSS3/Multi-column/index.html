@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3-Multi-column</title>
+	<!-- 
+		CSS3 多列: 
+		http://www.runoob.com/css3/css3-multiple-columns.html
+		HTML 参考手册- (HTML5 标准):
+		http://www.runoob.com/tags/html-reference.html
+		http://www.runoob.com/tags/ref-byfunc.html
+		HTML 全局属性:
+		http://www.runoob.com/tags/ref-standardattributes.html
+		HTML 事件属性:
+		http://www.runoob.com/tags/ref-eventattributes.html
+		HTML5 表单属性:
+		http://www.runoob.com/html/html5-form-attributes.html
+		HTML5 新元素:
+		http://www.runoob.com/html/html5-new-element.html
+		HTML <keygen> 标签:
+		http://www.runoob.com/tags/tag-keygen.html
+		键盘快捷键:
+		http://www.runoob.com/tags/html-keyboardshortcuts.html
+	 -->
+	<style>
+		img{
+			width: 100px;
+			height: 100px;
+		}
+		.table{
+			margin: 5px;
+			border: 5px solid green;
+		}
+		.table tr{
+			margin: 5px;
+			border: 3px sloid blue;
+		}
+		.table td{
+			margin: 5px;
+			border: 1px dashed red;
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+		}
+		.d-box{
+			background: rgba(0,0,0,0.7);
+			width: 100%;
+			height: auto;
+			box-sizing: border-box;
+		}
+		.d-box .d-darg{
+			border: 1px solid red;
+			margin: 5px;
+			background-color: rgba((0,255,0,0.7)
+		}
+		/*.div1{
+			background: rgba(0,255,0,0.5);
+			width: 300px;
+			height: 100px;
+			border: 1px solid red;
+			color: red;
+		}*/
+	</style>
+	<style>
+		.div1{
+			background-color: rgba(0,255,0,0.5);
+			width: 300px;
+			height: 100px;
+			border: 1px solid red;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="div-multi-columns">
+		<img src="../../images/icon.png" alt="icon.png" title="icon.png">
+	</div>
+	<div>
+		<form action="demo_keygen.html" method="get">
+		  Username: <input type="text" name="usr_name">
+		  Encryption: <keygen name="security" keytype="rsa"/>
+		  <!-- <keygen keytype="rsa|dsa|ec">  -->
+		  <input type="submit">
+		</form>
+	</div>
+	<hr>
+	<!-- <element draggable="true|false|auto">  -->
+	<div class="d-box">
+		<label for="">draggable="true"</label><br>
+		<div draggable="true" class="d-darg">
+			<h1>draggable="true"</h1>
+		</div>
+		<label for="">draggable="false"</label><br>
+		<div draggable="false" class="d-darg">
+			<h1>draggable="false"</h1>
+		</div>
+		<label for="">draggable="auto"</label><br>
+		<div draggable="auto" class="d-darg">
+			<h1>draggable="auto"</h1>
+		</div>
+	</div>
+	<hr>
+	<div id="div1" class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<!--  -->
+	</div><br>
+	<p id="drag1" draggable="true" ondragstart="drag(event)">
+		这是一段可移动的段落。请把该段落拖入上面的矩形。
+	</p>
+	<hr>
+	<div>
+		<label for="">contenteditable="true"</label><br>
+		<input type="text" contenteditable="true" placeholder='contenteditable="true"'><br>
+		<label for="">contenteditable="false"</label><br>
+		<input type="text" contenteditable="false" placeholder='contenteditable="false"'><br>
+		<!-- <element contenteditable="true|false">  -->
+		<label for="">contenteditable="true"</label><br>
+		<p contenteditable="true">这是可编辑的。尝试修改文本。</p>
+		<label for="">contenteditable="false"</label><br>
+		<p contenteditable="false">这是可编辑的。尝试修改文本。</p>
+	</div>
+	<hr>
+	<table cellspacing="3" cellpadding="2" contenteditable="" contextmenu="" class="table">
+		<thead>
+			<tr>
+				<td>thead-td</td>
+				<td>thead-td</td>
+				<td>thead-td</td>
+			</tr>
+		</thead>
+		<tbody>
+			<caption>caption</caption>
+			<tr>
+				<td>
+					<img src="../../images/icon.png" alt="icon.png" title="icon.png">
+				</td>
+				<td>
+					ppppppppppppppppppppppppppppppppp<br>
+					ppppppppppppppppppppppppppppppppp<br>
+					ppppppppppppppppppppppppppppppppp<br>
+				</td>
+				<td>
+					ppppppppppppppppppppppppppppppppp<br>
+					ppppppppppppppppppppppppppppppppp<br>
+					ppppppppppppppppppppppppppppppppp<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					?? Are you ready? Special announcement: Write code for a real autonomous vehicle & learn from top industry partners!<br> 
+				</td>
+				<td>
+					?? Are you ready? Special announcement: Write code for a real autonomous vehicle & learn from top industry partners!<br> 
+				</td>
+				<td>
+					?? Are you ready? Special announcement: Write code for a real autonomous vehicle & learn from top industry partners!<br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--  -->
+	<script >
+		function allowDrop(ev)
+		{
+			ev.preventDefault();
+		}
+
+		function drag(ev)
+		{
+			ev.dataTransfer.setData("Text",ev.target.id);
+		}
+
+		function drop(ev)
+		{
+			var data=ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+			ev.preventDefault();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* header.css */
+.header{
+	/*background: rgba(255,255,0,0.7);*/
+	background: url(./images/section-title-bg.png);
+	width: 100%;
+	top: 0;
+	margin: 0 auto;
+	box-sizing: border-box;
+	align-content: center;
+	vertical-align: center;
+	/*text-align: center;*/
+}
+.header>h1{
+	text-align: center;
+	color: rgba(255,0,255,0.7);
+	text-shadow: 3px 5px 7px #000000;
+}
+.header nav ul.nav-ul{
+	/*background: rgba(0,0,0,0.7);*/
+	display: block;
+	box-sizing: border-box;
+	align-content: center;
+	vertical-align: center;
+	width: 80%;
+	margin: auto 5%;
+	height: 56px;
+}
+.header nav ul.nav-ul>li{
+	float: left;
+	width: 100px;
+	height: 50px;
+	box-sizing: border-box;
+	align-content: center;
+	vertical-align: center;
+	background: rgba(0,255,0,0.7);
+	margin: auto 30px;
+}
+.header nav ul.nav-ul>li i:hover{
+	transform: scale(3) rotate(360deg);
+	transition: all 1s linear 0s;
+}

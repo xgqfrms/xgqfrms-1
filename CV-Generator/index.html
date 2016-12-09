@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CV-Generator: free for every programmer!</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="http://cdn.xgqfrms.xyz/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdn.xgqfrms.xyz/webfonts/css/font-awesome-4.6.3.min.css">
+	<style>
+		/*css 最高优先级!important*/
+		@keyframes animate{
+			0% {background: red};
+			15% {background: orange}
+			30% {background: yellow}
+			45% {background: green}
+			60% {background: blue}
+			75% {background: indigo}
+			90% {background: violet}
+			95% {background: white}
+			100% {background: black}
+		}
+		.animate{
+			/*animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+			animation: animate 7s ease 0s infinite alternate-reverse both running;
+			width: 200px;
+			height: 200px;
+			background: radial-gradient(center, red, orange, yellow, green, blue, indigo, violet);
+		}
+		.animate span{
+			justify-content: center;
+			vertical-align: center;
+			box-sizing: border-box;
+			margin: 50px auto;
+			text-align: center;
+			font-weight: bold;
+			font-size: 2em;
+			word-break: keep-all;
+		}
+		
+		.icon-aside{
+		    color:rgba(0,255,0,0.7);
+		}
+		.icon-html5 {
+		    color: #f16529;
+		}
+		.icon-nav{
+			color: #f16529;
+		}
+		/*reset css*/
+		body,h1{
+			margin: 0;
+			pading: 0;
+			/*background: rgba(0,0,0,0.7);*/
+		}
+		.header{
+			/*background: rgba(255,255,0,0.7);*/
+			background: url(./images/section-title-bg.png);
+			width: 100%;
+			top: 0;
+			margin: 0 auto;
+			box-sizing: border-box;
+			align-content: center;
+			vertical-align: center;
+			/*text-align: center;*/
+		}
+		.header>h1{
+			text-align: center;
+			color: rgba(255,0,255,0.7);
+			text-shadow: 3px 5px 7px #000000;
+		}
+		.header nav ul.nav-ul{
+			/*background: rgba(0,0,0,0.7);*/
+			display: block;
+			box-sizing: border-box;
+			align-content: center;
+			vertical-align: center;
+			width: 80%;
+			margin: auto 5%;
+			height: 56px;
+		}
+		.header nav ul.nav-ul>li{
+			float: left;
+			width: 100px;
+			height: 50px;
+			box-sizing: border-box;
+			align-content: center;
+			vertical-align: center;
+			background: rgba(0,255,0,0.7);
+			margin: auto 30px;
+		}
+		.header nav ul.nav-ul>li i:hover{
+			transform: scale(3) rotate(360deg);
+			transition: all 1s linear 0s;
+		}
+		.aside{
+			/*border: 1px solid red;*/
+			background: rgba(0,0,0,0.7);
+			width: 30%;
+			/*float: left;*/
+			float: right;
+			box-sizing: border-box;
+			align-content: center;
+			vertical-align: center;
+		}
+		.aside ul{
+			/**/
+		}
+		.aside ul.fa-ul>li{
+			display: inline-block;
+			width: 100%;
+			height: 50px;
+			margin: 10px;
+		}
+		.main{
+			/*background: rgba(255,0,255,0.7);*/
+			background: rgba(0,0,0,0.5);
+			width: 60%;
+			margin: auto 5%;
+			/*float: left;*/
+		}
+		.main .section0 > img{
+			width: 100%;
+		}
+		.main .section1 div.qr li i{
+			/*background: black;*/
+			color: green;
+			width: 32px;
+			height: 32px;
+			cursor: pointer;
+		}
+		.main .section1 div.qr li i:hover{
+			/*background: url(./images/qrcode.png) no-repeat;*/
+			color: red;
+			transform: scale(3);
+			transition: all 1s linear 0s;
+			width: 32px;
+			height: 32px;
+		}
+		.main .section-star div.rating{
+			unicode-bidi: bidi-override;
+			direction: rtl;
+			/*direction: ltr;*/
+			background-color: rgba(255,255,255,0.7);
+			width: 100px;
+			padding: 0 15px;
+			align-content: center;
+			box-sizing: border-box;
+		}
+		.main .section-star div.rating span{
+			cursor: pointer;
+			/*background-color: rgba(255,255,255,0.7);*/
+			color: rgba(0,255,0,0.7);
+		}
+		/*
+			content:'\2606'; === &#9734; === ☆;
+			content:'\2606'; === &#9733; === ★; 
+			https://css-tricks.com/star-ratings
+		*/
+		.main .section-star div.rating > span:hover{
+			cursor: pointer;			
+		}
+		.main .section-star div.rating > span:hover:before, div.rating > span:hover ~ span:before{
+			content: "\2605";
+			position: absolute;
+			color: rgba(255,255,0,0.7);
+			transition: all 0.5s;
+		}
+	</style>
+</head>
+<body>
+	<header class="header" role="header">
+		<h1>CV-Generator: free for every programmer!</h1>
+		<nav class="nav" role="nav">
+			<!-- Use fa-ul and fa-li to easily replace default bullets in unordered lists. rocket-->
+			<ul class="fa-ul nav-ul">
+				<li><i class="fa fa-fw fa-home fa-2x icon-nav" aria-hidden="true"></i><a href="#">Home</a></li>
+				<li><i class="fa fa-fw fa-wrench fa-2x icon-nav" aria-hidden="true"></i><a href="#">Tools</a></li>
+				<li><i class="fa fa-fw fa-book fa-2x icon-nav" aria-hidden="true"></i><a href="#">Book</a></li>
+
+				<li><i class="fa fa-fw fa-diamond fa-2x icon-nav" aria-hidden="true"></i><a href="#">Diamond</a></li>
+				<li><i class="fa fa-fw fa-newspaper-o fa-2x icon-nav" aria-hidden="true"></i><a href="#">About</a></li>
+				<li><i class="fa fa-fw fa-rss fa-2x icon-nav" aria-hidden="true"></i><a href="#">RSS</a></li>
+			</ul>
+		</nav>
+	</header>
+	<aside class="aside" role="aside">
+		<ul class="fa-ul">
+			<!-- <i class="fa fa-css3 fa-2x icon-css3 icon-large" aria-hidden="true"></i>  product-hunt-->
+			<li><i class="fa fa-li fa-user fa-lg icon-aside fa-spin" aria-hidden="true"></i><a href="#">基本信息</a></li>
+			<li><i class="fa fa-li fa-briefcase fa-lg icon-aside fa-spin" aria-hidden="true"></i><a href="#">工作经历</a></li>
+			<li><i class="fa fa-li fa-graduation-cap fa-lg icon-aside fa-spin" aria-hidden="true"></i><a href="#">教育经历</a></li>
+			<li><i class="fa fa-li fa-product-hunt fa-lg icon-aside fa-spin" aria-hidden="true"></i><a href="#">项目经验</a></li>
+			<li><i class="fa fa-li fa-picture-o fa-lg icon-aside fa-spin" aria-hidden="true"></i><a href="#">作品展示</a></li>
+			<li><i class="fa fa-li fa-wpforms fa-lg icon-aside fa-spin" aria-hidden="true"></i><a href="#">自我描述</a></li>
+			<li><i class="fa fa-li fa-commenting-o fa-lg icon-aside fa-spin" aria-hidden="true"></i><a href="#">期望工作</a></li>
+			<li><i class="fa fa-li fa-book fa-lg icon-aside fa-spin" aria-hidden="true"></i><a href="#">技能评价</a></li>
+			<li><i class="fa fa-li fa-cogs fa-lg icon-aside fa-spin fa-pulse" aria-hidden="true"></i><a href="#">自定义板块</a></li>
+			<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+			<i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+			<i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+			<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+			<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+			<br>
+			<i class="fa fa-flag fa-3x fa-fw icon-aside"></i>
+			<i class="fa fa-flag fa-3x fa-fw icon-aside fa-rotate-90"></i>
+			<i class="fa fa-flag fa-3x fa-fw icon-aside fa-flip-vertical"></i>
+			<i class="fa fa-flag fa-3x fa-fw icon-aside fa-flip-horizontal"></i>
+			<br>
+			<i class="fa fa-square-o icon-aside"></i>
+			<i class="fa fa-twitter icon-aside"></i>
+			<!--  fa-inverse -->
+			<span class="fa-stack fa-lg">
+			  <i class="fa fa-square-o fa-stack-2x icon-aside"></i>
+			  <i class="fa fa-twitter fa-stack-1x icon-aside"></i>
+			</span>
+			<i class="fa fa-camera icon-aside"></i>
+			<i class="fa fa-ban text-danger icon-aside"></i>
+			<!-- text-danger -->
+			<span class="fa-stack fa-lg">
+			  <i class="fa fa-camera fa-stack-1x icon-aside"></i>
+			  <i class="fa fa-ban fa-stack-2x icon-aside"></i>
+			</span>
+		</ul>
+	</aside>
+	<main class="main" role="main">
+		<h1>CV-Generator: free for every programmer!</h1>
+		<section class="section0">
+			<img src="http://www.w3schools.com/howto/img_band_ny.jpg" class="mySlides" alt="">
+			<img src="http://www.w3schools.com/howto/img_band_chicago.jpg" class="mySlides" alt="">
+			<img src="http://www.w3schools.com/howto/img_band_la.jpg" class="mySlides" alt="">
+		</section>
+		<section class="section1">
+			<h2>CV-Generator: free for every programmer!</h2>
+			<div class="qr">
+				<ul class="fa-ul">
+					<li><i class="fa fa-li fa-qrcode fa-lg"></i>qrcode</li>
+				</ul>
+			</div>
+			<div>
+				<i class="fa fa-quote-left fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
+				<p>...tomorrow we will run faster, stretch out our arms farther...And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past.</p>
+			</div>
+		</section>
+		<section class="section2">
+			<div>
+				<form action="form.php" method="GET">
+					<label for="">datalist</label>
+					<!-- $_GET : name="sm-name" -->
+					<input type="text" list="socail-media" size="50" name="sm-name" title="sm-title">
+					<!-- datalist:  <option value="Value">GitHub</option>-->
+					<!-- select :  <option value="GitHub">Value</option> -->
+					<datalist  id="socail-media">
+						<option value="https://github.com/?">GitHub</option>
+						<option value="https://www.linkedin.com/in/?">Linkedin</option>
+						<option value="https://www.facebook.com/?">Facebook</option>
+						<option value="https://twitter.com/?">Twitter</option>
+						<option value="https://www.pinterest.com/?/">Pinterest</option>
+						<option value="https://mva.microsoft.com/?">Microsoft MVA</option>
+						<option value="https://developer.mozilla.org/en-US/profiles/?">Mozilla MDN</option>
+						<option value="https://stackoverflow.com/users/?">Stack Overflow</option>
+						<option value="https://mozillians.org/zh-CN/u/?">mozillians</option>
+					</datalist>
+					<input type="submit" value="submit">
+				</form>
+			</div>
+		</section>
+		<section>
+			<div class="input-group margin-bottom-sm">
+			  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+			  <input class="form-control" type="text" placeholder="Email address">
+			</div>
+			<!-- fa-fw -->
+			<div class="input-group">
+			  <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+			  <input class="form-control" type="password" placeholder="Password">
+			</div>
+			<div>
+				<!-- open -->
+				<div class="btn-group ">
+				  <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i> User</a>
+				  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+				    <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
+				  </a>
+				  <ul class="dropdown-menu">
+				    <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+				    <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+				    <li><a href="#"><i class="fa fa-ban fa-fw"></i> Ban</a></li>
+				    <li class="divider"></li>
+				    <li><a href="#"><i class="fa fa-unlock"></i> Make admin</a></li>
+				  </ul>
+				</div>
+			</div>
+			<div>
+				<div class="btn-group">
+				  <a class="btn btn-default" href="#">
+				    <i class="fa fa-align-left" title="Align Left"></i>
+				  </a>
+				  <a class="btn btn-default" href="#">
+				    <i class="fa fa-align-center" title="Align Center"></i>
+				  </a>
+				  <a class="btn btn-default" href="#">
+				    <i class="fa fa-align-right" title="Align Right"></i>
+				  </a>
+				  <a class="btn btn-default" href="#">
+				    <i class="fa fa-align-justify" title="Align Justify"></i>
+				  </a>
+				</div>
+			</div>
+			<div>
+				<a class="btn btn-danger" href="#">
+					<i class="fa fa-trash-o fa-lg"></i>
+					Delete
+				</a>
+				<a class="btn btn-default btn-sm" href="#">
+					<i class="fa fa-cog"></i>
+					Settings
+				</a>
+				<a class="btn btn-lg btn-success" href="#">
+					<i class="fa fa-flag fa-2x pull-left"></i>
+					Font Awesome<br>Version 4.6.3
+				</a>
+			</div>
+		</section>
+		<section>
+			<div>
+				<h1>more coming soon</h1>
+			</div>
+		</section>
+		<section class="section-star">
+			<div>
+				<div class="rating">
+					<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+				</div>
+				<div class="rating">
+					<span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer" role="footer">
+		<address>@xgqfrms 2016 <i class="fa fa-github" title="github"></i></address>
+	</footer>
+	<script>
+		// Automatic Slideshow - change image every 3 seconds
+		var myIndex = 0;//global
+		carousel();
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("mySlides");//array img
+		    for (i = 0; i < x.length; i++) {
+		       x[i].style.display = "none";
+		    }
+		    myIndex++;
+		    if (myIndex > x.length) {
+		    	myIndex = 1;// circle reset
+		    }
+		    x[myIndex-1].style.display = "block";//
+		    setTimeout(carousel, 3000);// 闭包，回调，递归
+		}
+	</script>
+</body>
+</html>

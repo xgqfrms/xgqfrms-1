@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fib</title>
+</head>
+<body>
+	<div>
+		<h1>fib</h1>
+		<pre>
+			0
+			1
+			1
+			2
+			3
+			5
+			8
+			13
+			21
+			34
+		</pre>
+		<pre>			
+			[Python程序员的进化](http://group.cnblogs.com/topic/39728.html)
+
+			[不同的角度，不同的玩法——用Python实现Fibonacci函数](http://www.cnblogs.com/figure9/archive/2010/08/30/1812927.html)
+
+			[跟老齐学Python-（入门教程）](https://github.com/qiwsir/StarterLearningPython/blob/master/index.md)
+
+			[algorithm of realize by python](https://github.com/xgqfrms-GitHub/algorithm)
+
+		</pre>
+		<h1><mark>程&#1161;序&#1161;员&#1161;</mark></h1>
+		<pre>
+			<a href="https://en.wikipedia.org/wiki/Cyrillic_numerals">https://en.wikipedia.org/wiki/Cyrillic_numerals</a>
+			<img src="" alt="">
+			links:
+			<a href="http://xgqfrms.xyz">程҉序҉员҉</a>
+			<a href="http://www.fileformat.info/info/unicode/char/0489/index.htm">Unicode Character 'COMBINING CYRILLIC MILLIONS SIGN' (U+0489)</a>
+			<a href="http://www.fileformat.info/info/unicode/char/0489/browsertest.htm">Browser Test Page for Unicode Character 'COMBINING CYRILLIC MILLIONS SIGN' (U+0489)</a>
+			<a href="http://www.fileformat.info/info/unicode/char/0489/fontsupport.htm">COMBINING CYRILLIC MILLIONS SIGN (U+0489) Font Support</a>
+		</pre>
+	</div>
+	<div>
+		def sum_two_numbers(a, b):
+		    return a + b            # return result to the function caller
+
+		c = sum_two_numbers(3, 12)  # assign result of function execution to variable 'c'
+
+
+		def fib(n):
+		    """This is documentation string for function. It'll be available by fib.__doc__()
+		    Return a list containing the Fibonacci series up to n."""
+		    result = []
+		    a = 0
+		    b = 1
+		    while a < n:
+		        result.append(a)
+		        tmp_var = b
+		        b = a + b
+		        a = tmp_var
+		    return result
+
+		print(fib(10))
+	</div>
+	<!-- <script>
+			var b = 1;
+			var tmp_var = 0;
+			var result = [];
+		    for (var a = 0; a < 10; a++) {
+		    	result.push(a)
+		    	// console.log("a = " + a + ",\n");
+		    	tmp_var = b;
+		    	// console.log("tmp_var = " + tmp_var + ",\n");
+		    	b += a;
+		    	// console.log("b = " + b + ",\n");
+		        a = tmp_var -1;//0,1,1,2,3,5,8
+		        //a = tmp_var;//0,2,2,4,6 ???
+		        var JsonString = JSON.stringify(result);
+		        // document.write(JsonString);
+		        // console.log("JsonString  = " + JsonString  + ",\n");
+		    }
+		    console.log("JsonString  = " + JsonString  + ",\n");
+	</script> -->
+	<script>
+function fib(n){
+	var b = 1;
+	var tmp_var = 0;
+	var result = [];
+    for (var a = 0; a < n; a++) {
+    	result.push(a)
+    	// console.log("a = " + a + ",\n");
+    	tmp_var = b;
+    	// console.log("tmp_var = " + tmp_var + ",\n");
+    	b += a;
+    	// console.log("b = " + b + ",\n");
+        a = tmp_var-1;
+    }
+    var JsonString = JSON.stringify(result);
+    console.log("JsonString  = " + JsonString  + "\n");
+}
+fib(10);
+// JsonString  = [0,1,1,2,3,5,8]
+	</script>
+	<!-- <script>
+		var memoize = function(fn) {
+		  var cache = [];
+		  return function(i) {
+		    return (i in cache) ? cache[i] :
+		      (cache[i] = fn.call(arguments.callee, i));
+		  };
+		}
+		  
+		var fib = new memoize(function(i) {
+		  if (i == 0 || i == 1)
+		    return 1;
+		  return this(i-1) + this(i-2);
+		})
+	</script> -->
+</body>
+</html>

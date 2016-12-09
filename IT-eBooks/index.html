@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xgqfrms™ : IT-eBooks</title>
+	<!-- <link href="images/logo.png" rel="shortcut icon" type="image/x-icon"> -->
+	<link rel="shortcut icon" href="./pi.png" type="image/png">
+	<!-- SEO meta -->
+	<meta charset="UTF-8">
+	<!-- <meta name="author" content="xgqfrms"> -->
+	<link rel="author" type="text/plain" href="http://xgqfrms.xyz/humans.txt" />
+	<!-- <meta name="robots" content="noindex" /> -->
+	<meta name=generator content="Sublime Text 3">
+	<meta name="keywords" content="IT-eBooks,ebooks,pdf,free,xgqfrms,github,xgqfrms.xyz">
+	<meta name="description" content="xgqfrms.xyz : xgqfrms™ : IT-eBooks">
+	<meta name="application-name" content="xgqfrms.xyz">
+	<!-- media query -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' >
+	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"> -->
+	<!-- jquery && jquery UI -->
+<!-- 	<link rel="stylesheet" type="text/css" href="./lib/jquery_ui/jquery-ui.min.css" media="screen">
+	<script src='./lib/jquery/jquery-3.1.0.min.js' async></script>
+	<script src='./lib/jquery_ui/jquery-ui.min.js' async></script> -->
+	<!-- http://www.it-ebooks.info/ -->
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			/*color: rgba(255,255,255,0.7);*/
+			justify-content: center;
+			align-content: center;
+			/*clear: both;*/
+			cursor: pointer;
+		}
+		body{
+			width:100%;
+			height: 100%;
+			background: rgba(0,0,0,0.3);
+		}
+		.b-box{
+			margin: 0;
+			padding: 0;
+		}
+		.b-header{
+			text-align: center;
+			background: rgba(0,255,0,0.3);
+			color: rgba(0,0,0,0.7);
+			overflow: hidden;
+			float: left;
+			width:100%;
+			height: 100px;
+		}
+		.b-header .h-left{
+			text-align: center;
+			float: left;
+			width:50%;
+			/*background: rgba(0,0,0,0.7);*/
+			margin: 25px auto;
+			padding: 10px;
+		}
+		.b-header .h-left h2{
+			color: rgba(255,0,255,0.7);
+		}
+		.b-header .h-right{
+			margin: 25px auto;
+			padding: 20px;
+			text-align: center;
+			float: right;
+			width:50%;
+			color: rgba(255,0,0,1);
+			/*background: rgba(0,0,0,1);*/
+		}
+		.b-header .h-right .h-form{
+			/*margin: 0 auto 10px;*/
+		}
+		.b-header .h-right .h-form .si{
+			display: inline-block;
+			border-radius: 10px;
+			padding-left: 10px;
+		}
+		.b-header .h-right .h-form .bt{
+			display: inline-block;
+			border-radius: 5px;
+			padding: 1px 3px;
+			color: rgba(0,255,0,0.7);
+			background: rgba(0,0,0,1);
+		}
+		.b-header .h-right .h-form .ss{
+			margin-left: -20px;
+			margin-top: 5px;
+			display: inline-block;
+		}
+		.b-body{
+			margin: 0 auto;
+			text-align: center;
+		}
+		.b-footer{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="b-box">
+		<div class="b-header">
+			<!-- <h1>header</h1> -->
+			<div class="h-left">
+				<h2>
+					<span>IT eBooks</span>
+				</h2>
+				<h3>
+					<span>Free Download IT eBooks</span>
+				</h3>
+			</div>
+			<div class="h-right">
+				<div class="h-form">
+					<form action="../php/books.php" method="POST" name="form">
+						<!-- <input type="text" placeholder="freely search for your ebooks!" size="70" id="text"> -->
+						<input type="search" placeholder="freely search for your ebooks!" size="70" id="text" class="si">
+						<span></span>
+						<input type="submit" value="Search" id="search" class="bt"><br>
+						<span class="ss">Search eBook by:</span>
+						<input type="radio" id="title" name="book-radio">
+						<label for="title">Title</label>
+
+						<input type="radio" id="author" name="book-radio">
+						<label for="author">Author</label>
+
+						<input type="radio" id="isbn" name="book-radio">
+						<label for="isbn">ISBN</label>
+
+						<input type="radio" id="google" name="book-radio">
+						<label for="google">Google</label>
+
+						<input type="radio" id="isbn_d" name="book-radio">
+						<label for="isbn_d">ISBN.Directory</label>
+					</form>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="b-body">
+			<!-- <h1>body</h1> -->
+			<h1>Top Download eBooks</h1>
+			<img src="./book1.png" alt="books.png">
+			<img src="./book1.png" alt="books.png">
+			<h1>Last Upload eBooks</h1>
+			<img src="./book2.png" alt="books.png">
+			<img src="./book2.png" alt="books.png">
+			<img src="./book2.png" alt="books.png">
+			<h1>New eBooks</h1>
+			<img src="./book3.png" alt="books.png">
+		</div>
+		<hr>
+		<div class="b-footer">
+			<!-- <h1>footer</h1> -->
+			<div>
+				<span>Reproduction of site books is authorized only for informative purposes and strictly for personal, private use.</span><br>
+				<h3>Only Direct Download</h3>
+				<h3>IT eBooks Group © 2011-2016</h3>
+				<span>
+					<a href="http://it-ebooks.info/" target="_blank">IT-eBooks.Info</a>
+					<a href="http://it-ebooks-api.info/" target="_blank">IT-eBooks API</a>
+					<a href="http://it-ebooks-search.info/" target="_blank">IIT-eBooks Search</a>
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

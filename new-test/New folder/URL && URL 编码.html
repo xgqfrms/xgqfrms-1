@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>URL && URL 编码:</title>
+	<style>
+		.space{
+			margin-left: 12px;
+		}
+		td{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h3>
+			<a href="http://www.w3school.com.cn/tiy/t.asp?f=jseg_encodeURI">referrence link</a>
+		</h3>
+		<h3>
+			<a href="https://developers.google.com/url-shortener/?csw=1">Google URL Shortener</a>
+			<span><a href="https://goo.gl/">https://goo.gl/</a></span>
+		</h3>
+		<div id="div1">
+			<!--  -->
+		</div>
+		<div id="div2">
+			<!--  -->
+		</div>
+		<div id="div3">
+			<!-- 
+				div5 内容插入失败：原因 js 执行先后顺序的问题(顺序执行,如果前面js代码出错，后面的js代码就不会执行了)，
+				导致div5 先于父容器div3执行，找不到div3,无法生成div5
+			 -->
+			<!-- 解决方案：更改调用 div5 与 div3 的JS代码的执行顺序！ -->
+			<!-- 
+				1. 将 div5 移动到 div3外，div4 的后面！（好使）
+				2. 将 div5 的js代码，移动到 div3的代码后面！（不好使？？？）
+				   不好使原因：div3 的js代码执行.innerHTML 后，将div5 标签覆盖掉了，所以DOM 中div5 标签就不存在了！
+			 -->
+			 <!-- <div id="div5"></div> -->
+		</div>
+		<div id="div4">
+			<!--  -->
+		</div>
+		<div id="div5">
+			<span>just for rewrite test!</span>
+			<!-- span 内容不显示原因：div5 的js代码执行.innerHTML 后，将span标签覆盖掉了，所以DOM 中span 标签就不存在了！ -->
+			<!-- 所以 JS 操作DOM 只适用于，动态添加/删除 DOM节点／内容-->
+		</div>
+		<div id="div5_new">
+			<!-- 
+				<h1>Uncaught TypeError: Cannot set property 'innerHTML' of null</h1>
+				You have to place the hello div before the script, so that it exists when the script is loaded.
+				<a href="http://stackoverflow.com/questions/18239430/cannot-set-property-innerhtml-of-null">http://stackoverflow.com/questions/18239430/cannot-set-property-innerhtml-of-null</a>
+			 -->
+		</div>
+	</div>
+	<div>
+		<hr>
+		<table>
+			<thead>JavaScript encodeURI() 函数: <span style="color:red"><a href="http://www.w3chtml.com/html/ref/url-encode.html">URI编码对照表</a></span> </thead>
+			<hr>
+			<tbody>
+				<tr>
+					<td>:<span class="space"></span></td>
+					<td>/<span class="space"></span></td>
+					<td>.<span class="space"></span></td>
+					<td>&amp;nbsp<span class="space"></span></td>
+					<td>@<span class="space"></span></td>
+					<td>=<span class="space"></span></td>
+
+					<td>?<span class="space"></span></td>
+					<td>&<span class="space"></span></td>
+					<td>$<span class="space"></span></td>
+					<td>,<span class="space"></span></td>
+					<td>+<span class="space"></span></td>
+					<td>#<span class="space"></span></td>
+				</tr>
+				<tr>
+					<td>%3A<span class="space"></span></td>
+					<td>%2F<span class="space"></span></td>
+					<td>.<span class="space"></span></td>
+					<td>%20<span class="space"></span></td>
+					<td>%40<span class="space"></span></td>
+					<td>%3D<span class="space"></span></td>
+
+					<td>%3F<span class="space"></span></td>
+					<td>%26<span class="space"></span></td>
+					<td>%24<span class="space"></span></td>
+					<td>%2C<span class="space"></span></td>
+					<td>%2B<span class="space"></span></td>
+					<td>%23<span class="space"></span></td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+	</div>
+	<!-- js -->
+	<script>
+		// encodeURI : encodeURI(URIstring)
+		// encodeURI() 函数可把字符串作为 URI 进行编码。
+		/*
+			该方法不会对 ASCII 字母和数字进行编码，也不会对这些 ASCII 标点符号进行编码： - _ . ! ~ * ' ( ) 。
+			该方法的目的是对 URI 进行完整的编码，因此对以下在 URI 中具有特殊含义的 ASCII 标点符号，encodeURI() 函数是不会进行转义的：;/?:@&=+$,#
+		*/
+		var x1 = encodeURI("https://www.xgqfrms.xyz")+"<br/>";
+		var x2 = encodeURI("https://www.xgqfrms.xyz/My first/")+"<br/>";
+		var x3 = encodeURI("https://www.xgqfrms.xyz/id=xgqfrms@xyz&name=1$2,+4#5?")+"<br/>";
+		var x4 = encodeURI(",/?:@&=+$#")+"<br/><br/>";
+		var dom1 = document.getElementById('div1').innerHTML=(x1+x2+x3+x4);
+		// encodeURIComponent 
+		/*
+			如果URI组件中含有分隔符,比如space,?和#,则应当使用encodeURIComponent() 对组件进行编码。
+		*/
+		var y1 = encodeURIComponent("https://www.xgqfrms.xyz")+"<br/>";
+		var y2 = encodeURIComponent("https://www.xgqfrms.xyz/My first/")+"<br/>";
+		var y3 = encodeURIComponent("https://www.xgqfrms.xyz/id=xgqfrms@xyz&name=1$2,+4#5?")+"<br/>";
+		var y4 = encodeURI(",/?:@&=+$#")+"<br/><br/>";
+		var dom2 = document.getElementById('div2').innerHTML=(y1+y2+y3+y4);
+		
+		// Array
+		var test = new Array();
+		var testType = "";
+		if (test.constructor==Array){
+			testType = "This is an Array";
+		}
+		else if (test.constructor==Boolean){
+			testType = "This is a Boolean";
+		}
+		else if (test.constructor==Date){
+			testType = "This is a Date";
+		}
+		else if (test.constructor==String){
+			testType = "This is a String";
+		}
+
+		test[0] = encodeURIComponent("https://www.xgqfrms.xyz")+"<br/>";
+		      
+		console.log(test.prototype);
+		console.log("<br/>");
+		console.log(test.length);
+		console.log("<br/>");
+		console.log(test.constructor());
+		console.log("<br/>");
+		var dom3 = document.getElementById('div3').innerHTML=test.toString(test[0])+"<br/>";
+		var dom4 = document.getElementById('div4').innerHTML=test.valueOf(test[0])+"<br/><br/>";
+
+		var dom5 = document.getElementById('div5').innerHTML = "<mark><i>" + testType + "</i></mark>";
+		/*
+			不好使原因：div3 的js代码执行.innerHTML 后，将div5 标签覆盖掉了，所以DOM 中div5 标签就不存在了！
+		*/
+		var dom5_New = document.getElementById('div5_new').innerHTML = "<mark>" + testType + "</mark>";
+		var dom5_Rewrite = document.getElementById('div5_new').innerHTML = "<mark>" + testType + "test for Rewrite" + "</mark>";
+		console.log(testType);
+		console.log("<br/>");
+
+		// 
+		function employee(name,job,born){
+			this.nameValue=name;
+			this.jobValue=job;
+			this.bornValue=born;
+		}
+		var bill=new employee("Bill Gates","Engineer",1985);
+		employee.prototype.salaryValue=null;
+		// prototype 用来添加属性
+		bill.salary=20000;
+		document.write(bill.salary+"<br/>");
+		document.write(bill.nameValue+"<br/>");
+		document.write(bill.jobValue+"<br/>");
+		document.write(bill.bornValue+"<br/>");
+	</script>
+</body>
+</html>
