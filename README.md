@@ -1,4 +1,4 @@
-# xgqfrms.github.io
+# https://xyz.xgqfrms.xyz
 
 ***
 ***
@@ -9,7 +9,18 @@
 
 ### [www.xgqfrms.xyz](http://www.xgqfrms.xyz/)
 
-### [xgqfrms.github.io](http://xgqfrms.github.io/xgqfrms/)
+
+### [https://xgqfrms.xyz/](https://xgqfrms.xyz/)
+
+### [https://www.xgqfrms.xyz/](https://www.xgqfrms.xyz/)
+
+
+### [xgqfrms.github.io](https://xgqfrms.github.io/)  
+
+### [abc.xgqfrms.xyz](https://abc.xgqfrms.xyz/)
+***
+***
+
 
 ## [Plugins for SEO]
 
